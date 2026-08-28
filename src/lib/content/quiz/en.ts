@@ -1,9 +1,9 @@
 // ============================================================
 // TennisIndex — Quiz content (English)
 // ============================================================
-// English translation of de.ts. Same ids, same difficulty/correctOptionId
-// values and relatedGuideSlugs — only text differs. Keep in sync with
-// de.ts and es.ts; quiz-data.test.ts checks this automatically.
+// Same structure as de.ts (identical question IDs, difficulty,
+// correctOptionId, relatedGuideSlugs), only the text differs — see
+// quiz-data.test.ts for the parity checks this file must satisfy.
 
 import type { QuizDifficulty, QuizQuestion, QuizResultTier } from '../../quiz';
 
@@ -11,33 +11,31 @@ export const QUIZ_DIFFICULTIES_EN: QuizDifficulty[] = [
 	{
 		slug: 'anfaenger',
 		label: 'Beginner',
-		description: 'Basic rules, scoring, serve, glass and simple game situations.',
+		description: 'Basic rules, scoring, serving, equipment, and simple match situations.',
 		color: '#8BC53F',
-		metaTitle: 'Tennis Quiz for Beginners: Do You Know the Most Important Rules?',
+		metaTitle: 'Tennis Quiz for Beginners: Do You Know the Key Rules?',
 		metaDescription:
-			'Test your knowledge of tennis rules, serving, scoring, the glass and simple game situations.',
+			'Test your knowledge of tennis rules, serving, scoring, equipment, and simple match situations.',
 		recommendedGuideSlugs: ['tennis-regeln', 'tennis-fuer-anfaenger', 'tennis-ausruestung']
 	},
 	{
 		slug: 'fortgeschritten',
-		label: 'Advanced',
-		description:
-			'Tactical decisions, the bandeja, the lob, the volley, positioning and doubles communication.',
+		label: 'Intermediate',
+		description: 'Tactical decisions, serve variations, volleys, net play, and doubles communication.',
 		color: '#4C7A1F',
-		metaTitle: 'Tennis Quiz for Advanced Players: Technique, Tactics and Game Situations',
+		metaTitle: 'Tennis Quiz for Intermediate Players: Technique, Tactics, and Match Situations',
 		metaDescription:
-			'Test your tennis knowledge on the bandeja, the lob, the volley, doubles tactics, positioning and the glass.',
+			'Test your tennis knowledge on serving, volleys, doubles tactics, positioning, and shot selection.',
 		recommendedGuideSlugs: ['tennis-technik', 'tennis-taktik', 'tennis-doppel']
 	},
 	{
 		slug: 'experte',
 		label: 'Expert',
-		description:
-			'Complex rule situations, match strategy, shot selection under pressure, angles, pace and risk.',
+		description: 'Complex rule cases, match strategy, shot selection under pressure, angles, pace, and risk.',
 		color: '#0F1F13',
-		metaTitle: 'Tennis Expert Quiz: Tactics, Strategy and Complex Game Situations',
+		metaTitle: 'Tennis Expert Quiz: Tactics, Strategy, and Complex Match Situations',
 		metaDescription:
-			'The hard tennis quiz for experienced players: match strategy, shot selection, risk and tactical decisions.',
+			'The hard tennis quiz for experienced players: match strategy, shot selection, risk, and tactical decisions.',
 		recommendedGuideSlugs: ['tennis-taktik', 'tennis-training', 'tennis-doppel']
 	}
 ];
@@ -46,26 +44,26 @@ export const QUIZ_RESULT_TIERS_EN: QuizResultTier[] = [
 	{
 		minPercentage: 0,
 		maxPercentage: 39,
-		title: 'Still room to grow',
-		text: "You don't yet know the basics with confidence. Start with the most important rules and simple game situations."
+		title: 'Room to grow',
+		text: 'You\'re not quite solid on the basics yet. Start with the most important rules and simple match situations.'
 	},
 	{
 		minPercentage: 40,
 		maxPercentage: 69,
 		title: 'Solid foundation',
-		text: 'You already have a good basic understanding. With a bit more rules knowledge and tactics, you will quickly gain confidence.'
+		text: 'You already have a good basic understanding. A bit more rules knowledge and tactics will make you noticeably more confident.'
 	},
 	{
 		minPercentage: 70,
 		maxPercentage: 89,
 		title: 'Strong tennis knowledge',
-		text: 'You already understand many important situations well. Now the next step in technique and match tactics is worth it.'
+		text: 'You already understand many important situations well. Now\'s a good time to take the next step in technique and match tactics.'
 	},
 	{
 		minPercentage: 90,
 		maxPercentage: 100,
 		title: 'Tennis expert',
-		text: 'Very strong! You know your way around rules, tactics and game situations really well.'
+		text: 'Very strong! You really know your way around rules, tactics, and match situations.'
 	}
 ];
 
@@ -78,31 +76,28 @@ export const QUIZ_QUESTIONS_EN: QuizQuestion[] = [
 		difficulty: 'anfaenger',
 		question: 'What is tennis mainly?',
 		options: [
-			{ id: 'A', text: 'A singles sport without walls' },
-			{
-				id: 'B',
-				text: 'A racket sport usually played as doubles on a court with glass walls'
-			},
-			{ id: 'C', text: 'A variant of squash without a net' },
-			{ id: 'D', text: 'Pure fitness training' }
+			{ id: 'A', text: 'A racket sport played as singles or doubles' },
+			{ id: 'B', text: 'A variant of squash without a net' },
+			{ id: 'C', text: 'Pure fitness training without any scoring' },
+			{ id: 'D', text: 'A team sport with six players per side' }
 		],
-		correctOptionId: 'B',
+		correctOptionId: 'A',
 		explanation:
-			'Tennis is a racket sport usually played as doubles. Characteristic features are the smaller court, the net and the glass walls.',
+			'Tennis is a racket sport played either as singles (1 vs. 1) or doubles (2 vs. 2).',
 		relatedGuideSlugs: ['tennis-regeln']
 	},
 	{
 		id: 'anfaenger-2',
 		difficulty: 'anfaenger',
-		question: 'How is tennis usually scored?',
+		question: 'How is a game normally scored in tennis?',
 		options: [
 			{ id: 'A', text: '1, 2, 3, 4' },
 			{ id: 'B', text: '0, 1, 2, 3' },
 			{ id: 'C', text: '15, 30, 40, game' },
-			{ id: 'D', text: 'Every ball counts as a set' }
+			{ id: 'D', text: 'Every rally counts as one set' }
 		],
 		correctOptionId: 'C',
-		explanation: 'The scoring is similar to tennis: 15, 30, 40 and game.',
+		explanation: 'Within a game, points are counted 15, 30, 40, and game.',
 		relatedGuideSlugs: ['tennis-regeln']
 	},
 	{
@@ -110,33 +105,35 @@ export const QUIZ_QUESTIONS_EN: QuizQuestion[] = [
 		difficulty: 'anfaenger',
 		question: 'How must the serve be executed in tennis?',
 		options: [
-			{ id: 'A', text: 'From above head height' },
-			{ id: 'B', text: 'From below, after the ball has bounced once on the ground' },
-			{ id: 'C', text: 'Directly out of the air as a volley' },
-			{ id: 'D', text: 'With both hands' }
+			{ id: 'A', text: 'Overhand: the ball is tossed up and struck before it bounces' },
+			{ id: 'B', text: 'Underhand, after the ball has bounced once on the ground' },
+			{ id: 'C', text: 'Directly out of the air as a volley, with no toss' },
+			{ id: 'D', text: 'Always with both hands at once' }
 		],
-		correctOptionId: 'B',
-		explanation: 'The serve is hit underarm. The ball must bounce on the ground first.',
+		correctOptionId: 'A',
+		explanation:
+			'The serve is hit overhand: you toss the ball up and strike it before it touches the ground.',
 		relatedGuideSlugs: ['tennis-regeln']
 	},
 	{
 		id: 'anfaenger-4',
 		difficulty: 'anfaenger',
-		question: 'May the ball touch the glass wall after bouncing?',
+		question: 'Does a ball landing exactly on the line count as out?',
 		options: [
-			{ id: 'A', text: 'Yes, that is a central part of the game' },
-			{ id: 'B', text: 'No, the point is lost immediately' },
-			{ id: 'C', text: 'Only on the serve' },
-			{ id: 'D', text: 'Only if both teams agree' }
+			{ id: 'A', text: 'Yes, the line no longer belongs to the court' },
+			{ id: 'B', text: 'No, it counts as in as long as it touches the line' },
+			{ id: 'C', text: 'Only on the serve does the line count as out' },
+			{ id: 'D', text: 'That\'s decided purely by the umpire\'s judgment' }
 		],
-		correctOptionId: 'A',
-		explanation: 'After touching the ground, the ball may touch the glass wall and stay in play.',
+		correctOptionId: 'B',
+		explanation:
+			'If the ball touches any part of the line, it counts as in. It\'s only out once it lands completely outside all lines.',
 		relatedGuideSlugs: ['tennis-regeln']
 	},
 	{
 		id: 'anfaenger-5',
 		difficulty: 'anfaenger',
-		question: 'How many players are usually on the court in a tennis match?',
+		question: 'How many players are on court for a tennis doubles match?',
 		options: [
 			{ id: 'A', text: '2' },
 			{ id: 'B', text: '3' },
@@ -144,7 +141,7 @@ export const QUIZ_QUESTIONS_EN: QuizQuestion[] = [
 			{ id: 'D', text: '6' }
 		],
 		correctOptionId: 'C',
-		explanation: 'Tennis is mostly played as doubles, so with four players.',
+		explanation: 'In doubles, two teams of two players each face off, so four in total.',
 		relatedGuideSlugs: ['tennis-doppel']
 	},
 	{
@@ -152,40 +149,39 @@ export const QUIZ_QUESTIONS_EN: QuizQuestion[] = [
 		difficulty: 'anfaenger',
 		question: 'What is a lob?',
 		options: [
-			{ id: 'A', text: 'A short ball right behind the net' },
-			{ id: 'B', text: 'A high ball hit over the opponents' },
+			{ id: 'A', text: 'A short ball hit right behind the net' },
+			{ id: 'B', text: 'A high ball hit over an opponent' },
 			{ id: 'C', text: 'A serving fault' },
-			{ id: 'D', text: 'A shot into your own glass' }
+			{ id: 'D', text: 'A second serve attempt' }
 		],
 		correctOptionId: 'B',
-		explanation: 'A lob is a high ball meant to push the opponents back off the net.',
+		explanation: 'A lob is a high ball meant to go over a player standing at the net.',
 		relatedGuideSlugs: ['tennis-begriffe', 'tennis-technik']
 	},
 	{
 		id: 'anfaenger-7',
 		difficulty: 'anfaenger',
-		question:
-			"What happens if the ball is hit directly against the opponent's glass wall without bouncing on the ground first?",
+		question: 'What happens if the ball bounces twice before being returned?',
 		options: [
-			{ id: 'A', text: 'The ball is good' },
-			{ id: 'B', text: 'The ball is out' },
-			{ id: 'C', text: 'The point must be replayed' },
-			{ id: 'D', text: 'The opponent gets two points' }
+			{ id: 'A', text: 'The rally simply continues as normal' },
+			{ id: 'B', text: 'The point is over, and the other side gets the point' },
+			{ id: 'C', text: 'The point is always replayed' },
+			{ id: 'D', text: 'Both sides get half a point each' }
 		],
 		correctOptionId: 'B',
 		explanation:
-			"The ball must first bounce in the opponent's court. If it hits the opponent's glass wall directly, it is out.",
+			'The ball may only bounce once before being hit back. On a second bounce, the point is over.',
 		relatedGuideSlugs: ['tennis-regeln']
 	},
 	{
 		id: 'anfaenger-8',
 		difficulty: 'anfaenger',
-		question: 'What is especially important for beginners?',
+		question: 'What matters most for beginners?',
 		options: [
-			{ id: 'A', text: 'Always hit as hard as possible' },
-			{ id: 'B', text: 'Play every ball as a smash' },
-			{ id: 'C', text: 'Keep the ball in play with control' },
-			{ id: 'D', text: 'Never talk to your partner' }
+			{ id: 'A', text: 'Always hitting as hard as possible' },
+			{ id: 'B', text: 'Playing every ball as an overhead smash' },
+			{ id: 'C', text: 'Keeping the ball in play under control' },
+			{ id: 'D', text: 'Never talking to your partner' }
 		],
 		correctOptionId: 'C',
 		explanation: 'Control and consistency matter more for beginners than pure power.',
@@ -194,93 +190,94 @@ export const QUIZ_QUESTIONS_EN: QuizQuestion[] = [
 	{
 		id: 'anfaenger-9',
 		difficulty: 'anfaenger',
-		question: 'What equipment do you need at a minimum?',
+		question: 'What\'s the minimum equipment you need to get started?',
 		options: [
-			{ id: 'A', text: 'A tennis racket, suitable shoes and balls' },
-			{ id: 'B', text: 'A tennis racket and football boots' },
+			{ id: 'A', text: 'A tennis racket, proper shoes, and balls' },
+			{ id: 'B', text: 'A tennis racket and soccer cleats' },
 			{ id: 'C', text: 'A squash racket and a helmet' },
-			{ id: 'D', text: 'Only gloves' }
+			{ id: 'D', text: 'Just gloves' }
 		],
 		correctOptionId: 'A',
-		explanation: 'For tennis you need a tennis racket, suitable shoes and tennis balls.',
+		explanation: 'Tennis requires a tennis racket, suitable shoes, and tennis balls.',
 		relatedGuideSlugs: ['tennis-ausruestung']
 	},
 	{
 		id: 'anfaenger-10',
 		difficulty: 'anfaenger',
-		question: 'What is a common beginner mistake?',
+		question: 'What\'s a common beginner mistake?',
 		options: [
-			{ id: 'A', text: 'Too much communication with your partner' },
-			{ id: 'B', text: 'Playing too controlled' },
-			{ id: 'C', text: 'Standing too close to the net on the return' },
-			{ id: 'D', text: 'Wanting to hit every ball too hard' }
+			{ id: 'A', text: 'Communicating too much with your partner' },
+			{ id: 'B', text: 'Playing too much under control' },
+			{ id: 'C', text: 'Returning to the center of the court after your own shot' },
+			{ id: 'D', text: 'Always trying to hit every ball as hard as possible' }
 		],
 		correctOptionId: 'D',
 		explanation:
-			'Many beginners try to hit hard too often. In tennis, placement, patience and control are usually more important.',
+			'Many beginners try to hit hard too often. In tennis, placement, patience, and control usually matter more.',
 		relatedGuideSlugs: ['tennis-fuer-anfaenger', 'tennis-taktik']
 	},
 
 	// ------------------------------------------------------------
-	// ADVANCED
+	// INTERMEDIATE
 	// ------------------------------------------------------------
 	{
 		id: 'fortgeschritten-1',
 		difficulty: 'fortgeschritten',
-		question: 'Why is the lob tactically so important in tennis?',
+		question: 'Why is the lob tactically important in tennis?',
 		options: [
 			{ id: 'A', text: 'It automatically ends the point' },
-			{ id: 'B', text: 'It helps push the opponents off the net' },
+			{ id: 'B', text: 'It helps push a player standing at the net back' },
 			{ id: 'C', text: 'It counts double' },
-			{ id: 'D', text: 'Only professionals are allowed to play it' }
+			{ id: 'D', text: 'It may only be played by professionals' }
 		],
 		correctOptionId: 'B',
 		explanation:
-			'A good lob can push the opponents back off the net and let you take up a better position yourself.',
+			'A good lob can push opponents back from the net and let you take a better position yourself.',
 		relatedGuideSlugs: ['tennis-taktik']
 	},
 	{
 		id: 'fortgeschritten-2',
 		difficulty: 'fortgeschritten',
-		question: 'What is the main goal of a bandeja?',
+		question: 'What\'s the main purpose of a slice shot?',
 		options: [
-			{ id: 'A', text: 'Always winning the point immediately' },
-			{ id: 'B', text: 'Keeping the ball low with control and holding the net position' },
-			{ id: 'C', text: 'Deliberately hitting the ball out' },
-			{ id: 'D', text: 'Replacing the serve' }
+			{ id: 'A', text: 'To always win the point immediately' },
+			{ id: 'B', text: 'To make the ball fly flatter and bounce lower' },
+			{ id: 'C', text: 'To deliberately hit the ball out' },
+			{ id: 'D', text: 'To completely replace the serve' }
 		],
 		correctOptionId: 'B',
 		explanation:
-			'The bandeja is a controlled overhead shot used to apply pressure while keeping the net position at the same time.',
+			'Slice is hit with backspin: the ball flies flatter and bounces lower after landing.',
 		relatedGuideSlugs: ['tennis-technik']
 	},
 	{
 		id: 'fortgeschritten-3',
 		difficulty: 'fortgeschritten',
-		question: 'When is a volley especially useful?',
+		question: 'When is a volley particularly useful?',
 		options: [
-			{ id: 'A', text: 'When you are at the net and can take the ball early' },
-			{ id: 'B', text: 'When the ball is behind your own baseline' },
-			{ id: 'C', text: 'Only on the serve' },
-			{ id: 'D', text: 'Never, volleys are forbidden in tennis' }
+			{ id: 'A', text: 'When you\'re at the net and can take the ball early' },
+			{ id: 'B', text: 'When the ball is far behind your own baseline' },
+			{ id: 'C', text: 'Only immediately on your own serve' },
+			{ id: 'D', text: 'Never, volleys aren\'t allowed in tennis' }
 		],
 		correctOptionId: 'A',
-		explanation: 'Volleys are usually played at the net to take the ball early and build pressure.',
+		explanation:
+			'Volleys are usually played at the net, to take the ball early and apply pressure.',
 		relatedGuideSlugs: ['tennis-technik']
 	},
 	{
 		id: 'fortgeschritten-4',
 		difficulty: 'fortgeschritten',
-		question: 'Which position is often advantageous in tennis?',
+		question: 'Which position is often advantageous in tennis for applying pressure?',
 		options: [
-			{ id: 'A', text: 'Both players permanently far back' },
-			{ id: 'B', text: 'Both players at the net with control, when they can apply pressure' },
-			{ id: 'C', text: 'One player sits outside the court' },
-			{ id: 'D', text: 'Both players stand directly next to each other in the middle' }
+			{ id: 'A', text: 'Both players staying at the baseline permanently' },
+			{ id: 'B', text: 'A controlled position at the net' },
+			{ id: 'C', text: 'Standing outside the court boundary' },
+			{ id: 'D', text: 'Standing directly on the service line' }
 		],
 		correctOptionId: 'B',
 		explanation:
-			'The net is often a strong position in tennis, because you can build pressure from there.',
+			'The net is often a strong position in tennis, since it gives the opponent less reaction time.',
 		relatedGuideSlugs: ['tennis-taktik']
 	},
 	{
@@ -290,86 +287,86 @@ export const QUIZ_QUESTIONS_EN: QuizQuestion[] = [
 		options: [
 			{ id: 'A', text: 'Talking as little as possible' },
 			{ id: 'B', text: 'Only talking after the match' },
-			{ id: 'C', text: 'Clear calls like "mine", "yours", "out" or "lob"' },
+			{ id: 'C', text: 'Clear calls like "mine", "out", or "lob"' },
 			{ id: 'D', text: 'Confusing your partner during the rally' }
 		],
 		correctOptionId: 'C',
-		explanation: 'Short, clear calls help avoid misunderstandings.',
+		explanation: 'Short, clear calls help avoid misunderstandings and balls left unplayed.',
 		relatedGuideSlugs: ['tennis-doppel']
 	},
 	{
 		id: 'fortgeschritten-6',
 		difficulty: 'fortgeschritten',
-		question: 'What is a chiquita?',
+		question: 'What is a drop shot?',
 		options: [
-			{ id: 'A', text: 'A very hard smash' },
-			{ id: 'B', text: "A controlled, low ball aimed at the opponents' feet at the net" },
-			{ id: 'C', text: 'A kind of serve from above' },
-			{ id: 'D', text: 'A rally without the glass' }
+			{ id: 'A', text: 'A very hard serve' },
+			{ id: 'B', text: 'A short, softly hit ball landing just past the net' },
+			{ id: 'C', text: 'A ball deliberately hit into the net' },
+			{ id: 'D', text: 'A serve that must be replayed' }
 		],
 		correctOptionId: 'B',
 		explanation:
-			"The chiquita is a tactical ball played low at the opponents' feet to make their volley harder.",
-		relatedGuideSlugs: ['tennis-begriffe']
+			'A drop shot is a short, soft ball landing just past the net, forcing a player standing far back to sprint forward.',
+		relatedGuideSlugs: ['tennis-begriffe', 'tennis-taktik']
 	},
 	{
 		id: 'fortgeschritten-7',
 		difficulty: 'fortgeschritten',
-		question: 'When should you deliberately use the glass?',
+		question: 'Why is it especially worth practicing the serve deliberately?',
 		options: [
-			{
-				id: 'A',
-				text: 'When the direct shot is difficult and the ball becomes easier to play after the wall'
-			},
-			{ id: 'B', text: 'Only on the serve' },
-			{ id: 'C', text: 'Never, touching the glass is forbidden' },
-			{ id: 'D', text: 'Only if the opponent allows it' }
+			{ id: 'A', text: 'Because it\'s the only shot you fully control yourself' },
+			{ id: 'B', text: 'Because it doesn\'t count in doubles' },
+			{ id: 'C', text: 'Because it\'s always hit underhand' },
+			{ id: 'D', text: 'Because it may never be replayed' }
 		],
 		correctOptionId: 'A',
-		explanation: 'The glass can help you gain more time and play the ball with more control.',
-		relatedGuideSlugs: ['tennis-taktik']
+		explanation:
+			'Unlike every other shot, you fully control the toss and timing on the serve — which is why it deserves deliberate practice.',
+		relatedGuideSlugs: ['tennis-technik']
 	},
 	{
 		id: 'fortgeschritten-8',
 		difficulty: 'fortgeschritten',
-		question: 'What is a tactical mistake at the net?',
+		question: 'What\'s a tactical mistake at the net in doubles?',
 		options: [
 			{ id: 'A', text: 'Taking the ball early' },
 			{ id: 'B', text: 'Putting the opponent under pressure' },
-			{ id: 'C', text: 'Leaving too big a gap between the partners' },
+			{ id: 'C', text: 'Leaving too large a gap between partners' },
 			{ id: 'D', text: 'Placing the ball with control' }
 		],
 		correctOptionId: 'C',
 		explanation:
-			'Big gaps between the partners open up easy attacking opportunities for the opponents.',
+			'Large gaps between partners give the opposing side easy attacking opportunities.',
 		relatedGuideSlugs: ['tennis-doppel']
 	},
 	{
 		id: 'fortgeschritten-9',
 		difficulty: 'fortgeschritten',
-		question: 'Why should you not smash every high ball?',
+		question: 'Why shouldn\'t you smash every high ball with full power?',
 		options: [
-			{ id: 'A', text: 'Because smashes are never allowed' },
-			{ id: 'B', text: 'Because a bad smash can give the opponent a good chance to counter' },
-			{ id: 'C', text: 'Because high balls are automatically out' },
-			{ id: 'D', text: 'Because the point would otherwise be replayed' }
+			{ id: 'A', text: 'Because overhead smashes are never allowed in tennis' },
+			{ id: 'B', text: 'Because a poor smash can give the opponent a good chance to counter' },
+			{ id: 'C', text: 'Because high balls automatically count as out' },
+			{ id: 'D', text: 'Because it always causes the point to be replayed' }
 		],
 		correctOptionId: 'B',
-		explanation: 'An unplaced or too weak a smash can easily be defended or countered.',
+		explanation:
+			'A poorly placed or too-weak smash can easily be defended or countered.',
 		relatedGuideSlugs: ['tennis-technik', 'tennis-taktik']
 	},
 	{
 		id: 'fortgeschritten-10',
 		difficulty: 'fortgeschritten',
-		question: 'What matters especially on the return?',
+		question: 'What matters most on the return?',
 		options: [
-			{ id: 'A', text: 'Hit as hard as possible immediately' },
-			{ id: 'B', text: 'Get the ball safely into play and place it as deep as possible' },
-			{ id: 'C', text: 'Hit the ball directly into your own wall' },
-			{ id: 'D', text: 'Deliberately hit the net' }
+			{ id: 'A', text: 'Hitting as hard as possible right away' },
+			{ id: 'B', text: 'Getting the ball safely into play and placing it deep' },
+			{ id: 'C', text: 'Running as close to the net as possible before the ball even arrives' },
+			{ id: 'D', text: 'Deliberately hitting into the net' }
 		],
 		correctOptionId: 'B',
-		explanation: 'A safe, deep return prevents easy attacks from the serving team.',
+		explanation:
+			'A safe, deep return prevents easy attacks from the serving side.',
 		relatedGuideSlugs: ['tennis-taktik']
 	},
 
@@ -380,30 +377,30 @@ export const QUIZ_QUESTIONS_EN: QuizQuestion[] = [
 		id: 'experte-1',
 		difficulty: 'experte',
 		question:
-			'You are at the net, the opponent plays a very good lob over your backhand side. What is often the best decision?',
+			'You\'re at the net, and your opponent hits a very good lob over your backhand side. What\'s often the best decision?',
 		options: [
-			{ id: 'A', text: 'Sprint backwards and smash blindly' },
-			{ id: 'B', text: 'Bring the ball back with control via a bandeja or a defensive shot' },
-			{ id: 'C', text: 'Deliberately let the ball pass' },
+			{ id: 'A', text: 'Sprint backward and smash blindly' },
+			{ id: 'B', text: 'Bring the ball back under control with an overhead slice or a defensive shot' },
+			{ id: 'C', text: 'Deliberately let the ball go' },
 			{ id: 'D', text: 'Ignore your partner' }
 		],
 		correctOptionId: 'B',
 		explanation:
-			'Under pressure, control matters more than risk. A defensive bandeja or a controlled retreat is often better than a forced smash.',
+			'Under pressure, control matters more than risk. A controlled overhead slice or an orderly retreat is often better than a forced smash.',
 		relatedGuideSlugs: ['tennis-taktik', 'tennis-technik']
 	},
 	{
 		id: 'experte-2',
 		difficulty: 'experte',
-		question: 'Why is changing pace important in high-level tennis?',
+		question: 'Why is changing pace important in tennis at a high level?',
 		options: [
 			{ id: 'A', text: 'So the rally becomes random' },
-			{ id: 'B', text: "To disrupt the opponents' rhythm, positioning and reaction time" },
-			{ id: 'C', text: 'Because hard balls always win' },
-			{ id: 'D', text: 'Because slow balls are forbidden' }
+			{ id: 'B', text: 'To disrupt the opponent\'s rhythm, position, and reaction time' },
+			{ id: 'C', text: 'Because hard-hit balls always win automatically' },
+			{ id: 'D', text: 'Because slow balls are against the rules' }
 		],
 		correctOptionId: 'B',
-		explanation: 'Changing pace, height and placement makes the game harder to read.',
+		explanation: 'Varying pace, height, and placement makes the game harder to read.',
 		relatedGuideSlugs: ['tennis-taktik']
 	},
 	{
@@ -411,126 +408,121 @@ export const QUIZ_QUESTIONS_EN: QuizQuestion[] = [
 		difficulty: 'experte',
 		question: 'When is a hard smash strategically risky?',
 		options: [
-			{
-				id: 'A',
-				text: 'When it is not placed and the opponent can counter it off the glass or mesh'
-			},
+			{ id: 'A', text: 'When it\'s not well placed and the opponent can hit it back' },
 			{ id: 'B', text: 'When you want to win the point' },
-			{ id: 'C', text: 'When the ball is high' },
-			{ id: 'D', text: 'Always on the first game of the set' }
+			{ id: 'C', text: 'When the ball comes in high' },
+			{ id: 'D', text: 'Always, in the first game of the set' }
 		],
 		correctOptionId: 'A',
-		explanation: 'An inaccurate smash can come back and weaken your own position.',
+		explanation: 'An imprecise smash can come back and weaken your own position.',
 		relatedGuideSlugs: ['tennis-technik']
 	},
 	{
 		id: 'experte-4',
 		difficulty: 'experte',
-		question: 'What is a useful goal for a chiquita at a high level?',
+		question: 'What\'s a useful goal of a ball hit low and flat at the feet of a player standing at the net?',
 		options: [
 			{ id: 'A', text: 'Forcing the opponent into a difficult low volley' },
-			{ id: 'B', text: 'Playing the ball as high as possible off the back wall' },
-			{ id: 'C', text: 'Giving the ball away deliberately' },
-			{ id: 'D', text: 'Replacing the serve' }
+			{ id: 'B', text: 'Hitting the ball as high as possible over the whole court' },
+			{ id: 'C', text: 'Deliberately giving away the point' },
+			{ id: 'D', text: 'Replacing your own serve' }
 		],
 		correctOptionId: 'A',
 		explanation:
-			'A good chiquita forces the opponent into a low, uncomfortable volley and can help you win the net.',
-		relatedGuideSlugs: ['tennis-begriffe', 'tennis-taktik']
+			'A deep, flat ball at the feet forces an uncomfortable low volley and can help you take over the net yourself.',
+		relatedGuideSlugs: ['tennis-taktik']
 	},
 	{
 		id: 'experte-5',
 		difficulty: 'experte',
-		question:
-			'Which decision is often sensible when your own team is putting pressure on at the net?',
+		question: 'What decision is often smart when you have your opponent under pressure at the net?',
 		options: [
-			{ id: 'A', text: 'Only rely on maximum power' },
-			{
-				id: 'B',
-				text: 'Open up angles, play at the feet, or look for gaps between the opponents'
-			},
-			{ id: 'C', text: 'Break off the rally' },
-			{ id: 'D', text: 'Always play into the middle of your own half' }
+			{ id: 'A', text: 'Relying purely on maximum power' },
+			{ id: 'B', text: 'Opening up angles, targeting the feet, or finding gaps between opponents' },
+			{ id: 'C', text: 'Deliberately breaking off the rally' },
+			{ id: 'D', text: 'Always playing to the middle of your own half' }
 		],
 		correctOptionId: 'B',
 		explanation:
-			'At the net, placement, angles and pressure on the feet are often more effective than pure power.',
+			'At the net, placement, angles, and pressure on the feet are often more effective than raw power.',
 		relatedGuideSlugs: ['tennis-taktik']
 	},
 	{
 		id: 'experte-6',
 		difficulty: 'experte',
-		question: 'Why is the middle between the opponents often a good target?',
+		question: 'Why is the middle between two doubles opponents often a good target?',
 		options: [
-			{ id: 'A', text: 'Because nobody ever stands there' },
-			{ id: 'B', text: 'Because responsibilities can become unclear and it reduces angles' },
+			{ id: 'A', text: 'Because no one ever stands there' },
+			{ id: 'B', text: 'Because responsibility can become unclear and it reduces the opponents\' angles' },
 			{ id: 'C', text: 'Because the ball counts double there' },
-			{ id: 'D', text: 'Because you are only allowed to play there' }
+			{ id: 'D', text: 'Because you\'re only allowed to hit there' }
 		],
 		correctOptionId: 'B',
 		explanation:
-			'The middle can test communication and responsibility, and it often takes angles away from the opponents.',
+			'The middle can test the opponents\' communication and responsibility, and often takes away their angle for the return.',
 		relatedGuideSlugs: ['tennis-doppel', 'tennis-taktik']
 	},
 	{
 		id: 'experte-7',
 		difficulty: 'experte',
 		question:
-			'You are defending deep and the opponents are standing very close to the net. Which option is often sensible?',
+			'You\'re defending deep in doubles, and your opponents are standing very close to the net. Which option is often smart?',
 		options: [
 			{ id: 'A', text: 'A controlled lob over both opponents' },
-			{ id: 'B', text: 'A slow ball into your own net' },
-			{ id: 'C', text: 'A smash from a defensive position' },
-			{ id: 'D', text: "A ball hit directly at the opponent's glass wall without a bounce" }
+			{ id: 'B', text: 'A slow ball straight into your own net' },
+			{ id: 'C', text: 'A smash from deep defense' },
+			{ id: 'D', text: 'A flat slice with no height straight down the middle' }
 		],
 		correctOptionId: 'A',
-		explanation: 'A good lob can win back the net and take pressure off the situation.',
+		explanation:
+			'A good lob can reclaim the net and take the pressure off the situation.',
 		relatedGuideSlugs: ['tennis-taktik']
 	},
 	{
 		id: 'experte-8',
 		difficulty: 'experte',
-		question: 'What characterizes good pair tactics?',
+		question: 'What defines good doubles tactics?',
 		options: [
-			{ id: 'A', text: 'Both players make decisions independently of each other' },
-			{ id: 'B', text: 'Shared movement, clear roles and coordinated risk-taking' },
-			{ id: 'C', text: 'Only the stronger player plays every ball' },
-			{ id: 'D', text: 'As much distance as possible between the players' }
+			{ id: 'A', text: 'Both players making decisions independently of each other' },
+			{ id: 'B', text: 'Coordinated movement, clear roles, and aligned risk choices' },
+			{ id: 'C', text: 'Only the stronger player hits every ball' },
+			{ id: 'D', text: 'Keeping as much distance as possible between players' }
 		],
 		correctOptionId: 'B',
-		explanation: 'Successful pairs move in a coordinated way and make tactical decisions together.',
+		explanation:
+			'Successful doubles teams move in coordination and make tactical decisions together.',
 		relatedGuideSlugs: ['tennis-doppel']
 	},
 	{
 		id: 'experte-9',
 		difficulty: 'experte',
-		question: 'When can a slow ball be more effective than a hard ball?',
+		question: 'When can a slow ball be more effective than a hard one?',
 		options: [
 			{
 				id: 'A',
-				text: 'When it forces the opponent into a low contact point or an awkward movement'
+				text: 'When it forces the opponent into an awkward contact point or an uncomfortable movement'
 			},
 			{ id: 'B', text: 'Never' },
-			{ id: 'C', text: 'Only while warming up' },
+			{ id: 'C', text: 'Only during warm-up before the match' },
 			{ id: 'D', text: 'Only on match point' }
 		],
 		correctOptionId: 'A',
-		explanation: 'A slow, well-placed ball can break rhythm and provoke mistakes.',
+		explanation:
+			'A slow, well-placed ball can break the opponent\'s rhythm and provoke errors.',
 		relatedGuideSlugs: ['tennis-taktik']
 	},
 	{
 		id: 'experte-10',
 		difficulty: 'experte',
-		question: 'What is a sign of tactical maturity in tennis?',
+		question: 'What\'s a sign of tactical maturity in tennis?',
 		options: [
 			{ id: 'A', text: 'Playing every ball with maximum risk' },
-			{ id: 'B', text: 'Consciously choosing between risk, control, placement and position' },
-			{ id: 'C', text: 'Never playing lobs' },
-			{ id: 'D', text: 'Only wanting to win points through power' }
+			{ id: 'B', text: 'Deliberately choosing between risk, control, placement, and position' },
+			{ id: 'C', text: 'Never playing lobs at all' },
+			{ id: 'D', text: 'Only wanting to win points through raw power' }
 		],
 		correctOptionId: 'B',
-		explanation:
-			'Good players choose between safety, pressure and risk depending on the situation.',
+		explanation: 'Good players choose between safety, pressure, and risk depending on the situation.',
 		relatedGuideSlugs: ['tennis-taktik', 'tennis-training']
 	}
 ];

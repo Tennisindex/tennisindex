@@ -58,7 +58,7 @@ describe('guides-data Integrität (DE)', () => {
 			'tennis-technik',
 			'tennis-taktik',
 			'tennis-fuer-anfaenger',
-			'tennis-vs-tennis',
+			'tennis-einzel-doppel',
 			'tennis-begriffe',
 			'tennis-training',
 			'tennis-doppel',
@@ -128,7 +128,7 @@ describe('searchGuides', () => {
 	});
 
 	it('ist case-insensitiv', () => {
-		const result = searchGuides(GUIDES, 'BANDEJA');
+		const result = searchGuides(GUIDES, 'SLICE');
 		expect(result.length).toBeGreaterThan(0);
 	});
 

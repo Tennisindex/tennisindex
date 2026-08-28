@@ -1,10 +1,10 @@
 // ============================================================
-// TennisIndex — Contenido de la guía (español)
+// TennisIndex — Contenido de la guía (Español)
 // ============================================================
-// Traducción al español de de.ts. Mismos slugs, mismos IDs de sección,
-// mismos valores de category/difficulty — solo cambia el texto.
-// Mantener la estructura sincronizada con de.ts y en.ts; guides.test.ts
-// lo comprueba automáticamente.
+// Misma estructura que de.ts (slugs, IDs de sección, category/
+// difficulty/relatedSlugs idénticos), solo cambia el texto — ver
+// guides.test.ts para las comprobaciones de paridad que este archivo
+// debe cumplir.
 
 import type { GuideArticle } from '../../guides';
 
@@ -14,78 +14,71 @@ export const GUIDES_ES: GuideArticle[] = [
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-regeln',
-		title: 'Reglas del pádel explicadas de forma sencilla: la guía completa para principiantes',
-		metaTitle: 'Reglas del pádel explicadas de forma sencilla: la guía completa para principiantes',
+		title: 'Reglas del tenis explicadas de forma sencilla: la guía completa para principiantes',
+		metaTitle: 'Reglas del tenis explicadas de forma sencilla: la guía completa para principiantes',
 		metaDescription:
-			'Las reglas más importantes del pádel explicadas con claridad: saque, puntuación, cristal, paredes, red, faltas y situaciones típicas de juego.',
+			'Las reglas más importantes del tenis explicadas de forma sencilla: saque, puntuación, fuera, dejadas y situaciones de juego habituales.',
 		excerpt:
-			'Saque, puntuación, cristal y reglas de fuera de pista — todo lo que necesitas saber antes de tu primer partido, explicado de forma sencilla.',
+			'Saque, puntuación y reglas de fuera: todo lo que necesitas saber antes de tu primer partido, explicado con claridad.',
 		category: 'regeln',
 		difficulty: 'einsteiger',
 		readingTime: 9,
 		updatedAt: '2026-08-01',
 		popular: true,
 		beginnerRecommended: true,
-		relatedSlugs: ['tennis-begriffe', 'tennis-fuer-anfaenger', 'tennis-vs-tennis', 'tennis-doppel'],
+		relatedSlugs: ['tennis-begriffe', 'tennis-fuer-anfaenger', 'tennis-einzel-doppel', 'tennis-doppel'],
 		sections: [
 			{
 				id: 'was-ist-tennis',
-				heading: '¿Qué es el pádel?',
+				heading: '¿Qué es el tenis?',
 				paragraphs: [
-					'El pádel es un deporte de raqueta que casi siempre se juega en parejas, es decir, dos contra dos. Se juega en una pista cerrada, bastante más pequeña que una pista de tenis, rodeada de paredes de cristal y rejas.',
-					'La particularidad: después de botar, la pelota puede tocar las paredes propias y sigue en juego. Esto genera puntos largos y emocionantes que también resultan divertidos para principiantes desde el principio — la fuerza por sí sola casi nunca decide el punto; la colocación y la paciencia cuentan más.',
-					'Se golpea con una pala sólida, perforada y sin cuerdas; la pelota se parece a una pelota de tenis con algo menos de presión. La red está en el centro de la pista, igual que en el tenis.'
+					'El tenis es un deporte de raqueta que se juega tanto en individuales (1 contra 1) como en dobles (2 contra 2). Se juega en una pista rectangular dividida por una red — sobre tierra batida, pista dura o hierba.',
+					'El objetivo es golpear la pelota por encima de la red para que caiga dentro del campo contrario y el rival no pueda devolverla de forma reglamentaria. A diferencia de otros deportes de raqueta, no hay paredes ni vallas que sigan en juego — la pelota está fuera en cuanto bota fuera de las líneas.',
+					'Se golpea con una raqueta encordada, y la pelota es una bola de goma rellena de aire y recubierta de fieltro. Para niños y principiantes absolutos existen además pelotas de espuma y fieltro más lentas y con menos presión (etapas roja/naranja/verde antes de la pelota amarilla "normal").'
 				]
 			},
 			{
 				id: 'spielfeld-und-grundprinzip',
-				heading: 'La pista y el principio básico',
+				heading: 'Pista y principio básico',
 				paragraphs: [
-					'Una pista de pádel es un rectángulo cerrado: normalmente paredes de cristal en las líneas de fondo, y rejas o también cristal en los laterales. La red divide la pista en dos mitades, y cada mitad tiene a su vez un cuadro de saque izquierdo y otro derecho, similar al tenis.',
-					'La pista es claramente más compacta que una de tenis. Eso significa distancias cortas, muchos contactos con la pelota y hace que el pádel sea físicamente accesible incluso para quienes empiezan de cero.',
-					'Principio básico: golpeáis la pelota por encima de la red como en el tenis hasta que bota dos veces o se comete una falta — solo que las paredes pueden participar activamente.'
+					'Una pista de tenis mide 8,23 m de ancho y 23,77 m de largo en individuales. En dobles se añade a cada lado una franja adicional de 1,37 m (el "pasillo"), que no cuenta en individuales. La red está algo más alta en los postes (1,07 m) que en el centro (0,914 m).',
+					'Cada lado de la pista tiene, justo detrás de la red, dos cuadros de saque (izquierda y derecha), y detrás de ellos el resto del campo para continuar el peloteo.',
+					'Principio básico: tras cada golpe, la pelota debe botar dentro de las líneas del lado contrario. Después puede botar exactamente una vez antes de que el otro lado la devuelva — si bota una segunda vez, el punto termina. Golpear la pelota directamente del aire antes de que bote (una volea) está permitido en cualquier momento.'
 				]
 			},
 			{
 				id: 'zaehlweise',
-				heading: 'Cómo se cuenta en pádel',
+				heading: 'Cómo se cuenta en el tenis',
 				paragraphs: [
-					'La puntuación es la conocida del tenis: 15, 30, 40 y juego. En 40 iguales se habla de deuce (iguales) — a partir de ahí un equipo debe ganar dos puntos seguidos para llevarse el juego (algunos grupos de recreo juegan en su lugar un "punto de oro", un único punto decisivo — eso es cosa de acuerdo entre jugadores, no una norma fija).',
-					'Varios juegos ganados forman un set, varios sets forman un partido — normalmente se juega al mejor de tres sets. Para ganar un set, un equipo suele necesitar seis juegos con al menos dos de ventaja; en caso de empate suele decidir un tie-break.'
+					'Dentro de un juego se cuenta 15, 30, 40 y juego. Con 40 iguales se dice deuce (o "iguales") — a partir de ahí, un lado debe ganar dos puntos seguidos para llevarse el juego (el primero de esos dos puntos se llama ventaja).',
+					'Muchos partidos de ocio y algunos de liga juegan en su lugar el "punto decisivo" (no-ad) en el deuce: quien gane el siguiente punto se lleva el juego directamente — suele acordarse de antemano.',
+					'Ganar seis juegos (con una diferencia de al menos dos) da un set. Con 6-6 suele decidir un tie-break: se cuenta 1, 2, 3, etc., y se gana con al menos 7 puntos y dos de diferencia. Un partido suele jugarse al mejor de tres sets; muchas ligas amateur juegan un tie-break de partido a 10 en lugar de un tercer set completo para ahorrar tiempo.'
 				]
 			},
 			{
 				id: 'aufschlag-regeln',
 				heading: 'Reglas del saque',
 				paragraphs: [
-					'El saque se golpea por debajo: la pelota primero debe botar en el suelo, y solo después la golpeas — a diferencia del tenis, donde el saque se hace por arriba. El punto de contacto no puede estar más alto que la cadera.',
-					'Se saca en diagonal al cuadro de saque del rival, y un pie debe permanecer detrás de la línea de saque. Después de cada juego ganado, el saque pasa al otro equipo; dentro de un mismo equipo, los compañeros suelen alternarse para sacar.',
-					'Como en el tenis, hay un segundo intento si el primer saque falla (una doble falta cuesta el punto).'
+					'El saque se golpea por arriba: lanzas la pelota hacia arriba y la golpeas antes de que toque el suelo, dirigiéndola en diagonal al cuadro de saque contrario. Debes estar detrás de la línea de fondo y no puedes tocarla ni pisarla antes del golpe (falta de pie).',
+					'Cada punto empieza alternando entre el lado derecho (con marcador par) y el lado izquierdo (con marcador impar). El saque cambia de lado tras cada juego, y en dobles ambos compañeros se turnan para sacar dentro de su equipo.',
+					'Si el primer saque no entra, hay un segundo intento. Si ese también falla, es doble falta y el punto va directamente para el otro lado. Si el saque toca la cinta de la red y aun así entra correctamente en el cuadro, es un "let" — el saque se repite y no cuenta.'
 				]
 			},
 			{
-				id: 'aus',
-				heading: '¿Cuándo la pelota está fuera?',
+				id: 'aus-und-linien',
+				heading: '¿Cuándo está la pelota fuera?',
 				paragraphs: [
-					'La pelota está fuera si toca el suelo fuera de los límites de la pista, o si toca la pared de cristal o la reja antes de haber botado en el campo contrario.',
-					'Una pelota que sale de la pista por encima del vallado perimetral sin haber botado antes correctamente dentro del campo también se considera falta. Como regla general: la pelota primero debe botar en el campo correcto — después puede rebotar en las paredes (en tu propio lado) tantas veces como quiera, mientras siga en juego.'
+					'Una línea forma parte de la pista: si la pelota toca cualquier parte de la línea, se considera buena. Solo está fuera si bota completamente fuera de todas las líneas.',
+					'Para los golpes normales, todo el ancho de la pista incluidos los pasillos solo cuenta en dobles — en individuales, los pasillos exteriores no son campo válido. Para el saque, en cambio, solo cuenta el cuadro de saque diagonal correspondiente, en ambos formatos.',
+					'Si la pelota bota dos veces antes de ser devuelta, el punto también termina, sin importar dónde ocurra ese segundo bote.'
 				]
 			},
 			{
-				id: 'glas-und-waende',
-				heading: 'Cristal, rejas y paredes explicados',
+				id: 'let-und-stoerungen',
+				heading: 'Let, toques de red e interrupciones',
 				paragraphs: [
-					'Este es el punto que más confunde a los principiantes al principio: después de que la pelota haya botado en el suelo, puede tocar tu propia pared o tu propia reja y sigue en juego — todavía puedes devolverla.',
-					'Al revés también es válido: si golpeas la pelota directamente contra la pared del rival sin que antes haya botado en su campo, es falta. Así que la pared no sustituye al bote en el suelo, sino que entra en juego solo después.',
-					'Con algo de práctica, jugar con el cristal se convierte en una de las partes más emocionantes del pádel — abre opciones de devolución que sencillamente no existen en el tenis.'
-				]
-			},
-			{
-				id: 'netzspiel-volleys',
-				heading: 'Juego de red y voleas',
-				paragraphs: [
-					'Las voleas (golpear la pelota en el aire antes de que toque el suelo) están permitidas en general y son, de hecho, un elemento táctico central en el pádel — estar en la red y tomar las pelotas pronto suele ser la posición más fuerte.',
-					'Una excepción importante: en el saque, el resto no puede jugarse de volea mientras la pelota todavía se mueva dentro del cuadro de saque — aquí las reglas exactas varían un poco según la federación, así que en caso de duda conviene consultar el reglamento de la federación correspondiente o preguntar en el club.'
+					'"Let" significa que el punto no cuenta y se repite. Ocurre típicamente cuando el saque toca la cinta de la red y aun así entra correctamente en el cuadro de saque — o cuando ocurre una interrupción externa real durante el peloteo (por ejemplo, una pelota que rueda desde una pista vecina).',
+					'En cambio, si una pelota toca la red durante el peloteo normal (no en el saque) y después cae de forma reglamentaria en el campo contrario, sigue en juego — eso no es un let, sino un golpe válido completamente normal.'
 				]
 			},
 			{
@@ -93,1168 +86,960 @@ export const GUIDES_ES: GuideArticle[] = [
 				heading: 'Errores típicos de principiantes',
 				box: {
 					kind: 'mistakes',
-					title: 'Estos errores los verás en casi cualquier partido de principiantes',
+					title: 'Estos errores se ven en casi todos los partidos de principiantes',
 					items: [
-						'Golpear la pelota lo más fuerte posible en cada ocasión en lugar de colocarla con control.',
-						'Pensar en la pared antes de que la pelota haya botado — primero debe botar en el campo.',
-						'Quedarse demasiado atrás aunque la red sea la posición más fuerte.',
-						'Intentar sacar por arriba como en el tenis en lugar de por abajo tras el bote.',
-						'No hablar con el compañero, lo que deja pelotas centrales sin jugar o hace que las persigan los dos.'
+						'Pisar la línea de fondo al sacar (falta de pie), a menudo sin darse cuenta.',
+						'Confundirse con el marcador, sobre todo en deuce y ventaja.',
+						'Intentar jugar una pelota que ya ha botado dos veces.',
+						'Golpear con toda la fuerza por nerviosismo, en lugar de jugar primero de forma segura dentro de la pista.',
+						'En dobles, no acordar quién cubre la red y quién se queda atrás, dejando pelotas por el centro sin jugar.'
 					]
 				}
 			},
 			{
 				id: 'checkliste',
-				heading: 'Lista rápida de reglas',
+				heading: 'Checklist rápida de reglas',
 				box: {
 					kind: 'checklist',
 					title: 'Antes de tu primer partido',
 					items: [
-						'Saque por debajo, tras el bote, en diagonal al cuadro del rival.',
-						'La pelota debe botar primero en la pista antes de poder tocar una pared o la reja.',
-						'Puntuación como en el tenis: 15, 30, 40, juego — deuce en 40 iguales.',
-						'Tocar la pared directamente antes del bote en el suelo es falta.',
-						'Las voleas están permitidas (salvo, en parte, en el resto justo después del saque).'
+						'Saque por arriba, desde detrás de la línea de fondo, en diagonal hacia el cuadro correcto.',
+						'La pelota solo puede botar una vez antes de ser devuelta.',
+						'Puntuación: 15, 30, 40, juego — deuce en 40 iguales, luego hace falta una diferencia de dos puntos (salvo con no-ad).',
+						'La línea forma parte de la pista — una pelota sobre la línea es buena, no fuera.',
+						'Las voleas están permitidas en cualquier momento, mientras la pelota no haya botado y no estés dentro del campo contrario.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Es difícil aprender pádel?',
+				question: '¿Es difícil aprender a jugar al tenis?',
 				answer:
-					'Las reglas básicas se entienden en pocos minutos, y los primeros peloteos suelen salir ya en la primera hora. Jugar bien con el cristal y la táctica más fina, en cambio, necesitan algo más de práctica — típico de un deporte con una barrera de entrada baja pero mucho recorrido hacia arriba.'
+					'Las reglas básicas se entienden en pocos minutos, y los primeros peloteos sencillos suelen funcionar tras unas pocas clases. La constancia, el juego de piernas y la táctica, en cambio, se desarrollan durante meses — típico de un deporte con una barrera de entrada baja, pero con mucha profundidad después.'
 			},
 			{
-				question: '¿Necesito saber jugar al tenis para jugar al pádel?',
+				question: '¿Qué pasa en el deuce?',
 				answer:
-					'No. El pádel tiene su propia técnica básica y está pensado para ser accesible. La experiencia en tenis puede ayudar con el tacto de bola y la técnica de golpeo, pero no es un requisito.'
+					'Con 40 iguales, un lado debe ganar dos puntos seguidos para llevarse el juego. El primero de esos dos puntos se llama ventaja — si se gana también el siguiente, el juego termina; si no, se vuelve a deuce. Algunos partidos de ocio juegan no-ad en su lugar: un único punto decisivo.'
 			},
 			{
-				question: '¿Cuántos sets se juegan en pádel?',
+				question: '¿Una pelota sobre la línea cuenta como fuera?',
 				answer:
-					'En torneo, normalmente al mejor de tres sets; en el juego de recreo, muchos grupos acuerdan un solo set o un límite de tiempo — es una práctica habitual entre jugadores recreativos, no una norma fija.'
+					'No, todo lo contrario: si la pelota toca la línea en cualquier punto, se considera buena. Solo está fuera cuando bota completamente fuera de todas las líneas de la pista.'
 			},
 			{
-				question: '¿Qué pasa si la pelota golpea el techo de una pista cubierta?',
+				question: '¿Cuántos sets se juegan normalmente?',
 				answer:
-					'En pistas cubiertas se aplican reglas adicionales distintas según la instalación y la federación. Lo mejor es preguntar brevemente al club o al gestor de la instalación si no está claramente indicado.'
+					'En el ámbito amateur y de liga, normalmente al mejor de tres sets, y muchas ligas juegan un tie-break de partido a 10 en lugar de un tercer set completo para ahorrar tiempo. A nivel profesional, algunos torneos (sobre todo de individual masculino en Grand Slams) también juegan al mejor de cinco.'
 			}
 		]
 	},
 	{
-		slug: 'tennis-vs-tennis',
-		title: 'Pádel vs. tenis: las diferencias clave explicadas de forma sencilla',
-		metaTitle: 'Pádel vs. tenis: las diferencias clave explicadas de forma sencilla',
+		slug: 'tennis-einzel-doppel',
+		title: 'Individuales vs. dobles en tenis: las diferencias más importantes',
+		metaTitle: 'Individuales vs. dobles en tenis: las diferencias más importantes explicadas',
 		metaDescription:
-			'Pádel y tenis comparados: pista, palas, reglas, técnica, táctica, cómo empezar y coste.',
+			'Qué diferencia realmente a individuales y dobles en tenis: pista, táctica, saque y qué formato te conviene más.',
 		excerpt:
-			'Qué tienen en común el pádel y el tenis — y en qué se diferencian en la pista, las palas, las reglas y la táctica.',
+			'Mismo deporte, dos juegos muy distintos: así se diferencian individuales y dobles en pista, táctica y ritmo.',
 		category: 'regeln',
 		difficulty: 'einsteiger',
-		readingTime: 8,
+		readingTime: 6,
 		updatedAt: '2026-08-01',
-		popular: true,
-		relatedSlugs: ['tennis-regeln', 'tennis-fuer-anfaenger', 'tennis-schlaeger', 'tennis-begriffe'],
+		relatedSlugs: ['tennis-regeln', 'tennis-doppel', 'tennis-taktik'],
 		sections: [
 			{
-				id: 'gemeinsamkeiten',
-				heading: 'Similitudes',
+				id: 'ueberblick',
+				heading: 'Dos formatos, un mismo deporte',
 				paragraphs: [
-					'Ambos deportes son juegos de raqueta con red, una puntuación similar (15, 30, 40, juego) y el objetivo de colocar la pelota de modo que el rival ya no pueda alcanzarla.',
-					'Quien ya haya jugado al tenis trae consigo un buen sentido básico del vuelo de la pelota, el timing y el juego de posición — eso ayuda notablemente al empezar en el pádel, aunque la técnica sea distinta en los detalles.'
+					'Las reglas básicas — puntuación, saque, el principio de fuera — son idénticas en individuales y dobles. Aun así, ambos formatos se juegan de forma muy distinta: en individuales cubres toda la pista tú solo, en dobles compartes pista y responsabilidad con tu pareja.',
+					'TennisIndex mantiene un rating independiente para cada formato — tu nivel en individuales no dice necesariamente nada sobre tu nivel en dobles, y viceversa. Muchos jugadores son claramente más fuertes en un formato que en el otro.'
 				]
 			},
 			{
-				id: 'spielfeld',
-				heading: 'Diferencias en la pista',
+				id: 'spielfeldgroesse',
+				heading: 'Tamaño de pista: con o sin pasillos',
 				paragraphs: [
-					'Una pista de pádel es claramente más pequeña que una de tenis y está completamente cerrada: paredes de cristal y rejas en lugar de espacio abierto. Estas paredes son parte activa del juego, no solo un límite.',
-					'El pádel se juega prácticamente siempre en parejas, mientras que el tenis se juega tanto en individuales como en dobles de forma bastante habitual.'
+					'La pista en sí tiene el mismo tamaño en ambos formatos, pero en dobles los dos pasillos exteriores (1,37 m cada uno) también cuentan como campo válido — el ancho de juego es mayor en dobles. En el saque no cambia nada: el cuadro de saque es idéntico en ambos formatos.',
+					'En individuales, el ancho de juego más reducido significa más carrera para ti solo, pero también una responsabilidad más clara — cada error y cada buen punto son inequívocamente tuyos.'
 				]
 			},
 			{
-				id: 'schlaeger-baelle',
-				heading: 'Diferencias en palas y pelotas',
+				id: 'taktik-unterschiede',
+				heading: 'Táctica: carrera de fondo vs. posición en la red',
 				paragraphs: [
-					'Las palas de pádel son más cortas, no tienen cuerdas y en su lugar tienen una superficie sólida y perforada de materiales compuestos de carbono o fibra de vidrio con núcleo de espuma. Las raquetas de tenis tienen un mango más largo y una cabeza ovalada encordada.',
-					'Las pelotas de pádel se parecen a las de tenis, pero suelen tener algo menos de presión interna para adaptarse a la pista más pequeña y a las paredes.'
+					'En individuales gira mucho en torno al juego de fondo, la resistencia y la capacidad de mover al rival por la pista — los puntos suelen construirse a lo largo de varios golpes.',
+					'En dobles, en cambio, la posición en la red decide más a menudo: un equipo que llega pronto y con confianza a la red tiene más opciones de puntos cortos y contundentes. Comunicarse con tu pareja (quién juega qué pelota, quién cubre el centro) se vuelve casi tan importante como la técnica de golpeo en sí.'
 				]
 			},
 			{
-				id: 'aufschlag-regeln-vergleich',
-				heading: 'Saque y reglas',
+				id: 'aufschlag-unterschiede',
+				heading: 'Saque y resto',
 				paragraphs: [
-					'En el tenis se saca por arriba, en el pádel por abajo tras el bote. La mayor novedad estructural del pádel es la pared: tras el bote en el suelo, la pelota puede tocar la pared en tu propio lado y sigue en juego — algo que no existe en el tenis.'
+					'En individuales sacas tú cada dos puntos y después debes defender toda la pista tú solo. En dobles, ambos compañeros se turnan para sacar dentro de un mismo juego, y quien saca suele avanzar directamente a la red tras el saque, mientras su pareja ya suele estar allí.'
 				]
 			},
 			{
-				id: 'tempo-taktik',
-				heading: 'Ritmo de juego y táctica',
+				id: 'was-passt-zu-dir',
+				heading: '¿Qué te conviene más?',
 				paragraphs: [
-					'El pádel vive mucho del juego de red: como la pista es más pequeña y las paredes permiten peloteos largos, la posición en la red suele ser más decisiva que la pura potencia del golpe. En el tenis, los duelos de fondo, la potencia de saque y los desplazamientos más largos tienen un papel mayor.',
-					'Por eso el pádel resulta más accesible para muchos principiantes: incluso con una condición física moderada se pueden jugar peloteos largos e inteligentes.'
-				]
-			},
-			{
-				id: 'einstieg-tennisspieler',
-				heading: 'Cómo empezar siendo jugador de tenis',
-				paragraphs: [
-					'Los jugadores de tenis sobre todo tienen que desaprender dos cosas: sacar por abajo y usar las paredes de forma consciente en vez de evitar cualquier pelota que vaya hacia ellas. La base de derecha y revés, en cambio, suele transferirse bien.',
-					'Un error inicial habitual entre quienes cambian de deporte: golpear con fuerza por reflejo, como están acostumbrados en el tenis — en el pádel, por culpa de las paredes, eso suele acabar regalando una pelota fácil al rival.'
-				]
-			},
-			{
-				id: 'was-ist-einfacher',
-				heading: '¿Qué es más fácil de aprender?',
-				paragraphs: [
-					'Para principiantes totales, el pádel se considera generalmente más accesible: pista más pequeña, desplazamientos más cortos, paredes que perdonan errores y un formato de dobles en el que compartes el espacio con un compañero. El tenis exige antes una técnica de golpeo más precisa solo para mantener la pelota dentro de la pista, más grande.',
-					'Eso no significa que el pádel sea "más fácil" en el sentido de menos exigente — a nivel alto, la profundidad táctica es considerable. Pero empezar suele resultar más rápido.'
+					'Si te gusta correr, los peloteos largos y jugar de forma independiente, probablemente disfrutes más de individuales. Si te gusta el juego táctico en equipo, los puntos más cortos y un juego más social, dobles suele encajar mejor — muchos jugadores simplemente practican ambos, según el día y la disponibilidad de compañeros.'
 				]
 			}
 		],
 		faq: [
 			{
-				question: '¿Puedo jugar bien al pádel desde el principio si tengo experiencia en tenis?',
+				question: '¿Es dobles más fácil que individuales?',
 				answer:
-					'Traes un buen sentido básico, pero tendrás que acostumbrarte de nuevo al saque y al juego con las paredes. Las primeras sesiones les resultan poco familiares a muchos jugadores de tenis antes de que encaje.'
+					'No necesariamente más fácil, sino exigente de otra manera: recorres menos distancia, pero necesitas reaccionar más rápido, jugar más cerca de la red y coordinarte constantemente con tu pareja.'
 			},
 			{
-				question: '¿Necesito las mismas zapatillas para pádel que para tenis?',
+				question: '¿Se puntúa igual en dobles que en individuales?',
 				answer:
-					'No necesariamente — las zapatillas de pádel están optimizadas para los cambios de dirección rápidos y cortos en la pista más pequeña. Más sobre esto en la guía de zapatillas de pádel.'
+					'Sí, puntos, juegos y sets se cuentan de forma idéntica. La única diferencia estructural es que, dentro de un equipo, el saque se alterna entre ambos compañeros.'
 			},
 			{
-				question: '¿El pádel surgió de pistas de tenis adaptadas?',
+				question: '¿Necesito una pareja fija para jugar dobles?',
 				answer:
-					'El pádel tiene una historia de origen propia y sus propias medidas de pista. Algunas instalaciones sí convierten pistas de tenis en pistas de pádel, pero es una decisión constructiva de operadores individuales, no una regla del deporte.'
+					'No — muchos clubes y la búsqueda de partidos de TennisIndex te ayudan a encontrar compañeros de dobles adecuados de forma espontánea. Un equipo consolidado tiene ventaja en la comunicación, pero las parejas nuevas también funcionan bien.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-begriffe',
-		title: 'Términos de pádel explicados: bandeja, víbora, chiquita, globo y más',
-		metaTitle: 'Términos de pádel explicados: bandeja, víbora, chiquita, globo y más',
+		title: 'Términos de tenis explicados: ace, break, slice, volea y más',
+		metaTitle: 'Términos de tenis explicados: el gran glosario para principiantes',
 		metaDescription:
-			'Los términos de pádel más importantes explicados de forma sencilla. Ideal para principiantes que quieren entender mejor las reglas, los golpes y la táctica del pádel.',
+			'Los términos de tenis más importantes explicados de forma sencilla: ace, break, slice, volea, dejada y más.',
 		excerpt:
-			'De la bandeja a la chiquita: el pequeño diccionario de pádel para todos los que quieren seguir la conversación en la pista.',
+			'Ace, break, slice, dejada — un glosario compacto de los términos de tenis más importantes para principiantes.',
 		category: 'regeln',
 		difficulty: 'einsteiger',
-		readingTime: 7,
+		readingTime: 5,
 		updatedAt: '2026-08-01',
-		beginnerRecommended: true,
-		relatedSlugs: ['tennis-technik', 'tennis-taktik', 'tennis-regeln', 'tennis-doppel'],
+		relatedSlugs: ['tennis-regeln', 'tennis-technik', 'tennis-taktik'],
 		sections: [
 			{
-				id: 'grundbegriffe',
-				heading: 'Términos básicos',
+				id: 'einleitung',
+				heading: '¿Por qué un glosario?',
 				paragraphs: [
-					'Pista: el campo de juego, rodeado de paredes de cristal y rejas.',
-					'Fuera: la pelota ha quedado inválida, el punto va para el otro lado.',
-					'Punto de oro: en deuce, un único punto decide en lugar de la regla de los dos puntos — un atajo popular en el juego de recreo, no una obligación fija de torneo en todas partes.'
+					'En tu primer entrenamiento en el club o viendo un partido, aparecen rápidamente términos como ace, break o error no forzado, que sin explicación dicen poco. Este glosario reúne los más importantes en un solo lugar para que puedas consultarlos con facilidad.'
 				]
 			},
 			{
-				id: 'schlagbegriffe',
-				heading: 'Términos de golpeo',
-				paragraphs: [
-					'Bandeja: un golpe de arriba controlado, jugado normalmente para mantener la posición de red en vez de acabar el punto de inmediato.',
-					'Víbora: una variante de la bandeja con más efecto lateral, a menudo aún más agresiva en la colocación de la pelota.',
-					'Chiquita: una pelota baja y controlada que se juega profunda, a los pies de los rivales que están en la red.',
-					'Remate (smash): el golpe fuerte de arriba, generalmente el golpe de definición por excelencia — pero solo si está bien colocado.',
-					'Globo (lob): una pelota alta por encima de los rivales para hacerlos retroceder desde la red.'
-				]
-			},
-			{
-				id: 'taktikbegriffe',
-				heading: 'Términos tácticos',
-				paragraphs: [
-					'Posición de red: normalmente el lugar tácticamente más fuerte, cerca de la red, desde el que se genera presión.',
-					'Resto (return): el golpe que devuelve el saque del rival.',
-					'Winner: un golpe que el rival ya no puede alcanzar en absoluto — el punto se gana directamente.'
-				]
-			},
-			{
-				id: 'spielfeldbegriffe',
-				heading: 'Términos de la pista',
-				paragraphs: [
-					'Línea de fondo: la línea límite trasera de la pista, justo delante de la pared de cristal.',
-					'Cuadro de saque: el campo diagonal en el que debe caer el saque.',
-					'Línea central: divide cada mitad de la pista en un cuadro de saque izquierdo y otro derecho.'
-				]
-			},
-			{
-				id: 'spanische-begriffe',
-				heading: 'Origen de los términos',
-				paragraphs: [
-					'El pádel tiene raíces españolas y sudamericanas, por eso muchos términos técnicos vienen del español y se usan internacionalmente sin traducir — también en el pádel de habla inglesa o alemana los oyes constantemente: "bandeja", "víbora" y "chiquita" son ejemplos de ello.'
-				]
-			},
-			{
-				id: 'glossar',
-				heading: 'Mini glosario de la A a la Z',
+				id: 'die-wichtigsten-begriffe',
+				heading: 'Los términos más importantes de un vistazo',
 				box: {
 					kind: 'info',
-					title: 'Los términos más importantes de un vistazo',
+					title: 'De la A a la V',
 					items: [
-						'Bandeja — golpe de arriba controlado para asegurar la red',
-						'Chiquita — pelota baja a los pies de los jugadores de red',
-						'Punto de oro — punto único decisivo en deuce',
-						'Globo (lob) — pelota alta por encima de los rivales',
-						'Resto (return) — el golpe que devuelve el saque',
-						'Remate (smash) — golpe fuerte de arriba',
-						'Víbora — variante de la bandeja con más efecto lateral',
-						'Winner — punto ganado directamente'
+						'Ace: un saque que el rival ni siquiera toca — punto directo.',
+						'Break: ganar el juego de saque del rival.',
+						'Deuce (iguales): marcador de 40 iguales dentro de un juego.',
+						'Doble falta: fallan ambos intentos de saque — punto para el otro lado.',
+						'Línea de fondo: la línea trasera de la pista, desde donde se saca.',
+						'Let: el punto se repite, normalmente porque el saque tocó la cinta de la red.',
+						'Globo (lob): una pelota alta que pasa por encima del rival, a menudo situado en la red.',
+						'Passing shot: una pelota que pasa por el lateral a un jugador situado en la red.',
+						'Resto: el primer golpe tras el saque del rival.',
+						'Slice: un golpe con efecto cortado, la pelota vuela más plana y bota más baja.',
+						'Dejada (dropshot): una pelota corta y suave que cae justo detrás de la red.',
+						'Tie-break: desempate con marcador de 6-6 en el set, contado en puntos individuales.',
+						'Topspin: un golpe con efecto liftado hacia adelante, la pelota bota más alta y rápida tras el bote.',
+						'Error no forzado: un fallo evitable cometido sin presión apreciable del rival.',
+						'Volea: golpear la pelota directamente del aire antes de que bote.'
 					]
 				}
+			},
+			{
+				id: 'begriffe-rund-ums-match',
+				heading: 'Términos relacionados con el partido',
+				paragraphs: [
+					'"Perder el saque" significa perder tu propio juego de saque — más habitual entre amateurs que entre profesionales, donde mantener el saque suele considerarse una clara ventaja. Una "remontada" describe superar una desventaja considerable.',
+					'"Error no forzado" y "error forzado" distinguen si un fallo ocurre por sí solo (por ejemplo, golpear a la red sin presión del rival) o fue provocado por un buen golpe contrario — esta distinción no influye en tu rating de TennisIndex, donde solo se valora el resultado final.'
+				]
 			}
 		],
 		faq: [
 			{
-				question: '¿Tengo que conocer todos los términos técnicos para jugar al pádel?',
+				question: '¿Cuál es la diferencia entre slice y topspin?',
 				answer:
-					'No. Para empezar bastan las reglas básicas y algunos nombres de golpes. Pero los términos ayudan a entender mejor los entrenamientos y las conversaciones tácticas en el club.'
+					'El slice se golpea con efecto cortado: la pelota vuela más plana y bota más baja y plana tras el impacto. El topspin se golpea con efecto liftado hacia adelante: la pelota vuela en un arco más alto y bota más alta y rápida hacia adelante tras el impacto.'
 			},
 			{
-				question: '¿Por qué tantos términos de pádel son en español?',
+				question: '¿Qué significa "break"?',
 				answer:
-					'El pádel tiene sus raíces en el mundo hispanohablante, por lo que muchos términos técnicos se han impuesto internacionalmente sin traducirse.'
+					'Un break ocurre cuando ganas el juego de saque de tu rival — es decir, ganas un juego aunque el otro lado estuviera sacando. Táctimente suele considerarse un punto especialmente valioso.'
 			}
 		]
 	},
-
 	// ------------------------------------------------------------
 	// EQUIPAMIENTO
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-ausruestung',
-		title: 'Equipamiento de pádel: lo que realmente necesitas para jugar',
-		metaTitle: 'Equipamiento de pádel: lo que realmente necesitas para jugar',
+		title: 'Equipamiento de tenis: lo que realmente necesitas para empezar',
+		metaTitle: 'Equipamiento de tenis para principiantes: la visión completa',
 		metaDescription:
-			'Equipamiento de pádel para principiantes y avanzados: palas, zapatillas, pelotas, ropa y accesorios útiles explicados de forma sencilla.',
-		excerpt: 'El equipo básico para empezar — y lo que puedes comprar tranquilamente más adelante.',
+			'Raquetas, pelotas, zapatillas, ropa: el equipamiento de tenis que realmente necesitas para empezar, y lo que puede esperar.',
+		excerpt:
+			'Raquetas, pelotas, zapatillas y ropa: una visión honesta de lo que realmente necesitas para empezar.',
 		category: 'ausruestung',
 		difficulty: 'einsteiger',
-		readingTime: 8,
+		readingTime: 7,
 		updatedAt: '2026-08-01',
 		popular: true,
-		beginnerRecommended: true,
-		relatedSlugs: ['tennis-schlaeger', 'tennis-schuhe', 'tennis-kosten', 'tennis-fuer-anfaenger'],
+		relatedSlugs: ['tennis-schlaeger', 'tennis-schuhe', 'tennis-kosten'],
 		sections: [
 			{
 				id: 'grundausstattung',
-				heading: 'Equipo básico',
+				heading: 'El equipamiento básico',
 				paragraphs: [
-					'Para empezar necesitas básicamente tres cosas: una pala de pádel, zapatillas adecuadas y pelotas de pádel. Muchas instalaciones prestan palas las primeras veces, así que no tienes que invertir enseguida.',
-					'Todo lo demás — ropa especial, bolsas, overgrips — es útil, pero no decisivo para tus primeros partidos.'
+					'Para tus primeras clases, en el fondo solo necesitas tres cosas: una raqueta de tenis, zapatillas de tenis adecuadas y ropa deportiva cómoda. Las pelotas suelen ponerlas el club o el entrenador en tu primer entrenamiento o clase de prueba.',
+					'Todo lo demás — pelotas propias, bolsa de raqueta, grip, toalla en el poste de la red — es práctico, pero no imprescindible al principio. Mejor comprar poco y con criterio que todo el equipamiento de golpe.'
 				]
 			},
 			{
-				id: 'tennisschlaeger',
-				heading: 'Palas de pádel',
+				id: 'schlaeger',
+				heading: 'Raquetas',
 				paragraphs: [
-					'La pala es la compra más importante. A los principiantes normalmente les va bien con una forma redonda o de lágrima, que ofrece más control y un punto dulce más grande. Más detalles sobre formas, peso y elección en la guía dedicada a palas de pádel.'
+					'Para empezar conviene una raqueta más ligera con una cabeza más grande — eso amplía el punto dulce y perdona más los golpes imprecisos que una raqueta de torneo pequeña y pesada. Muchos clubes prestan raquetas para las clases de prueba, así que no hace falta comprar una propia de inmediato.',
+					'Los detalles para elegir raqueta (tamaño de cabeza, peso, grosor de puño) están en la guía específica de raquetas.'
 				]
 			},
 			{
-				id: 'tennisschuhe',
-				heading: 'Zapatillas de pádel',
+				id: 'baelle',
+				heading: 'Pelotas',
 				paragraphs: [
-					'El pádel se juega con muchos esprints cortos y cambios de dirección rápidos. Las zapatillas específicas de pádel ofrecen el agarre y la estabilidad lateral adecuados para eso — más sobre esto en la guía de zapatillas de pádel. Para tu primera prueba, unas zapatillas estables de deporte de sala o de tenis suelen servir.'
+					'Las pelotas de tenis normales existen en dos versiones: "regular duty" para superficies blandas como la tierra batida, "extra duty" con fieltro más resistente para pista dura. Para niños y principiantes absolutos también hay pelotas más lentas y con menos presión (roja/naranja/verde) que facilitan el inicio.',
+					'Una pelota va perdiendo presión interna y rebote con el tiempo — para un entrenamiento informal, eso suele seguir siendo suficiente durante bastante tiempo.'
 				]
 			},
 			{
-				id: 'tennisbaelle',
-				heading: 'Pelotas de pádel',
+				id: 'schuhe-und-kleidung',
+				heading: 'Zapatillas y ropa',
 				paragraphs: [
-					'Las pelotas de pádel se parecen a las de tenis, pero suelen tener algo menos de presión interna. La mayoría de las instalaciones y clubes ponen pelotas a disposición o las venden allí mismo — como principiante, rara vez tienes que preocuparte de esto tú mismo.'
+					'Las zapatillas de correr normales no son adecuadas para el tenis: les falta la estabilidad lateral necesaria para los cambios rápidos de dirección, y su dibujo de suela a menudo no encaja con la superficie. Más detalles en la guía específica de zapatillas.',
+					'En la ropa, lo que más importa es la libertad de movimiento y un tejido transpirable — en pistas de tierra batida, la ropa clara también es práctica, porque el polvo rojo se nota más sobre tejidos oscuros.'
 				]
 			},
 			{
-				id: 'kleidung',
-				heading: 'Ropa',
-				paragraphs: [
-					'Con ropa de deporte normal es más que suficiente: camiseta transpirable, pantalón corto o falda que permitan libertad de movimiento, calcetines deportivos. Las colecciones específicas de pádel quedan bien, pero no son un requisito.'
-				]
-			},
-			{
-				id: 'zubehoer',
-				heading: 'Accesorios',
-				paragraphs: [
-					'Complementos útiles con el tiempo: una funda o paletero para transportar la pala, un overgrip cuando el grip original esté gastado, y un antivibrador si el impacto se te hace muy fuerte en el brazo. Todo opcional, nada de eso es importante el primer día.'
-				]
-			},
-			{
-				id: 'nicht-sofort-kaufen',
-				heading: 'Lo que los principiantes no necesitan comprar enseguida',
+				id: 'kann-warten',
+				heading: 'Puede esperar hasta saber si el tenis es tu deporte',
 				box: {
 					kind: 'tips',
-					title: 'Puede esperar hasta que sepas si el pádel será tu deporte',
+					title: 'Mejor ahorrar para más adelante',
 					items: [
-						'Una pala profesional cara — una pala de iniciación sólida o prestada basta para los primeros meses.',
-						'Una colección completa de ropa de pádel.',
-						'Pelotas propias en grandes cantidades — la mayoría de las instalaciones las ponen.',
-						'Accesorios como overgrips o antivibradores antes de jugar siquiera con regularidad.'
+						'Una segunda raqueta más cara — la primera es de sobra para los primeros meses.',
+						'Una bolsa de raqueta con varios compartimentos.',
+						'Reserva de grips y antivibradores especiales.',
+						'Pelotas de torneo en botes grandes.',
+						'Relojes específicos de tenis o wearables de seguimiento.'
 					]
 				}
 			},
 			{
-				id: 'kauf-checkliste',
-				heading: 'Lista de compra',
+				id: 'vor-dem-kauf',
+				heading: 'Antes de tu primera compra',
 				box: {
 					kind: 'checklist',
-					title: 'Antes de tu primera compra',
+					title: 'Comprobación rápida',
 					items: [
-						'Juega 1–2 veces con una pala prestada antes de invertir.',
-						'Elige la pala según el control, no según el aspecto (ver la guía de palas de pádel).',
-						'Elige zapatillas con buen sujeción lateral en vez de simples zapatillas de running.',
-						'Pregunta en la instalación si ponen pelotas.',
-						'Con ropa de deporte cómoda y que permita moverte libremente es más que suficiente.'
+						'Toma una o dos clases de prueba con raqueta prestada antes de comprar la tuya.',
+						'Deja que te midan el grosor de puño en una tienda especializada, no lo adivines.',
+						'Ten en cuenta la superficie principal de tu club (tierra vs. pista dura) al elegir zapatillas.',
+						'Elige la ropa por libertad de movimiento, no solo por estética.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Puedo jugar al pádel con raquetas de tenis?',
+				question: '¿Necesito mi propia raqueta desde el principio?',
 				answer:
-					'No, las palas de pádel son un equipo deportivo propio, sin cuerdas y con una superficie sólida y perforada. Una raqueta de tenis no sirve para esto.'
+					'No. Para tus primeras clases de prueba suele bastar con una raqueta prestada del club. Cuando quede claro que vas a seguir jugando de forma regular, merece la pena comprar la tuya con el asesoramiento adecuado.'
 			},
 			{
-				question: '¿Necesito equipamiento propio desde el principio?',
+				question: '¿Sirven las zapatillas deportivas normales para jugar al tenis?',
 				answer:
-					'No. Muchas instalaciones prestan palas, y las pelotas suelen estar incluidas. Para empezar, basta con ropa de deporte cómoda y calzado adecuado.'
-			},
-			{
-				question: '¿Con qué frecuencia hay que reponer el equipamiento?',
-				answer:
-					'Depende mucho de la frecuencia con la que juegues y del material. Las zapatillas se desgastan notablemente por los muchos cambios de dirección, mientras que las palas suelen durar bastante más para jugadores recreativos.'
+					'Para una única clase de prueba, en apuros, sí — pero no a largo plazo: las zapatillas de tenis ofrecen estabilidad lateral y un dibujo adaptado a la superficie que las zapatillas de correr normales no tienen, algo importante para prevenir lesiones.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-schlaeger',
-		title: 'Palas de pádel para principiantes: formas, peso y cómo elegir',
-		metaTitle: 'Palas de pádel para principiantes: formas, peso y cómo elegir',
+		title: 'Raquetas de tenis para principiantes: tamaño de cabeza, peso y elección',
+		metaTitle: 'Raquetas de tenis para principiantes: la guía de compra completa',
 		metaDescription:
-			'Cómo encontrar la pala de pádel adecuada: palas redondas, en forma de lágrima y de diamante, peso, balance y estilo de juego.',
+			'Tamaño de cabeza, peso, grosor de puño y encordado: cómo encontrar la raqueta de tenis adecuada como principiante.',
 		excerpt:
-			'¿Redonda, lágrima o diamante? Así eliges la forma de pala que se adapta a tu estilo de juego.',
+			'Tamaño de cabeza, peso y grosor de puño explicados de forma sencilla: cómo encontrar tu primera raqueta.',
 		category: 'ausruestung',
 		difficulty: 'einsteiger',
 		readingTime: 8,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-ausruestung', 'tennis-schuhe', 'tennis-technik', 'tennis-kosten'],
+		relatedSlugs: ['tennis-ausruestung', 'tennis-technik', 'tennis-kosten'],
 		sections: [
 			{
-				id: 'warum-wichtig',
-				heading: 'Por qué es importante elegir bien la pala',
+				id: 'kopfgroesse',
+				heading: 'Tamaño de cabeza: más grande perdona más',
 				paragraphs: [
-					'La pala influye directamente en lo fácil que te resulta tener control y en cuánta fuerza tienes que poner tú mismo en un golpe. Una pala adecuada a tu estilo de juego hace que la curva de aprendizaje inicial sea notablemente más agradable.',
-					'No existe una pala objetivamente "mejor" — solo la que se adapta a tu nivel actual y a tu estilo de juego.'
+					'El tamaño de la cabeza de la raqueta se mide en pulgadas cuadradas, normalmente entre unas 95 y 115. Una cabeza más grande ofrece un punto dulce más amplio y perdona mejor los golpes imprecisos — ideal para empezar.',
+					'Los jugadores más experimentados suelen pasar a cabezas más pequeñas porque permiten jugar con más precisión y control una vez que la técnica está asentada. Para el primer año o dos, la opción más grande y perdonadora suele ser casi siempre la mejor.'
 				]
 			},
 			{
-				id: 'formen',
-				heading: 'Formas de pala explicadas',
-				paragraphs: [
-					'Redonda: el punto dulce más grande, muy favorable para el control, generalmente la forma recomendada para empezar.',
-					'Lágrima: una forma híbrida entre control y potencia, un buen compromiso para jugadores con algo de experiencia.',
-					'Diamante: el peso está más arriba en la cabeza de la pala, más potencia, punto dulce más pequeño — más adecuada para jugadores avanzados con técnica limpia.'
-				]
-			},
-			{
-				id: 'gewicht-balance',
+				id: 'gewicht-und-balance',
 				heading: 'Peso y balance',
 				paragraphs: [
-					'Las palas más ligeras se manejan más rápido y cuidan más el brazo y el hombro; las palas más pesadas dan más potencia al golpe, pero también exigen más control y fuerza.',
-					'Para principiantes se recomienda generalmente una clase de peso ligera a media — primero el control, la potencia llega sola con el tiempo.'
+					'Las raquetas para principiantes suelen pesar entre 250 y 285 gramos sin encordar — lo suficientemente ligeras para usarlas durante toda una sesión sin fatigarse. Las raquetas más pesadas (a partir de unos 300 gramos) ofrecen más estabilidad y potencia en el impacto sólido, pero exigen más fuerza de brazo y una técnica limpia.',
+					'El balance (con más peso en la cabeza, en el mango, o equilibrado) influye en la maniobrabilidad. Las raquetas con más peso en la cabeza dan más potencia con menos swing, las de más peso en el mango dan más control y maniobrabilidad — para empezar, un balance equilibrado o ligeramente hacia el mango suele funcionar mejor.'
 				]
 			},
 			{
-				id: 'kontrolle-vs-power',
-				heading: 'Control frente a potencia',
+				id: 'griffstaerke',
+				heading: 'Grosor de puño',
 				paragraphs: [
-					'Las palas orientadas al control (normalmente redondas, con balance equilibrado) perdonan más y ayudan a mantener la pelota en juego con seguridad. Las palas orientadas a la potencia (normalmente de diamante, con más peso en la cabeza) premian la técnica precisa con más fuerza, pero también castigan más los errores.',
-					'Como regla general: quien todavía está trabajando en la técnica básica casi siempre se beneficia más del control que de potencia adicional.'
+					'El grosor de puño suele indicarse en tallas de L0 a L5 (aproximadamente entre 4 1/8 y 4 5/8 pulgadas). Un puño demasiado grueso dificulta el giro de muñeca en algunos golpes; uno demasiado fino obliga a la mano a apretar más de lo necesario — ambos favorecen la tensión con el tiempo.',
+					'En una tienda especializada pueden medirte la talla adecuada rápidamente; como regla general, debería quedar aproximadamente el ancho de un dedo entre las yemas de los dedos y la palma con la mano rodeando el puño.'
 				]
 			},
 			{
-				id: 'anfaenger-schlaeger',
-				heading: 'Palas para principiantes',
+				id: 'besaitung',
+				heading: 'Encordado y tensión',
 				paragraphs: [
-					'Una pala redonda o en forma de lágrima con peso moderado es la elección adecuada para la mayoría de los principiantes. Perdona los puntos de impacto imprecisos y facilita aprender los golpes básicos.'
+					'La mayoría de las raquetas se venden ya encordadas, normalmente con nylon sintético — sólido y económico para empezar. Las cuerdas de tripa natural o multifilamento ofrecen más sensación de juego, pero cuestan más.',
+					'La tensión de encordado influye en control y potencia: más tensa suele significar más control pero menos potencia natural; más floja, lo contrario. Para empezar, el encordado de fábrica casi siempre es un buen punto de partida — el ajuste fino llega más adelante, con más sensación de juego.'
 				]
 			},
 			{
-				id: 'fortgeschrittene-schlaeger',
-				heading: 'Palas para jugadores avanzados',
-				paragraphs: [
-					'Con la técnica ya asentada, merece la pena mirar modelos en forma de lágrima o diamante con más potencia, según si prima el control o el juego de ataque.'
-				]
-			},
-			{
-				id: 'kauffehler',
-				heading: 'Errores al comprar',
+				id: 'haeufiger-frust',
+				heading: 'Lo que más frustración genera con una raqueta nueva',
 				box: {
 					kind: 'mistakes',
-					title: 'Esto suele generar frustración con la pala nueva',
+					title: 'Errores de compra habituales',
 					items: [
-						'Comprar una pala profesional o de potencia aunque la técnica básica todavía no esté asentada.',
-						'Decidir solo por el aspecto o la marca en lugar de comprobar la forma y el peso.',
-						'Elegir una pala claramente demasiado pesada — eso sobrecarga innecesariamente el brazo y el hombro.',
-						'No probar la pala ni pedir asesoramiento antes de comprar, aunque muchas tiendas lo ofrecen.'
+						'Una "raqueta de profesional" con cabeza pequeña y mucho peso, solo porque la usa tu jugador favorito.',
+						'Adivinar el grosor de puño solo por el tamaño de la mano, sin medirlo.',
+						'Encordar demasiado tenso "porque más tenso suena mejor" — eso sobre todo resta potencia y comodidad.',
+						'La raqueta se queda meses sin usar en un rincón porque no se sintió bien desde el primer swing.'
 					]
 				}
 			},
 			{
-				id: 'checkliste',
-				heading: 'Lista de comprobación de la pala',
+				id: 'vor-dem-kauf-schlaeger',
+				heading: 'Comprobar antes de comprar',
 				box: {
 					kind: 'checklist',
-					title: 'Comprobar antes de comprar',
+					title: 'Comprobación rápida',
 					items: [
-						'Forma: redonda o en forma de lágrima para empezar.',
-						'Peso: más bien ligero a medio, sobre todo si hay problemas de brazo u hombro.',
-						'Balance: equilibrado en lugar de con peso en la cabeza, si el control es la prioridad.',
-						'Si es posible, probar la pala o pedirla prestada antes.',
-						'Decidir definitivamente solo después de algunas sesiones de entrenamiento.'
+						'Tamaño de cabeza desde unas 100 pulgadas cuadradas para empezar.',
+						'Peso sin encordar en el rango de 250–285 gramos.',
+						'Grosor de puño medido en tienda especializada, no adivinado.',
+						'Probar una raqueta de demostración si la tienda la ofrece, antes de comprar.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Qué forma de pala es mejor para principiantes?',
+				question: '¿Cuánto cuesta una buena raqueta para principiantes?',
 				answer:
-					'Por lo general una forma redonda: el punto dulce más grande, el máximo control, la más indulgente con los impactos imprecisos.'
+					'El rango de precios es amplio y cambia constantemente — una tienda especializada cerca de ti te dará la información más actual y fiable. Más importante que el precio para empezar es acertar con el tamaño de cabeza, el peso y el grosor de puño.'
 			},
 			{
-				question: '¿Cuánto debería pesar mi primera pala de pádel?',
+				question: '¿Sirve una raqueta usada para empezar?',
 				answer:
-					'En general, ligera a media. Las cifras exactas de peso varían según el fabricante — lo mejor es pedir asesoramiento en una tienda especializada o probar distintos modelos.'
-			},
-			{
-				question: '¿Tengo que gastar mucho dinero de entrada siendo principiante?',
-				answer:
-					'No. Hay modelos de iniciación sólidos a precios moderados, y muchos clubes prestan palas de todos modos para las primeras veces.'
+					'Sí, siempre que el tamaño de cabeza, el peso y el grosor de puño encajen. Eso sí, conviene revisar el estado del encordado — unas cuerdas muy desgastadas o quebradizas suelen poderse volver a encordar de forma económica.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-schuhe',
-		title: 'Zapatillas de pádel: en qué fijarte al comprarlas',
-		metaTitle: 'Zapatillas de pádel: en qué fijarte al comprarlas',
+		title: 'Zapatillas de tenis: en qué fijarte al comprarlas',
+		metaTitle: 'Comprar zapatillas de tenis: suela, superficie y ajuste explicados',
 		metaDescription:
-			'Zapatillas de pádel explicadas: agarre, estabilidad, amortiguación, dibujos de suela y diferencias con zapatillas de tenis o running.',
+			'Tierra batida, pista dura o all-court: los dibujos de suela y criterios que debes conocer antes de comprar zapatillas de tenis.',
 		excerpt:
-			'Por qué las zapatillas de running normales llegan rápido a su límite en la pista — y qué hacen distinto las zapatillas de pádel.',
+			'Tierra batida o pista dura — el dibujo de suela adecuado marca la mayor diferencia al elegir zapatillas de tenis.',
 		category: 'ausruestung',
 		difficulty: 'einsteiger',
-		readingTime: 7,
+		readingTime: 6,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-ausruestung', 'tennis-schlaeger', 'tennis-fuer-anfaenger', 'tennis-kosten'],
+		relatedSlugs: ['tennis-ausruestung', 'tennis-schlaeger', 'tennis-fuer-anfaenger'],
 		sections: [
 			{
 				id: 'warum-spezielle-schuhe',
-				heading: 'Por qué importan las zapatillas específicas',
+				heading: '¿Por qué zapatillas específicas de tenis?',
 				paragraphs: [
-					'El pádel exige muchos esprints cortos, paradas bruscas y cambios de dirección laterales en un espacio comparativamente pequeño. Las zapatillas de running están optimizadas para el movimiento en línea recta y suelen ofrecer poca sujeción lateral para eso.',
-					'Las zapatillas de pádel están construidas específicamente para este tipo de exigencia, con una suela adecuada al pavimento y más soporte en los laterales.'
+					'El tenis exige muchos cambios rápidos de dirección, paradas y pasos laterales — mucha más carga lateral que correr. Las zapatillas de tenis están construidas para eso, con zonas de refuerzo lateral y una suela más resistente y plana que las zapatillas de correr normales.',
+					'Jugar de forma habitual con zapatillas de correr no solo implica peor agarre, sino también un desgaste más rápido de la suela y un mayor riesgo de lesión en movimientos bruscos.'
 				]
 			},
 			{
-				id: 'grip-sohlenprofil',
-				heading: 'Agarre y dibujo de suela',
+				id: 'sohle-nach-belag',
+				heading: 'Dibujo de suela según la superficie',
 				paragraphs: [
-					'El pavimento de las pistas de pádel (normalmente moqueta con relleno de arena) requiere un dibujo de suela propio que ofrezca suficiente agarre para arrancadas y paradas rápidas sin bloquear al deslizar y girar.',
-					'Las suelas con tacos demasiado agresivos (como en algunas zapatillas de exterior o running) pueden engancharse en el pavimento, y las suelas demasiado lisas resbalan sin control — las zapatillas de pádel buscan deliberadamente el término medio.'
+					'Para tierra batida son adecuadas las zapatillas con un dibujo fino de espiga (herringbone) — ese dibujo agarra bien en la tierra suelta y aun así permite un deslizamiento controlado al frenar, algo incluso deseable en tierra batida.',
+					'Para pista dura son habituales dibujos más resistentes, normalmente algo más gruesos, que aguantan el mayor desgaste. Las zapatillas "all-court" con un dibujo mixto son un buen compromiso si juegas en superficies variadas.',
+					'Las pistas de hierba (menos habituales en el ámbito amateur) necesitan a su vez zapatillas propias, normalmente con pequeños tacos — las zapatillas normales de tierra o pista dura resbalan demasiado o dañan la superficie.'
 				]
 			},
 			{
-				id: 'stabilitaet',
-				heading: 'Estabilidad en los cambios de dirección',
+				id: 'passform-und-daempfung',
+				heading: 'Ajuste y amortiguación',
 				paragraphs: [
-					'Una estructura de soporte lateral reforzada protege de las torceduras de tobillo en los movimientos laterales rápidos que se dan constantemente en el pádel. Es una de las mayores diferencias respecto a las zapatillas de running clásicas, pensadas sobre todo para amortiguación en línea recta.'
+					'Las zapatillas de tenis deberían dejar algo más de espacio en la puntera que el calzado del día a día, porque el pie tiende a deslizarse hacia adelante en los movimientos laterales. Un buen agarre en el talón importa más que la máxima amortiguación — una amortiguación demasiado blanda puede incluso sentirse menos estable en cambios rápidos de dirección.',
+					'Quien tenga molestias de rodilla o articulaciones suele beneficiarse de algo más de amortiguación en el antepié; en caso de duda, conviene una breve consulta en una tienda especializada.'
 				]
 			},
 			{
-				id: 'daempfung',
-				heading: 'Amortiguación',
-				paragraphs: [
-					'Como hay muchas paradas cortas y bruscas y arrancadas, las zapatillas de pádel necesitan una amortiguación que descargue las articulaciones justo en este patrón de esfuerzo — no es lo mismo que la amortiguación de una zapatilla de running, pensada para pasos uniformes en línea recta.'
-				]
-			},
-			{
-				id: 'indoor-outdoor',
-				heading: 'Interior frente a exterior',
-				paragraphs: [
-					'Algunos modelos están optimizados específicamente para suelos de pista cubierta o para pistas al aire libre; otros funcionan para ambos. Si juegas sobre todo en un tipo de instalación, merece la pena mirar la indicación del fabricante sobre el uso previsto.'
-				]
-			},
-			{
-				id: 'haeufige-fehler',
-				heading: 'Errores frecuentes',
+				id: 'falsche-wahl',
+				heading: 'Elecciones de zapatillas de las que uno suele arrepentirse',
 				box: {
 					kind: 'mistakes',
-					title: 'Esta elección de calzado suele arrepentirse rápido',
+					title: 'Errores de compra habituales',
 					items: [
-						'Usar zapatillas de running normales para entrenar pádel con regularidad.',
-						'Reutilizar zapatillas de tenis sin comprobarlas — algunas funcionan bien, otras no, depende del modelo.',
-						'No fijarse en el ajuste ni en la sujeción lateral al comprar, solo en el aspecto.',
-						'Comprar zapatillas claramente demasiado ajustadas o demasiado holgadas "porque estaban de oferta".'
+						'Zapatillas de correr para el primer entrenamiento en el club, "porque ya están en el armario".',
+						'Zapatillas de pista dura sobre tierra batida — peor agarre y desgaste más rápido.',
+						'Talla demasiado ajustada, sin espacio para el deslizamiento del pie hacia adelante.',
+						'No hacer una breve prueba en tienda o pista de prueba antes de comprar.'
 					]
 				}
 			},
 			{
-				id: 'kauf-checkliste',
-				heading: 'Lista de compra',
+				id: 'vor-dem-schuhkauf',
+				heading: 'Antes de comprar zapatillas',
 				box: {
 					kind: 'checklist',
-					title: 'Antes de comprar zapatillas',
+					title: 'Comprobación rápida',
 					items: [
-						'Probar la sujeción lateral y la estabilidad, no solo la amortiguación hacia delante.',
-						'Elegir un dibujo de suela adaptado al pavimento de tu pista habitual.',
-						'Comprobar el ajuste en la instalación o en una tienda especializada si es posible.',
-						'Si juegas a menudo, vigilar el desgaste de la suela exterior.'
+						'Elegir el dibujo de suela según la superficie principal de tu club.',
+						'Prever algo más de espacio en el antepié que en el calzado diario.',
+						'Probar el agarre del talón y la estabilidad lateral, no solo la amortiguación.',
+						'Considerar un modelo all-court si juegas en superficies variadas.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Puedo usar zapatillas de tenis para pádel?',
+				question: '¿Puedo usar unas mismas zapatillas en todas las superficies?',
 				answer:
-					'En parte sí, según el modelo — muchas zapatillas de tenis ya ofrecen buena sujeción lateral. Pero para jugar con regularidad, merece la pena tener zapatillas desarrolladas específicamente para pádel.'
+					'Con un modelo all-court, en gran parte sí, con compromisos notables frente a una zapatilla pensada específicamente para una superficie. Si juegas sobre todo en una superficie, un dibujo de suela especializado suele rendir mejor.'
 			},
 			{
-				question: '¿Por qué las zapatillas de running no son adecuadas para pádel?',
+				question: '¿Con qué frecuencia debería cambiar mis zapatillas de tenis?',
 				answer:
-					'Las zapatillas de running están optimizadas para el movimiento en línea recta y suelen ofrecer poca sujeción lateral para los cambios de dirección rápidos del pádel — eso aumenta el riesgo de lesión.'
-			},
-			{
-				question: '¿Con qué rapidez se desgastan las zapatillas de pádel?',
-				answer:
-					'Depende mucho de la frecuencia de juego, el pavimento y el estilo de movimiento. Quien juega mucho e intensamente desgastará la suela exterior más rápido que un jugador ocasional.'
+					'Depende mucho de la frecuencia de juego y la superficie — la tierra batida desgasta la suela notablemente más rápido que la pista dura. En cuanto el dibujo se alise visiblemente o el agarre lateral disminuya, toca cambiarlas, independientemente de un plazo fijo.'
 			}
 		]
 	},
-
 	// ------------------------------------------------------------
 	// TÉCNICA Y TÁCTICA
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-technik',
-		title: 'Técnica de pádel: los golpes más importantes explicados de forma sencilla',
-		metaTitle: 'Técnica de pádel: los golpes más importantes explicados de forma sencilla',
+		title: 'Técnica de tenis: los golpes más importantes explicados de forma sencilla',
+		metaTitle: 'Técnica de tenis: derecha, revés, saque y volea explicados',
 		metaDescription:
-			'Los golpes de pádel más importantes de un vistazo: derecha, revés, volea, bandeja, víbora, globo y remate.',
+			'Derecha, revés, saque, volea y slice: los golpes de fondo más importantes del tenis explicados con claridad.',
 		excerpt:
-			'De la derecha a la bandeja — los golpes básicos que componen cualquier partido de pádel.',
+			'Derecha, revés, saque y volea: los golpes de fondo sobre los que se construye toda técnica posterior.',
 		category: 'technik-taktik',
 		difficulty: 'fortgeschritten',
 		readingTime: 9,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-taktik', 'tennis-begriffe', 'tennis-training', 'tennis-doppel'],
+		relatedSlugs: ['tennis-taktik', 'tennis-training', 'tennis-begriffe'],
 		sections: [
 			{
-				id: 'grundhaltung',
-				heading: 'Postura básica',
+				id: 'vorhand',
+				heading: 'Derecha (forehand)',
 				paragraphs: [
-					'Una postura básica ligeramente flexionada y móvil, con el peso sobre la parte delantera del pie, es la base de casi cualquier golpe en pádel. Desde esta posición puedes arrancar rápido en cualquier dirección sin tener que buscar primero el equilibrio de forma incómoda.',
-					'La pala se sostiene normalmente con las dos manos de forma relajada (un grip tipo continental para las voleas), para poder reaccionar igual de rápido de derecha y de revés.'
+					'La derecha suele ser el primer golpe fiable de la mayoría de jugadores y a menudo su arma más potente. Se golpea en el lado de la mano de la raqueta, normalmente con un movimiento de preparación que baja la raqueta por debajo del punto de contacto antes de impulsarla hacia adelante y arriba.',
+					'Hay dos familias de empuñadura habituales: una semi-western u western para mucho topspin, o una eastern más plana para una trayectoria más directa y plana. Para principiantes suele funcionar bien una empuñadura intermedia, dejando ambas opciones abiertas.'
 				]
 			},
 			{
-				id: 'vorhand-rueckhand',
-				heading: 'Derecha y revés',
+				id: 'rueckhand',
+				heading: 'Revés (backhand)',
 				paragraphs: [
-					'La derecha y el revés son los golpes básicos con los que se resuelven la mayoría de los peloteos. Lo importante es un movimiento de swing compacto y controlado en lugar de un armado exageradamente grande — en pádel la precisión suele contar más que la pura potencia.',
-					'El punto de impacto ideal está ligeramente por delante del cuerpo, con una postura estable y una muñeca activa para el ajuste fino de la dirección.'
+					'El revés se golpea a una o dos manos. A dos manos aporta estabilidad y potencia extra, y suele ser el punto de entrada más fácil para principiantes. A una mano permite más alcance y muchos lo consideran más elegante, pero requiere más práctica hasta que la fuerza y el control encajan.',
+					'Qué variante conviene más depende mucho de la fuerza, el alcance y la preferencia personal — ambas se juegan con éxito incluso a alto nivel.'
+				]
+			},
+			{
+				id: 'aufschlag',
+				heading: 'Saque',
+				paragraphs: [
+					'El saque es el único golpe en el que tienes control total sobre el lanzamiento de la pelota y el tiempo — por eso merece la pena practicarlo de forma deliberada. Elementos clave son un lanzamiento constante y limpio, un movimiento de preparación fluido (la "posición de trofeo") y un punto de contacto lo más alto y adelantado posible.',
+					'Para principiantes, la constancia es lo que más importa: mejor un primer saque algo más lento pero fiable que muchas dobles faltas por arriesgar demasiado.'
 				]
 			},
 			{
 				id: 'volley',
 				heading: 'Volea',
 				paragraphs: [
-					'La volea se juega en la red, antes de que la pelota toque el suelo. El movimiento es corto y compacto, más un bloqueo y una guía controlados que un swing completo.',
-					'Una buena volea mantiene la pelota baja y la coloca de forma deliberada, en lugar de devolverla "de cualquier manera".'
+					'En la volea se golpea la pelota directamente del aire, normalmente con un movimiento corto y compacto en lugar de un gran swing. La posición base en la red importa: el peso hacia adelante, la raqueta delante del cuerpo, para poder reaccionar a pelotas rápidas.',
+					'Un error habitual de principiantes es dar demasiado swing en la volea — los movimientos cortos y controlados suelen ser más precisos y fiables.'
 				]
 			},
 			{
-				id: 'lob',
-				heading: 'Globo (lob)',
+				id: 'slice-und-topspin',
+				heading: 'Slice y topspin',
 				paragraphs: [
-					'El globo es una pelota alta y profunda por encima de los rivales que están en la red. Técnicamente requiere una cara de pala abierta y un swing tranquilo y controlado de abajo hacia arriba — el objetivo es altura y profundidad, no velocidad.'
+					'El slice (efecto cortado) produce una pelota más plana y con un bote más bajo — útil para quitar velocidad o ganar tiempo para reposicionarse. El topspin (efecto liftado) produce un arco más alto y un bote más pronunciado y rápido — útil para más seguridad sobre la red manteniendo velocidad.',
+					'Ambos complementan los golpes de fondo en lugar de sustituirlos — la mayoría de jugadores avanzados alternan entre uno y otro según la situación.'
 				]
 			},
 			{
-				id: 'bandeja',
-				heading: 'Bandeja',
-				paragraphs: [
-					'La bandeja es un golpe de arriba controlado que se juega como respuesta a un globo, con el que mantienes la posición de red en vez de dejarte empujar hacia atrás. El swing está amortiguado, casi como un slice desde arriba, en lugar de un remate completo.'
-				]
-			},
-			{
-				id: 'vibora',
-				heading: 'Víbora',
-				paragraphs: [
-					'La víbora es una variante de la bandeja con un efecto lateral más marcado, que hace que la pelota rebote de forma más fuerte e incómoda después de botar. Requiere algo más de sensibilidad técnica que la bandeja clásica.'
-				]
-			},
-			{
-				id: 'smash',
-				heading: 'Remate (smash)',
-				paragraphs: [
-					'El remate es el golpe de arriba completo, a máxima velocidad, pensado generalmente como golpe de definición directo. Lo decisivo es la colocación — un remate mal colocado a menudo se puede contrarrestar sorprendentemente bien con el cristal o la reja.'
-				]
-			},
-			{
-				id: 'glas-nutzen',
-				heading: 'Aprovechar el cristal',
-				paragraphs: [
-					'Las técnicas con el cristal exigen sobre todo timing: reevaluar la pelota después del bote en el suelo y el rebote en la pared, y devolverla con control desde una postura tranquila, en lugar de precipitarse a por ella.'
-				]
-			},
-			{
-				id: 'technik-tipps',
-				heading: 'Consejos técnicos para principiantes',
+				id: 'fortschritt',
+				heading: 'Con qué progresas más rápido',
 				box: {
 					kind: 'tips',
-					title: 'Con esto progresas más rápido',
+					title: 'Consejos de entrenamiento',
 					items: [
-						'Aprende primero una derecha y un revés limpios antes de dar prioridad a la bandeja y la víbora.',
-						'Practica en la red movimientos de volea cortos y compactos, deliberadamente, en lugar de swings completos.',
-						'Incorpora el globo pronto a tu repertorio — técnicamente es más sencillo de lo que su fama sugiere.',
-						'Ten paciencia con el juego de cristal: primero evalúa bien el rebote, luego golpea.'
+						'Entrena primero la constancia por el centro de la red, y solo después la velocidad y los ángulos.',
+						'No descuides el juego de piernas — la mejor técnica de golpeo sirve de poco sin un posicionamiento a tiempo.',
+						'Practica regularmente contra una pared o máquina lanzapelotas para aumentar las repeticiones.',
+						'Graba en vídeo tus propios golpes y revísalos con un entrenador o entrenadora.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Qué golpe debería aprender primero como principiante?',
+				question: '¿Debería aprender el revés a una mano o a dos manos?',
 				answer:
-					'Una derecha y un revés sólidos desde una posición básica estable — sobre eso se construyen todos los demás golpes.'
+					'Para la mayoría de principiantes, a dos manos es el inicio más fácil y estable, porque la segunda mano aporta fuerza y control extra. A una mano merece la pena sobre todo si quieres desarrollar de forma deliberada más alcance y versatilidad con el slice.'
 			},
 			{
-				question: '¿Es difícil aprender la bandeja?',
+				question: '¿Cuánto se tarda en tener un saque sólido?',
 				answer:
-					'Necesita algo de práctica, porque el swing está más amortiguado que en el remate. Con un entrenamiento específico en la pista o en clases individuales, se puede aprender bien.'
-			},
-			{
-				question: '¿Cómo de importante es realmente el remate en el pádel?',
-				answer:
-					'Es un golpe de definición efectivo, pero menos central de lo que parece a primera vista — la colocación, el globo y el juego de red deciden más puntos a largo plazo.'
+					'Un saque razonablemente constante y fiable suele conseguirse en algunas semanas de entrenamiento regular. Más velocidad y precisión se siguen desarrollando después durante meses — el saque se considera con razón uno de los golpes técnicamente más exigentes.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-taktik',
-		title: 'Táctica de pádel: juega mejor en pareja de forma sencilla',
-		metaTitle: 'Táctica de pádel: juega mejor en pareja de forma sencilla',
+		title: 'Táctica de tenis: juega mejor en individuales',
+		metaTitle: 'Táctica de tenis en individuales: fundamentos para ganar más puntos',
 		metaDescription:
-			'Táctica de pádel para principiantes y avanzados: posicionamiento, juego de red, globo, paciencia, comunicación y cómo evitar errores.',
+			'Juego de fondo, subidas a la red y elección de golpe: cómo construir una táctica más clara en individuales de tenis.',
 		excerpt:
-			'Por qué una colocación inteligente en pádel a menudo aporta más que el golpe más duro.',
+			'Juego de fondo, subidas a la red y una elección de golpe inteligente: gana más puntos en individuales sin golpear más fuerte.',
 		category: 'technik-taktik',
 		difficulty: 'fortgeschritten',
-		readingTime: 9,
+		readingTime: 8,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-technik', 'tennis-doppel', 'tennis-training', 'tennis-begriffe'],
+		relatedSlugs: ['tennis-technik', 'tennis-doppel', 'tennis-einzel-doppel'],
 		sections: [
 			{
-				id: 'taktik-vs-power',
-				heading: 'Por qué la táctica es más importante que la pura potencia',
+				id: 'grundlinienspiel',
+				heading: 'Juego de fondo: la posición es media batalla',
 				paragraphs: [
-					'Como la pista está delimitada por paredes, vuelven muchas pelotas que en tenis ya habrían sido fuera. Por eso la pura dureza se castiga rápido: una pelota demasiado fuerte y sin colocar suele acabar como una pelota fácil para el rival.',
-					'Quien en cambio usa la colocación, los cambios de ritmo y el posicionamiento gana más puntos a largo plazo que los jugadores de pura fuerza.'
+					'Volver al centro de la pista tras cada golpe propio es uno de los fundamentos tácticos más importantes en individuales — desde ahí cubres ambos lados de forma aproximadamente equilibrada. Quedarse en el lateral en cambio deja casi abierta la otra mitad de la pista.',
+					'El golpe cruzado (por la diagonal larga) suele ser el más seguro, porque la red está más baja ahí y hay más pista disponible. El paralelo es más arriesgado, pero a menudo más sorprendente y efectivo que un intercambio previsible por cruzado.'
 				]
 			},
 			{
-				id: 'grundpositionen',
-				heading: 'Posiciones básicas en parejas',
+				id: 'netzangriff',
+				heading: 'Cuándo conviene subir a la red',
 				paragraphs: [
-					'Lo ideal es que ambos compañeros estén a la misma altura — o los dos en la red (posición de ataque) o los dos en la línea de fondo (posición de defensa). Las formaciones mixtas, con uno delante y otro muy atrás, suelen abrir huecos innecesariamente grandes.'
+					'Una pelota corta y floja del rival suele ser la mejor oportunidad para avanzar y terminar el punto con una volea o un smash, en lugar de seguir jugando desde el fondo. Estar en la red reduce considerablemente el tiempo de reacción del rival.',
+					'Subir muy pocas veces regala puntos fáciles; subir demasiado a menudo y sin buen motivo hace fácil que te pasen o te hagan un globo — el equilibrio marca la diferencia.'
 				]
 			},
 			{
-				id: 'netz-erobern',
-				heading: 'Conquistar la red',
+				id: 'schlagwahl-unter-druck',
+				heading: 'Elección de golpe bajo presión',
 				paragraphs: [
-					'La red suele ser la posición más fuerte en pádel: desde ahí se pueden tomar las pelotas pronto y generar presión. El camino hasta allí suele pasar por un buen globo o una bandeja controlada, que le da tiempo a la pareja rival a retroceder mientras tú avanzas.'
+					'En situaciones ajustadas (deuce, punto de set) conviene apostar por tu golpe más fiable en lugar de un experimento arriesgado. Muchos puntos no se pierden por golpes ganadores espectaculares del rival, sino por errores no forzados propios y evitables en momentos así.',
+					'Una regla sencilla: cuanto más ajustado el marcador, más margen de seguridad conviene dejar — mejor jugar un golpe algo menos arriesgado pero terminar el punto de forma fiable.'
 				]
 			},
 			{
-				id: 'lob-einsetzen',
-				heading: 'Usar bien el globo',
+				id: 'muster-erkennen',
+				heading: 'Reconocer los patrones del rival',
 				paragraphs: [
-					'Un globo bien calculado empuja a los rivales lejos de la red y le da a tu equipo la oportunidad de hacerse con la posición de red. Por eso es menos un golpe de apuro que una herramienta táctica activa.'
+					'Muchos jugadores tienen preferencias inconscientes — como jugar casi siempre cruzado en vez de paralelo, o elegir casi siempre el mismo golpe bajo presión. Quien reconoce esos patrones durante un partido puede ajustarse de forma deliberada, por ejemplo anticipando antes una posición o buscando el lado más débil.'
 				]
 			},
 			{
-				id: 'glas-verteidigen',
-				heading: 'Defender con el cristal',
-				paragraphs: [
-					'En defensa, el cristal ayuda a ganar tiempo: en lugar de restar de forma inmediata y precipitada una pelota difícil, puedes aprovechar el rebote en la pared para reposicionarte y responder con control.'
-				]
-			},
-			{
-				id: 'kommunikation',
-				heading: 'Comunicación con tu compañero',
-				paragraphs: [
-					'Avisos cortos y claros como "mía", "tuya", "fuera" o "globo" evitan malentendidos y pelotas que se persiguen entre los dos o que se quedan sin jugar. Los buenos equipos de dobles hablan continuamente durante el partido, no solo cuando hay problemas.'
-				]
-			},
-			{
-				id: 'taktische-fehler',
-				heading: 'Errores tácticos frecuentes',
+				id: 'punktekosten',
+				heading: 'Esto cuesta más puntos en la práctica',
 				box: {
 					kind: 'mistakes',
-					title: 'Esto es lo que más puntos cuesta en la práctica',
+					title: 'Errores tácticos habituales',
 					items: [
-						'Que ambos jugadores se queden fijos en la línea de fondo aunque la red esté libre.',
-						'Dejar demasiado hueco entre los compañeros.',
-						'Querer rematar cada pelota alta en lugar de elegir control y colocación.',
-						'No comunicarse, con lo que las pelotas se quedan sin jugar en el centro.',
-						'No reorganizar la posición después de ganar un punto.'
+						'Quedarse quieto tras el propio golpe en lugar de volver al centro.',
+						'Buscar la máxima velocidad en cada bola en lugar de priorizar colocación y constancia.',
+						'Ignorar las pelotas cortas del rival en lugar de subir sistemáticamente a la red.',
+						'Probar golpes innecesariamente arriesgados en puntos importantes en lugar de confiar en lo fiable.'
 					]
 				}
 			},
 			{
-				id: 'match-checkliste',
-				heading: 'Lista de comprobación para el partido',
+				id: 'im-kopf-behalten',
+				heading: 'Ten esto en cuenta antes y durante el partido',
 				box: {
 					kind: 'checklist',
-					title: 'Tener en cuenta antes y durante el partido',
+					title: 'Comprobación rápida',
 					items: [
-						'Estar juntos en la red o juntos atrás, no mezclados.',
-						'Usar el globo de forma activa para reconquistar la red.',
-						'Intercambiar avisos cortos con el compañero continuamente.',
-						'No golpear cada pelota lo más fuerte posible — colocación antes que dureza.',
-						'Reposicionarse brevemente después de cada punto.'
+						'Volver al centro de la pista tras cada golpe.',
+						'Usar sistemáticamente las pelotas cortas como señal para subir a la red.',
+						'Confiar en tu golpe más fiable en los puntos ajustados.',
+						'Observar los patrones del rival durante el partido y aprovecharlos.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Cuál es la regla táctica más importante en el pádel de pareja?',
+				question: '¿Deberían los principiantes trabajar ya la táctica?',
 				answer:
-					'Actuar juntos a la misma altura — o los dos en la red o los dos atrás. Las formaciones mixtas suelen ser el mayor punto débil.'
+					'Sí, de forma sencilla — sobre todo volver al centro de la pista tras cada golpe se puede practicar desde el principio y aporta de inmediato notablemente más puntos ganados, sin necesitar aún mejor técnica de golpeo.'
 			},
 			{
-				question: '¿Con qué frecuencia debería hablar con mi compañero?',
+				question: '¿Es mejor opción el cruzado o el paralelo?',
 				answer:
-					'De forma continua, no solo cuando hay problemas. Los avisos cortos antes y durante cada peloteo evitan la mayoría de los malentendidos.'
-			},
-			{
-				question: '¿Merece la pena arriesgar o es mejor jugar siempre seguro?',
-				answer:
-					'Ambas cosas tienen su lugar — elegir según la situación entre seguridad y riesgo controlado es precisamente lo que define la madurez táctica.'
+					'El cruzado suele ser la opción base más segura, porque la red está más baja ahí y hay más pista disponible. El paralelo merece la pena de forma deliberada como factor sorpresa, o cuando el rival está muy preparado para golpes cruzados.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-doppel',
-		title: 'Pádel en pareja: posicionamiento, comunicación y juego en equipo',
-		metaTitle: 'Pádel en pareja: posicionamiento, comunicación y juego en equipo',
+		title: 'Dobles de tenis: posicionamiento, comunicación y juego en equipo',
+		metaTitle: 'Dobles de tenis: posicionamiento, comunicación y formaciones explicadas',
 		metaDescription:
-			'El pádel se juega en parejas. Aprende posicionamiento, comunicación, coordinación, reparto de roles y errores típicos en equipo.',
+			'Posición en la red, comunicación y formaciones de saque: cómo jugar de forma más inteligente como equipo de dobles.',
 		excerpt:
-			'Por qué una pareja de pádel compenetrada es más que dos buenos jugadores individuales.',
+			'Posición en la red, acuerdos claros y la formación adecuada: así se convierten dos jugadores en un verdadero equipo.',
 		category: 'technik-taktik',
 		difficulty: 'fortgeschritten',
 		readingTime: 8,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-taktik', 'tennis-regeln', 'tennis-technik', 'tennis-training'],
+		relatedSlugs: ['tennis-taktik', 'tennis-einzel-doppel', 'tennis-technik'],
 		sections: [
 			{
-				id: 'warum-doppel-wichtig',
-				heading: 'Por qué el juego en pareja es tan importante en el pádel',
+				id: 'grundformation',
+				heading: 'Formación base: uno en la red, otro atrás',
 				paragraphs: [
-					'El pádel se juega prácticamente solo en parejas — la pista, las reglas y la táctica están completamente pensadas para que dos personas defiendan y ataquen juntas una mitad. Una pareja compenetrada gana casi siempre a dos jugadores individuales fuertes pero sin coordinación.'
+					'La formación clásica de dobles en el propio saque: quien saca se queda atrás, mientras su pareja ya está en la red. Tras un buen primer saque, quien saca también avanza rápidamente hacia la red, para que ambos lleguen cuanto antes a la posición fuerte de red.',
+					'En el resto suele ser al revés: quien resta se queda atrás en la línea de fondo, mientras su pareja también se mantiene algo más cauta al principio, hasta que aparece una buena oportunidad para avanzar.'
 				]
 			},
 			{
-				id: 'grundposition',
-				heading: 'Posición básica',
+				id: 'kommunikation',
+				heading: 'Comunicación: pequeña, pero decisiva',
 				paragraphs: [
-					'La formación base: ambos compañeros aproximadamente a la misma altura, cada uno responsable de su mitad de la pista pero atento a las pelotas del centro. Este orden básico debe recuperarse rápido después de cada peloteo.'
+					'Avisos cortos y claros como "mía" o "tuya" para las pelotas por el centro evitan el fallo de dobles más habitual: que ambos se queden quietos porque cada uno pensaba que su pareja se hacía cargo.',
+					'También conviene un acuerdo breve antes del saque, por ejemplo si quien está en la red debe intentar activamente el "poach" (interceptar el resto) o quedarse en su lado — los movimientos sorpresa espontáneos funcionan mejor si se avisan brevemente de antemano.'
 				]
 			},
 			{
-				id: 'wer-nimmt-welchen-ball',
-				heading: '¿Quién toma cada pelota?',
+				id: 'formationen',
+				heading: 'Formaciones más allá de la disposición estándar',
 				paragraphs: [
-					'Como regla general: quien tenga mejor ángulo y mejor control de bola para la situación, la toma — normalmente el jugador al que la pelota se acerca más por su derecha. Las pelotas exactamente en el centro son negociables y hay que avisarlas claramente, para evitar colisiones o pelotas que se queden sin jugar.'
+					'La "formación australiana" coloca a ambos miembros del equipo en el mismo lado de la pista, para cortarle a un rival con un revés cruzado fuerte ese golpe preferido. La "formación en I" coloca a quien está en la red justo detrás de quien saca, en el centro, y solo se desplaza a un lado tras el saque, dificultando prever la dirección del resto.',
+					'Estas formaciones merecen la pena sobre todo contra restos muy trabajados del rival — para empezar, la formación base clásica es más que suficiente.'
 				]
 			},
 			{
-				id: 'links-rechts',
-				heading: 'Jugador de reves e izquierda y jugador de derecha',
+				id: 'gasse-abdecken',
+				heading: 'Cubrir el pasillo',
 				paragraphs: [
-					'Muchas parejas juegan con una asignación fija de lado, a menudo según la mano dominante: los diestros suelen jugar en la mitad izquierda de la pista, para que el revés no tenga que ocuparse constantemente del centro, por donde llegan la mayoría de las pelotas — pero eso no es una regla fija, sino un criterio empírico que varía según el estilo de juego.'
+					'Un objetivo habitual del rival es un golpe hacia el pasillo exterior cuando ahí se abre un hueco. La regla básica: quien está en la red cubre también el pasillo de su lado en cuanto el rival se coloca en buena posición para un golpe paralelo — para eso hace falta seguir todo el punto constantemente, no solo la propia pelota.'
 				]
 			},
 			{
-				id: 'netz-verteidigung-gemeinsam',
-				heading: 'Jugar juntos la red y la defensa',
-				paragraphs: [
-					'Ya sea en la red o en defensa, lo decisivo es que ambos compañeros se muevan juntos, como conectados por una línea invisible. Si uno avanza o retrocede, el otro debería acompañarlo, para no abrir huecos.'
-				]
-			},
-			{
-				id: 'doppel-fehler',
-				heading: 'Errores típicos en pareja',
+				id: 'bremst-teams-aus',
+				heading: 'Esto frena a la mayoría de equipos',
 				box: {
 					kind: 'mistakes',
-					title: 'Esto frena a la mayoría de las parejas',
+					title: 'Errores habituales en dobles',
 					items: [
-						'Responsabilidad poco clara con las pelotas del centro, sin avisar.',
-						'Un compañero en la red, el otro muy atrás — una formación mixta permanente.',
-						'Caer en la frustración tras un punto perdido en lugar de reorganizarse.',
-						'No adaptarse al nivel del compañero, sino buscar riesgo de forma aislada.'
+						'Dejar pelotas por el centro sin jugar porque no está claro quién es responsable.',
+						'Quedarse demasiado pasivo en la red en lugar de interceptar activamente las pelotas.',
+						'Retroceder de inmediato tras el propio resto en lugar de aprovechar la ocasión para avanzar.',
+						'No acordar nada brevemente antes del saque, con lo que los momentos sorpresa se desperdician.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Existe el pádel también en individuales?',
+				question: '¿Quién debería estar en la red?',
 				answer:
-					'El pádel se juega mayoritariamente en parejas. Existen variantes individuales de forma puntual, pero son la excepción, no el estándar del deporte.'
+					'En general, quien no esté restando ni sacando en ese momento — la posición de red suele ser la más fuerte en dobles, porque obliga al rival a tiempos de reacción más cortos y permite más puntos ganados de forma directa.'
 			},
 			{
-				question: '¿Cómo encuentro el lado adecuado para mí?',
+				question: '¿Qué es "poachear"?',
 				answer:
-					'Lo mejor es probar ambos lados en el entrenamiento. Muchos jugadores prefieren el lado en el que su mano dominante no tiene que encargarse constantemente de las pelotas que vienen del centro.'
-			},
-			{
-				question: '¿Qué hago si mi compañero es mucho más débil o más fuerte?',
-				answer:
-					'La comunicación es lo que más ayuda: acordar claramente quién toma cada pelota, y adaptar tu propio riesgo al nivel conjunto en lugar de actuar de forma aislada.'
+					'Poachear significa interceptar activamente, como jugador de red, una pelota que en realidad iba dirigida a tu pareja — normalmente en el resto, para sorprender al rival. Funciona mejor con un aviso breve de antemano.'
 			}
 		]
 	},
-
 	// ------------------------------------------------------------
-	// INICIACIÓN Y ENTRENAMIENTO
+	// PRIMEROS PASOS
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-fuer-anfaenger',
-		title: 'Pádel para principiantes: todo lo que debes saber antes de tu primer partido',
-		metaTitle: 'Pádel para principiantes: todo lo que debes saber antes de tu primer partido',
+		title: 'Tenis para principiantes: todo lo que necesitas saber antes de tu primer partido',
+		metaTitle: 'Tenis para principiantes: la guía completa de inicio',
 		metaDescription:
-			'Pádel para principiantes: reglas, equipamiento, primeros golpes, errores típicos y consejos para tu primer partido.',
+			'Encontrar club, primera clase, equipamiento: la guía completa de inicio para tu primer partido de tenis.',
 		excerpt:
-			'Tu punto de partida: todo lo importante para tu primer día de pádel, resumido de forma compacta.',
+			'Encontrar club, tomar tu primera clase, conseguir equipamiento: un camino sencillo hacia el tenis.',
 		category: 'einstieg',
 		difficulty: 'einsteiger',
-		readingTime: 9,
+		readingTime: 8,
 		updatedAt: '2026-08-01',
 		popular: true,
 		beginnerRecommended: true,
-		relatedSlugs: ['tennis-regeln', 'tennis-ausruestung', 'tennis-vs-tennis', 'tennis-training'],
+		relatedSlugs: ['tennis-regeln', 'tennis-ausruestung', 'tennis-einzel-doppel', 'tennis-training'],
 		sections: [
 			{
-				id: 'warum-einsteigerfreundlich',
-				heading: 'Por qué el pádel es amigable para principiantes',
+				id: 'verein-oder-platz-finden',
+				heading: 'Encontrar club o pista',
 				paragraphs: [
-					'El pádel se juega en una pista más pequeña que el tenis, las paredes dan a los errores una segunda oportunidad, y jugar en pareja significa que compartes el espacio con un compañero. Por eso, incluso los principiantes totales suelen conseguir peloteos reales al poco tiempo.'
+					'La forma más sencilla de empezar suele ser una oferta de prueba en un club cercano — muchos ofrecen clases de prueba gratuitas o económicas. Alternativamente, en muchas ciudades también se pueden reservar pistas públicas o comerciales por horas, sin ninguna vinculación a un club.',
+					'En TennisIndex, /vereine y /karte muestran de un vistazo los clubes y pistas cerca de ti.'
 				]
 			},
 			{
-				id: 'was-du-brauchst',
-				heading: 'Lo que necesitas',
+				id: 'erste-trainerstunde',
+				heading: 'La primera clase con entrenador',
 				paragraphs: [
-					'Para tu primer intento basta con ropa de deporte cómoda, zapatillas estables y — si la instalación no presta nada — una pala prestada o económica de iniciación. Más detalles en la guía de equipamiento de pádel.'
+					'Una primera clase guiada por un entrenador o entrenadora suele merecer más la pena que golpear sin coordinación con un amigo — los movimientos mal aprendidos luego cuestan mucho corregirlos.',
+					'En la primera clase espera sobre todo trabajo de base: agarre, movimientos sencillos de derecha y revés, primeros peloteos cortos a poca distancia — todavía no un partido completo.'
 				]
 			},
 			{
-				id: 'wichtigste-regeln',
-				heading: 'Las reglas más importantes',
+				id: 'was-mitbringen',
+				heading: 'Qué llevar',
 				paragraphs: [
-					'En resumen: saque por debajo tras el bote, puntuación como en el tenis, la pelota puede rebotar en tu propia pared tras botar en el suelo y sigue en juego. La visión completa la encuentras en la guía de reglas del pádel.'
+					'Para la primera clase basta con ropa deportiva cómoda y zapatillas deportivas firmes — la mayoría de clubes o entrenadores prestan una raqueta al principio. Una botella de agua y, con sol, protección solar no son mala idea en pista, sobre todo en verano.'
 				]
 			},
 			{
-				id: 'erste-schlaege',
-				heading: 'Primeros golpes',
-				paragraphs: [
-					'Al principio, concéntrate en una derecha y un revés estables desde una posición básica tranquila. Las voleas, el globo y la bandeja llegan solos en cuanto los golpes básicos están asentados — más sobre esto en la guía de técnica.'
-				]
-			},
-			{
-				id: 'verhalten-auf-dem-court',
-				heading: 'Comportamiento en la pista',
-				paragraphs: [
-					'Se aplican las normas de cortesía habituales, como en cualquier deporte de raqueta: devolver la pelota solo cuando el punto haya terminado claramente, no hacer avisos molestos durante el golpe del rival, y ser generoso en caso de duda con decisiones de fuera discutidas.'
-				]
-			},
-			{
-				id: 'tipps-erstes-match',
-				heading: 'Consejos para tu primer partido',
+				id: 'entspannter-court-besuch',
+				heading: 'Para que tu primera visita a la pista sea relajada',
 				box: {
 					kind: 'tips',
-					title: 'Para que tu primera visita a la pista sea relajada',
+					title: 'Consejos prácticos',
 					items: [
-						'Calienta un poco antes en lugar de empezar directamente el partido.',
-						'No intentes golpear cada pelota fuerte — al principio importa más mantenerse en el peloteo.',
-						'Acuerda brevemente con jugadores más experimentados cómo contáis y jugáis.',
-						'Pregunta directamente las dudas sobre las reglas sin problema — todo el mundo empezó alguna vez.'
+						'Llegar algo antes para familiarizarte con la pista y el entorno.',
+						'No intentar golpear fuerte de inmediato — primero encontrar el timing y el punto de contacto.',
+						'Preguntar brevemente al final de la clase en qué trabajar hasta la próxima.',
+						'Si tienes dudas sobre la etiqueta (por ejemplo, quién recoge las pelotas), simplemente pregunta con educación.'
 					]
 				}
 			},
 			{
-				id: 'anfaengerfehler',
-				heading: 'Errores de principiante',
+				id: 'anfaenger-typisch',
+				heading: 'Típico al principio, pero fácil de evitar',
 				box: {
 					kind: 'mistakes',
-					title: 'Típico al principio, pero fácil de evitar',
+					title: 'Errores habituales de principiantes',
 					items: [
-						'Concentrarse demasiado en la fuerza en lugar de en el control.',
-						'Retroceder constantemente en lugar de buscar la red.',
-						'Evitar el juego con la pared en lugar de practicarlo.',
-						'No hablar con el compañero.'
+						'Quedarse demasiado lejos de la línea de fondo por inseguridad ante las pelotas rápidas.',
+						'Agarrar la raqueta con demasiada fuerza, lo que quita swing y sensación.',
+						'Darle muchas vueltas a un punto fallado en lugar de centrarse rápido en el siguiente.',
+						'Practicar muy poco entre clases — la constancia surge sobre todo de la repetición.'
 					]
 				}
 			},
 			{
-				id: 'start-checkliste',
-				heading: 'Lista de comprobación para empezar',
+				id: 'bevor-es-losgeht',
+				heading: 'Antes de empezar',
 				box: {
 					kind: 'checklist',
-					title: 'Antes de empezar',
+					title: 'Comprobación rápida',
 					items: [
-						'Ropa de deporte cómoda y zapatillas estables.',
-						'Pala prestada o conseguida como modelo de iniciación.',
-						'Reglas básicas de saque, puntuación y cristal interiorizadas.',
-						'Calentar de forma relajada antes del primer punto.',
-						'Empezar con los oídos abiertos a los consejos de jugadores más experimentados.'
+						'Buscar una clase de prueba en un club cercano.',
+						'Llevar ropa deportiva cómoda y zapatillas deportivas firmes.',
+						'No olvidar la botella de agua y la protección solar.',
+						'Mantener expectativas modestas — los primeros golpes rara vez entran "como en la tele".'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Con qué rapidez aprendo pádel como principiante absoluto?',
+				question: '¿A partir de qué edad se puede empezar a jugar al tenis?',
 				answer:
-					'Las reglas básicas y los primeros peloteos suelen salir ya en la primera hora. Después, un nivel de juego seguro se desarrolla a lo largo de varias sesiones de entrenamiento y partidos.'
+					'Se puede empezar a jugar al tenis prácticamente a cualquier edad. Para niños existen pelotas más lentas y pistas más pequeñas para un inicio más fácil, y para adultos de cualquier edad, cursos de iniciación normales en la mayoría de clubes.'
 			},
 			{
-				question: '¿Necesito experiencia previa en otros deportes?',
+				question: '¿Necesito estar en forma para empezar?',
 				answer:
-					'No, no es un requisito — la forma física general y el tacto de bola ayudan, pero no son imprescindibles.'
+					'No — los fundamentos se pueden aprender independientemente del nivel de forma física, y la condición se desarrolla por sí sola con el juego regular. Un buen calentamiento antes de cada sesión ayuda a evitar lesiones desde el principio.'
 			},
 			{
-				question: '¿Dónde encuentro compañeros de juego para empezar?',
+				question: '¿Con qué rapidez encontraré compañeros de mi nivel?',
 				answer:
-					'Muchos clubes ofrecen sesiones de prueba o horarios de entrenamiento abiertos. Las ofertas para encontrar jugadores dentro de la propia comunidad también pueden ayudar a encontrar compañeros adecuados.'
+					'A través de un club, normalmente bastante rápido, ya que ahí suelen entrenar juntos muchos principiantes. TennisIndex también ayuda, mediante la clasificación del club y la búsqueda de partidos, a encontrar rivales adecuados para tu nivel actual.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-training',
-		title: 'Entrenamiento de pádel: ejercicios para técnica, táctica y mejores partidos',
-		metaTitle: 'Entrenamiento de pádel: ejercicios para técnica, táctica y mejores partidos',
+		title: 'Entrenamiento de tenis: ejercicios de técnica, táctica y mejores partidos',
+		metaTitle: 'Entrenamiento de tenis: ejercicios de técnica, forma física y táctica',
 		metaDescription:
-			'Entrenamiento de pádel para principiantes y avanzados: ejercicios de volea, globo, bandeja, cristal, posicionamiento y práctica de partido.',
+			'Desde el entrenamiento contra pared hasta la simulación de partidos: ejercicios que mejoran técnica, forma física y táctica.',
 		excerpt:
-			'Cómo estructurar tu entrenamiento con sentido — desde ejercicios técnicos hasta tu propio plan de 4 semanas.',
+			'Desde el entrenamiento contra pared hasta la simulación de partidos: estos ejercicios te hacen avanzar, sea cual sea tu nivel.',
 		category: 'einstieg',
 		difficulty: 'fortgeschritten',
-		readingTime: 9,
+		readingTime: 7,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-technik', 'tennis-taktik', 'tennis-doppel', 'tennis-fuer-anfaenger'],
+		relatedSlugs: ['tennis-technik', 'tennis-taktik', 'tennis-fuer-anfaenger'],
 		sections: [
 			{
-				id: 'trainingsaufbau',
-				heading: 'Cómo se estructura un buen entrenamiento de pádel',
+				id: 'technikuebungen',
+				heading: 'Ejercicios de técnica para golpes de fondo constantes',
 				paragraphs: [
-					'Un entrenamiento eficaz suele combinar tres bloques: ejercicios técnicos para golpes concretos, ejercicios tácticos para el posicionamiento y las decisiones, y práctica de partido real, donde ambos se combinan. Quien solo juega partidos sin trabajar de forma específica la técnica suele estancarse en un nivel determinado.'
+					'El entrenamiento contra pared es uno de los ejercicios más eficientes para principiantes: la pelota vuelve al instante, lo que permite muchas más repeticiones en poco tiempo que jugar con pareja. El objetivo al principio es la pura constancia — golpear la pelota limpiamente diez, veinte, treinta veces seguidas antes de añadir velocidad.',
+					'Una máquina lanzapelotas (si el club dispone de una) permite practicar de forma dirigida tipos de golpe concretos con velocidad y colocación constantes, sin depender de una pareja de entrenamiento.'
 				]
 			},
 			{
-				id: 'technikuebungen',
-				heading: 'Ejercicios técnicos',
+				id: 'beinarbeit',
+				heading: 'Juego de piernas y forma física',
 				paragraphs: [
-					'Repetir golpes concretos — como series de voleas en la red o repeticiones de globo desde la posición básica — mejora la consistencia y el timing, sin la presión de un punto real.'
+					'Los ejercicios de salto lateral (side shuffles), sprints cortos entre marcas y el sombra (patrones de movimiento sin pelota) mejoran la velocidad de reacción, que a menudo decide los puntos en el juego real — unas piernas más rápidas te llevan antes a la posición de golpeo.',
+					'La resistencia de base se puede trabajar además con carrera, ciclismo o natación — el tenis en sí, con sus muchos sprints cortos y pausas, es más un deporte de intervalos que uno puramente de resistencia.'
 				]
 			},
 			{
 				id: 'taktikuebungen',
-				heading: 'Ejercicios tácticos',
+				heading: 'Ejercicios de táctica con pareja',
 				paragraphs: [
-					'Ejercicios como "ambas parejas empiezan atrás, el objetivo es avanzar juntos a la red" entrenan específicamente la toma de decisiones y la coordinación, no solo la pura técnica de golpeo.'
+					'Los puntos con reglas restringidas — por ejemplo, solo se permiten golpes cruzados, o un punto solo cuenta tras al menos cinco golpes — entrenan de forma deliberada la constancia y el pensamiento táctico, en lugar de solo golpear con velocidad.',
+					'Las situaciones de partido simuladas (por ejemplo, "vas 3-5 abajo, gana este juego") ayudan a entrenar de forma deliberada la fortaleza mental bajo presión, en lugar de probarla por primera vez en una competición real.'
 				]
 			},
 			{
-				id: 'partneruebungen',
-				heading: 'Ejercicios con el compañero',
-				paragraphs: [
-					'Los ejercicios en pareja — como peloteos dirigidos con un tipo de golpe prefijado (solo globo, solo volea) — ayudan a construir automatismos con tu propio compañero, que luego se pueden usar de forma intuitiva en el partido.'
-				]
-			},
-			{
-				id: 'training-mit-trainer',
-				heading: 'Entrenamiento con entrenador',
-				paragraphs: [
-					'Un entrenador puede lanzar pelotas de forma dirigida para practicar repetidamente ciertas situaciones (defensa de remate, variantes de resto) y da feedback directo sobre la técnica — eso suele acelerar notablemente el progreso frente al juego puramente recreativo.'
-				]
-			},
-			{
-				id: 'fehleranalyse',
-				heading: 'Análisis de errores',
-				paragraphs: [
-					'Después de un partido o entrenamiento merece la pena hacer un repaso breve y honesto: ¿qué golpes fallaron con inseguridad? ¿Qué decisiones tácticas no funcionaron? Los ajustes pequeños y dirigidos aportan más a largo plazo que la pura repetición sin reflexión.'
-				]
-			},
-			{
-				id: 'vier-wochen-plan',
-				heading: 'Plan de entrenamiento de 4 semanas',
+				id: 'einstiegsrahmen',
+				heading: 'Un marco de inicio sencillo — adáptalo a tu nivel',
 				box: {
 					kind: 'info',
-					title: 'Un marco de inicio sencillo — adáptalo a tu nivel',
+					title: 'Sesión de entrenamiento de ejemplo (60–75 minutos)',
 					items: [
-						'Semana 1: afianzar los golpes básicos — derecha, revés, voleas sencillas.',
-						'Semana 2: incorporar de forma dirigida el globo y la bandeja en ejercicios de pareja.',
-						'Semana 3: practicar el posicionamiento y la conquista de la red en pareja.',
-						'Semana 4: aplicar lo aprendido en partidos reales y reflexionar después.'
+						'10 minutos de calentamiento: carrera suave, estiramientos, primeros peloteos suaves.',
+						'15 minutos de golpes de fondo: derecha y revés cruzados, con foco en la constancia.',
+						'10 minutos de práctica de saque y resto.',
+						'15 minutos de práctica de volea y juego de red.',
+						'15–20 minutos de puntos o un partido reducido para aplicarlo todo.',
+						'5 minutos de vuelta a la calma y una breve reflexión sobre qué funcionó y qué no.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Con qué frecuencia debería entrenar para mejorar?',
+				question: '¿Con qué frecuencia deberían entrenar los principiantes?',
 				answer:
-					'Depende de tus objetivos. Ya con una o dos sesiones dirigidas por semana, además de los partidos normales, se nota un progreso claro.'
+					'Con una o dos sesiones por semana es más que suficiente para un progreso notable al principio. La regularidad suele importar más que la frecuencia — mejor entrenar de forma constante una vez por semana que de forma esporádica con largos huecos entre medias.'
 			},
 			{
-				question: '¿Necesito un entrenador para mejorar?',
+				question: '¿Sirve realmente el entrenamiento contra pared?',
 				answer:
-					'No es imprescindible, pero un feedback dirigido suele acelerar notablemente el desarrollo, sobre todo en detalles técnicos como la bandeja o la víbora.'
-			},
-			{
-				question: '¿Qué me aportan los ejercicios técnicos frente a solo jugar partidos?',
-				answer:
-					'En el partido lo que importa es el resultado; en el entrenamiento puedes trabajar de forma específica debilidades concretas, sin la presión de ganar el punto.'
+					'Sí, especialmente para la constancia y el timing — las muchas repeticiones en poco tiempo ayudan a fijar el movimiento base más rápido que el juego normal, donde no todos los peloteos se desarrollan igual.'
 			}
 		]
 	},
-
 	// ------------------------------------------------------------
-	// COSTE
+	// COSTES
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-kosten',
-		title: '¿Cuánto cuesta el pádel? Precios, equipamiento y gastos continuos explicados',
-		metaTitle: '¿Cuánto cuesta el pádel? Precios, equipamiento y gastos continuos explicados',
+		title: '¿Cuánto cuesta el tenis? Equipamiento, cuota de club y costes recurrentes explicados',
+		metaTitle: '¿Cuánto cuesta el tenis? Equipamiento, cuota de club y precio de pista',
 		metaDescription:
-			'¿Cuánto cuesta el pádel? Resumen de alquiler de pista, equipamiento, clases, cuotas de socio y consejos para ahorrar.',
+			'Cuota de club, precio de pista, equipamiento y clases: los factores de coste del tenis explicados de un vistazo.',
 		excerpt:
-			'Qué partidas de coste aparecen realmente en el pádel — y dónde merece la pena ahorrar.',
+			'Cuota de club, precio de pista y equipamiento — una visión honesta de los factores de coste del tenis.',
 		category: 'kosten',
 		difficulty: 'einsteiger',
-		readingTime: 7,
+		readingTime: 6,
 		updatedAt: '2026-08-01',
-		relatedSlugs: [
-			'tennis-ausruestung',
-			'tennis-fuer-anfaenger',
-			'tennis-training',
-			'tennis-schlaeger'
-		],
+		relatedSlugs: ['tennis-ausruestung', 'tennis-schlaeger', 'tennis-fuer-anfaenger'],
 		sections: [
 			{
-				id: 'welche-kosten',
-				heading: '¿Qué costes surgen?',
+				id: 'einmalige-kosten',
+				heading: 'Costes puntuales: equipamiento',
 				paragraphs: [
-					'El coste del pádel se compone a grandes rasgos del alquiler de la pista, el equipamiento, en su caso clases, y opcionalmente una cuota de socio en un club. Cuánto suma todo en total depende mucho de la región, la instalación y la frecuencia de juego — no hay precios fijos a nivel nacional, porque la oferta varía demasiado para eso.'
+					'La mayor compra puntual es la raqueta, seguida de unas zapatillas de tenis adecuadas. Cuánto gastes depende mucho de si compras nueva en una tienda especializada, eliges un modelo para principiantes o empiezas con algo de segunda mano — los precios además cambian constantemente, así que una consulta actual en una tienda cercana es más útil que una cifra fija aquí.',
+					'La ropa y los accesorios (pelotas, quizá una bolsa) se suman a eso, pero suelen ser mucho más económicos que la raqueta y las zapatillas juntas.'
 				]
 			},
 			{
-				id: 'courtmiete',
-				heading: 'Alquiler de pista',
+				id: 'laufende-kosten',
+				heading: 'Costes recurrentes: cuota de club y precio de pista',
 				paragraphs: [
-					'La mayoría de las instalaciones alquilan pistas por horas, a menudo repartidas entre hasta cuatro jugadores. Los precios varían bastante según ubicación, hora del día y ocupación — consultar la lista de precios de la instalación en cuestión da la información más fiable.'
+					'Jugar a través de un club suele implicar una cuota anual o mensual, que varía mucho según el club, la región y las instalaciones (número de pistas, capacidad cubierta, servicios adicionales). Algunos clubes cobran además una cuota de inscripción única.',
+					'Jugar sin vinculación a un club suele implicar en cambio pagar una tarifa por hora en instalaciones públicas o comerciales — práctico para jugar de forma irregular, pero a menudo más caro a largo plazo que una cuota de club si juegas con regularidad.'
 				]
 			},
 			{
-				id: 'ausruestung-kosten',
-				heading: 'Equipamiento',
+				id: 'training-und-unterricht',
+				heading: 'Entrenamiento y clases',
 				paragraphs: [
-					'Las palas de iniciación suelen ser más baratas que los modelos para jugadores avanzados, a lo que se suman en su caso zapatillas y ropa. Quien solo quiere probar puede pedir una pala prestada en muchas instalaciones y así apenas tiene que invertir al principio — más sobre esto en la guía de equipamiento de pádel.'
+					'Las clases individuales con un entrenador o entrenadora suelen ser la forma de entrenamiento más cara, pero también la más personalizada. Las clases en grupo son más económicas por persona y añaden además el componente social de aprender juntos — a menudo la mejor opción para empezar.',
+					'El coste de las clases varía mucho según la región, la cualificación del entrenador o entrenadora y lo que ofrece el club.'
 				]
 			},
 			{
-				id: 'training-kosten',
-				heading: 'Clases',
+				id: 'laufende-kleinkosten',
+				heading: 'Pequeños costes recurrentes',
 				paragraphs: [
-					'Las clases individuales o en grupo con entrenador cuestan cantidades distintas según la instalación y el entrenador. Las clases en grupo suelen ser más baratas por persona que las clases individuales.'
+					'Las pelotas se desgastan y hay que reponerlas con regularidad, especialmente si juegas a menudo. Las cuerdas se rompen o pierden tensión — un reencordado ocasional forma parte del mantenimiento normal para quien juega con regularidad.',
+					'Si participas en partidos de liga o torneos, hay que contar además con cuotas de inscripción, según la federación y la competición.'
 				]
 			},
 			{
-				id: 'turniere',
-				heading: 'Torneos',
-				paragraphs: [
-					'Participar en torneos suele conllevar una cuota de inscripción que cubre el alquiler de pista, las pelotas y la organización. El importe varía según el organizador y el formato del torneo.'
-				]
-			},
-			{
-				id: 'mitgliedschaften',
-				heading: 'Cuotas de socio',
-				paragraphs: [
-					'Algunas instalaciones y clubes ofrecen cuotas de socio con precios de pista reducidos o horarios de juego fijos. Si merece la pena depende de con qué regularidad juegas realmente — con un juego ocasional, suele salir más barato el simple alquiler por horas.'
-				]
-			},
-			{
-				id: 'spartipps',
-				heading: 'Consejos para ahorrar',
+				id: 'bezahlbar-bleiben',
+				heading: 'Cómo mantener el tenis asequible',
 				box: {
 					kind: 'tips',
-					title: 'Así el pádel se mantiene asequible',
+					title: 'Consejos de ahorro para empezar',
 					items: [
-						'Al principio, pide una pala prestada en lugar de comprar enseguida.',
-						'Las horas valle (por la mañana, entre semana) suelen ser más baratas que los horarios de tarde y fin de semana.',
-						'Jugad entre cuatro y compartid el alquiler de la pista.',
-						'Elige clases en grupo en lugar de individuales para empezar.',
-						'Antes de contratar una cuota de socio, calcula de forma realista con qué frecuencia juegas realmente.'
+						'Probar primero con raqueta prestada y clases de prueba antes de compras mayores.',
+						'Elegir clases en grupo en lugar de individuales para empezar.',
+						'Revisar raquetas y equipamiento de segunda mano en una tienda especializada o a través del club.',
+						'Comparar la cuota de club con el precio de pista pública según tu forma real de jugar, en lugar de decidir de forma general.'
 					]
 				}
 			},
 			{
-				id: 'kosten-checkliste',
-				heading: 'Lista de comprobación de costes',
+				id: 'vor-dem-einstieg-klaeren',
+				heading: 'Aclarar antes de empezar',
 				box: {
 					kind: 'checklist',
-					title: 'Aclarar antes de empezar',
+					title: 'Comprobación rápida',
 					items: [
-						'Comprobar la lista de precios de la instalación deseada para alquiler de pista y horas valle.',
-						'Aclarar si se prestan o se proporcionan palas y pelotas.',
-						'Calcular tu propia frecuencia de juego de forma realista.',
-						'Considerar las clases en grupo como una forma económica de empezar.',
-						'Contratar una cuota de socio solo cuando se vea que vas a jugar con regularidad.'
+						'Preguntar directamente en el club deseado por la cuota y una posible cuota de inscripción.',
+						'Comprobar si se ofrece una cuota de prueba o un periodo de prueba.',
+						'Aclarar si se facilita raqueta o pelotas al principio.',
+						'Comparar precios de clases en grupo e individuales antes de decidirte.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: '¿Es el pádel más caro que el tenis?',
+				question: '¿Es el tenis un deporte caro?',
 				answer:
-					'No se puede decir de forma general — los costes dependen mucho de la región, la instalación y la frecuencia de juego personal, en ambos deportes por igual.'
+					'Los costes de inicio se pueden mantener bajos con equipamiento prestado y clases en grupo. Se encarece sobre todo con equipamiento propio de alta gama, clases individuales regulares y participación en competiciones — para jugar de forma informal, empezar sigue siendo asequible.'
 			},
 			{
-				question: '¿Merece la pena una cuota de socio para principiantes?',
+				question: '¿Merece la pena una cuota de club frente al precio de pista?',
 				answer:
-					'Al principio, normalmente no es imprescindible — primero prueba con qué frecuencia juegas de verdad, y después decide sobre una cuota de socio.'
-			},
-			{
-				question: '¿Cuál es la forma más económica de empezar con el pádel?',
-				answer:
-					'Una pala prestada, aprovechar las horas valle y jugar entre cuatro para compartir el alquiler de la pista — así los costes iniciales se mantienen manejables.'
+					'Eso depende sobre todo de con qué frecuencia juegues. Con juego regular, una cuota de club suele salir más barata que reservas individuales repetidas; con juego muy irregular, el precio de pista por horas sin ningún compromiso fijo puede encajar mejor.'
 			}
 		]
 	}

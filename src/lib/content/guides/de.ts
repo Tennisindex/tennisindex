@@ -1,5 +1,5 @@
 // ============================================================
-// TennisIndex — Ratgeber-Inhalte
+// TennisIndex — Ratgeber-Inhalte (Deutsch)
 // ============================================================
 // Lokale Content-Quelle, kein CMS. Neuen Artikel ergänzen: Objekt vom
 // Typ GuideArticle an dieses Array anhängen, Slug in relatedSlugs
@@ -18,78 +18,71 @@ export const GUIDES_DE: GuideArticle[] = [
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-regeln',
-		title: 'Tennis Regeln einfach erklärt: Der komplette Guide für Anfänger',
-		metaTitle: 'Tennis Regeln einfach erklärt: Der komplette Guide für Anfänger',
+		title: 'Tennis-Regeln einfach erklärt: Der komplette Guide für Anfänger',
+		metaTitle: 'Tennis-Regeln einfach erklärt: Der komplette Guide für Anfänger',
 		metaDescription:
-			'Die wichtigsten Tennis-Regeln verständlich erklärt: Aufschlag, Punkte, Glas, Wände, Netz, Fehler und typische Spielsituationen.',
+			'Die wichtigsten Tennis-Regeln verständlich erklärt: Aufschlag, Zählweise, Aus, Let und typische Spielsituationen.',
 		excerpt:
-			'Aufschlag, Zählweise, Glas und Aus-Regeln — alles, was du für dein erstes Match wissen musst, kompakt erklärt.',
+			'Aufschlag, Zählweise und Aus-Regeln — alles, was du für dein erstes Match wissen musst, kompakt erklärt.',
 		category: 'regeln',
 		difficulty: 'einsteiger',
 		readingTime: 9,
 		updatedAt: '2026-08-01',
 		popular: true,
 		beginnerRecommended: true,
-		relatedSlugs: ['tennis-begriffe', 'tennis-fuer-anfaenger', 'tennis-vs-tennis', 'tennis-doppel'],
+		relatedSlugs: ['tennis-begriffe', 'tennis-fuer-anfaenger', 'tennis-einzel-doppel', 'tennis-doppel'],
 		sections: [
 			{
 				id: 'was-ist-tennis',
 				heading: 'Was ist Tennis?',
 				paragraphs: [
-					'Tennis ist ein Rückschlagsport, der fast immer im Doppel gespielt wird — also zwei gegen zwei. Gespielt wird auf einem eingezäunten Court, der deutlich kleiner ist als ein Tennisplatz, umgeben von Glaswänden und Gittern.',
-					'Das Besondere: Der Ball darf nach dem Aufspringen die eigenen Wände berühren und bleibt trotzdem im Spiel. Dadurch entstehen lange, spannende Ballwechsel, die auch für Einsteiger schnell Spaß machen — Kraft allein entscheidet selten, Platzierung und Geduld zählen mehr.',
-					'Geschlagen wird mit einem festen, gelochten Schläger ohne Saiten, der Ball ähnelt einem etwas drucklosen Tennisball. Das Netz steht wie beim Tennis in der Mitte des Courts.'
+					'Tennis ist ein Rückschlagsport, der sowohl im Einzel (1 gegen 1) als auch im Doppel (2 gegen 2) gespielt wird. Gespielt wird auf einem rechteckigen Platz, der durch ein Netz in zwei Hälften geteilt ist — auf Sand (Asche), Hartplatz oder Rasen.',
+					'Ziel ist es, den Ball so über das Netz zu schlagen, dass er im gegnerischen Feld aufkommt und die Gegenseite ihn nicht regulär zurückspielen kann. Anders als bei manchen anderen Rückschlagsportarten gibt es keine Wände oder Gitter, die aktiv mitspielen — der Ball ist aus, sobald er außerhalb der Linien landet.',
+					'Geschlagen wird mit einem besaiteten Schläger, der Ball ist ein mit Filz überzogener, luftgefüllter Gummiball. Für Kinder und blutige Anfänger:innen gibt es zusätzlich langsamere Schaumstoff- und Filzbälle mit weniger Druck (Stufen Rot/Orange/Grün vor dem "normalen" gelben Ball).'
 				]
 			},
 			{
 				id: 'spielfeld-und-grundprinzip',
 				heading: 'Spielfeld und Grundprinzip',
 				paragraphs: [
-					'Ein Tennis-Court ist ein umschlossenes Rechteck: an den Grundlinien meist Glaswände, an den Seiten oft Gitter oder ebenfalls Glas. Das Netz teilt den Court in zwei Hälften, jede Hälfte hat wiederum ein Aufschlagfeld links und rechts, ähnlich wie beim Tennis.',
-					'Der Court ist deutlich kompakter als ein Tennisplatz. Das sorgt für kurze Wege, viele Ballkontakte und macht Tennis auch für Neueinsteiger körperlich gut zugänglich.',
-					'Grundprinzip: Ihr spielt den Ball wie beim Tennis über das Netz, bis er zweimal auf dem Boden aufkommt oder ein Fehler passiert — nur dass die Wände dabei aktiv mitspielen dürfen.'
+					'Ein Tennisplatz ist im Einzel 8,23 m breit und 23,77 m lang. Für Doppel kommen links und rechts noch je 1,37 m breite Zusatzstreifen ("Gassen") dazu, die im Einzel nicht zählen. Das Netz ist an den Pfosten etwas höher (1,07 m) als in der Mitte (0,914 m).',
+					'Jede Platzhälfte hat direkt hinter dem Netz zwei Aufschlagfelder (links und rechts), dahinter bis zur Grundlinie das restliche Spielfeld für den weiteren Ballwechsel.',
+					'Grundprinzip: Der Ball muss nach jedem Schlag im gegnerischen Feld innerhalb der Linien aufkommen. Danach darf er genau einmal auf dem Boden aufspringen, bevor die Gegenseite ihn zurückschlägt — kommt er ein zweites Mal auf, ist der Punkt vorbei. Ein Ball direkt aus der Luft zu nehmen (Volley), bevor er aufkommt, ist jederzeit erlaubt.'
 				]
 			},
 			{
 				id: 'zaehlweise',
 				heading: 'Zählweise beim Tennis',
 				paragraphs: [
-					'Die Zählweise ist die aus dem Tennis bekannte: 15, 30, 40 und Spielgewinn. Steht es 40:40, spricht man von Einstand — danach muss ein Team zwei Punkte in Folge gewinnen, um das Spiel zu holen (manche Freizeitrunden spielen stattdessen "Golden Point", also einen entscheidenden Punkt — das ist Vereinbarungssache).',
-					'Mehrere gewonnene Spiele ergeben einen Satz, mehrere Sätze ein Match — meist wird auf zwei Gewinnsätze gespielt. Für den Satzgewinn braucht ein Team in der Regel sechs Spiele mit mindestens zwei Spielen Vorsprung, bei Gleichstand entscheidet oft ein Tiebreak.'
+					'Innerhalb eines Spiels (Games) zählt man 15, 30, 40 und Spielgewinn. Steht es 40:40, heißt das Einstand — danach muss eine Seite zwei Punkte in Folge gewinnen, um das Spiel zu holen (der erste dieser beiden Punkte heißt Vorteil).',
+					'Viele Freizeit- und manche Liga-Runden spielen bei Einstand stattdessen den "entscheidenden Punkt" (No-Ad): Wer den nächsten Ballwechsel gewinnt, holt direkt das Spiel — das ist Vereinbarungssache und steht meist vorher fest.',
+					'Sechs gewonnene Spiele (mit mindestens zwei Spielen Vorsprung) ergeben einen Satz. Steht es 6:6, entscheidet meist ein Tiebreak: Hier zählt man 1, 2, 3 usw., gewonnen ist er mit mindestens 7 Punkten und zwei Punkten Vorsprung. Ein Match geht in der Regel über zwei Gewinnsätze, im dritten Satz spielen viele Amateur-Ligen statt eines vollen Satzes einen Match-Tiebreak bis 10.'
 				]
 			},
 			{
 				id: 'aufschlag-regeln',
 				heading: 'Aufschlag-Regeln',
 				paragraphs: [
-					'Der Aufschlag erfolgt von unten: Der Ball muss zuerst auf dem Boden aufspringen, erst danach schlägst du ihn — anders als beim Tennis, wo von oben aufgeschlagen wird. Der Treffpunkt darf dabei nicht höher als Hüfthöhe liegen.',
-					'Aufgeschlagen wird diagonal ins gegnerische Aufschlagfeld, ein Fuß muss dabei hinter der Aufschlaglinie bleiben. Nach jedem gewonnenen Spiel wechselt der Aufschlag zum anderen Team, innerhalb eines Teams wechseln sich die Partner meist ab.',
-					'Wie beim Tennis gibt es einen zweiten Versuch, wenn der erste Aufschlag danebengeht (Doppelfehler kostet den Punkt).'
+					'Der Aufschlag erfolgt von oben: Du wirfst den Ball hoch und schlägst ihn, bevor er den Boden berührt, diagonal in das gegnerische Aufschlagfeld. Dabei musst du hinter der Grundlinie stehen — sie darfst du vor dem Treffmoment weder berühren noch übertreten (Fußfehler).',
+					'Jeder Punkt beginnt abwechselnd von der rechten Seite (bei geradem Punktestand) und der linken Seite (bei ungeradem Punktestand). Nach jedem gewonnenen Spiel wechselt der Aufschlag zur anderen Seite, im Doppel wechseln sich die beiden Partner:innen dabei innerhalb ihres Teams ab.',
+					'Landet der erste Aufschlag nicht regulär im Feld, gibt es einen zweiten Versuch. Geht auch der daneben, ist das ein Doppelfehler und der Punkt geht direkt an die Gegenseite. Berührt der Aufschlag die Netzkante und landet trotzdem korrekt im Feld, ist das ein "Let" — der Aufschlag wird wiederholt, ohne dass er zählt.'
 				]
 			},
 			{
-				id: 'aus',
+				id: 'aus-und-linien',
 				heading: 'Wann ist der Ball im Aus?',
 				paragraphs: [
-					'Der Ball ist aus, wenn er außerhalb der Feldbegrenzung den Boden berührt, oder wenn er die Glaswand oder das Gitter berührt, bevor er im gegnerischen Feld aufgekommen ist.',
-					'Auch ein Ball, der über die umlaufende Umzäunung hinaus das Feld verlässt, ohne vorher regulär im Feld aufgekommen zu sein, zählt als Fehler. Grundsätzlich gilt: Erst muss der Ball im richtigen Feld auf dem Boden aufkommen — danach darf er (auf der eigenen Seite) beliebig oft von Wänden abprallen, solange er im Spiel bleibt.'
+					'Eine Linie gehört zum Feld dazu: Berührt der Ball auch nur einen Teil der Linie, gilt er als "gut" (in). Erst wenn er komplett außerhalb aller Linien aufkommt, ist er aus.',
+					'Beim Grundschlag zählt dafür die gesamte Feldbreite inklusive der Doppelgassen nur im Doppel — im Einzel sind die äußeren Gassen kein gültiges Feld. Beim Aufschlag zählt dagegen ausschließlich das jeweils diagonale Aufschlagfeld.',
+					'Springt der Ball ein zweites Mal auf, bevor er zurückgeschlagen wird, ist der Punkt ebenfalls vorbei — unabhängig davon, wo der zweite Bodenkontakt stattfindet.'
 				]
 			},
 			{
-				id: 'glas-und-waende',
-				heading: 'Glas, Gitter und Wände erklärt',
+				id: 'let-und-stoerungen',
+				heading: 'Let, Netzberührung und Störungen',
 				paragraphs: [
-					'Das ist der Punkt, der Tennis für Einsteiger anfangs am meisten verwirrt: Nachdem der Ball auf dem Boden aufgekommen ist, darf er die eigene Wand oder das eigene Gitter berühren und bleibt im Spiel — du darfst ihn dann noch zurückschlagen.',
-					'Umgekehrt gilt: Schlägst du den Ball direkt in die gegnerische Wand, ohne dass er vorher im gegnerischen Feld aufgekommen ist, ist das ein Fehler. Die Wand ist also kein Ersatz für den Bodenkontakt, sondern kommt erst danach ins Spiel.',
-					'Mit etwas Übung wird das Spiel mit dem Glas zu einem der spannendsten Teile von Tennis — es eröffnet Rückschlagmöglichkeiten, die es im Tennis so nicht gibt.'
-				]
-			},
-			{
-				id: 'netzspiel-volleys',
-				heading: 'Netzspiel und Volleys',
-				paragraphs: [
-					'Volleys (den Ball aus der Luft schlagen, bevor er den Boden berührt) sind grundsätzlich erlaubt und im Tennis sogar ein zentraler Taktikbaustein — am Netz zu stehen und Bälle früh zu nehmen, ist oft die stärkste Position.',
-					'Eine wichtige Ausnahme: Beim Aufschlag darf der Return nicht als Volley gespielt werden, solange sich der Ball noch im Aufschlagfeld bewegt — hier gelten je nach Verband leicht unterschiedliche Detailregeln, im Zweifel hilft ein Blick in die Regeln des jeweiligen Verbands oder eine kurze Nachfrage im Verein.'
+					'"Let" heißt: Der Punkt zählt nicht und wird wiederholt. Das passiert klassischerweise, wenn der Aufschlag die Netzkante streift und trotzdem korrekt im Aufschlagfeld landet — oder wenn während des Ballwechsels eine echte Störung von außen auftritt (z. B. ein Ball von einem Nachbarplatz rollt ins Feld).',
+					'Berührt dagegen ein Ball im normalen Ballwechsel (nicht beim Aufschlag) das Netz und fällt danach regulär ins gegnerische Feld, bleibt er im Spiel — das ist kein Let, sondern ein ganz normaler, gültiger Schlag.'
 				]
 			},
 			{
@@ -99,11 +92,11 @@ export const GUIDES_DE: GuideArticle[] = [
 					kind: 'mistakes',
 					title: 'Diese Fehler siehst du in fast jedem Anfänger-Match',
 					items: [
-						'Den Ball bei jeder Gelegenheit maximal hart schlagen, statt kontrolliert zu platzieren.',
-						'Vor dem Bodenkontakt schon an die Wand denken — erst muss der Ball im Feld aufkommen.',
-						'Zu weit hinten stehen bleiben, obwohl das Netz die stärkere Position wäre.',
-						'Den Aufschlag von oben wie beim Tennis versuchen, statt von unten nach Bodenkontakt.',
-						'Nicht mit dem Partner sprechen, wodurch Bälle in der Mitte liegen bleiben oder doppelt angelaufen werden.'
+						'Beim Aufschlag über die Grundlinie treten (Fußfehler), oft unbemerkt.',
+						'Zählweise durcheinanderbringen, besonders bei Einstand und Vorteil.',
+						'Einen Ball spielen wollen, der schon zweimal aufgekommen ist.',
+						'Aus Unsicherheit jeden Ball voll durchziehen, statt erst einmal sicher ins Feld zu spielen.',
+						'Beim Doppel nicht klären, wer am Netz und wer hinten steht — dadurch bleiben Bälle in der Mitte liegen.'
 					]
 				}
 			},
@@ -114,11 +107,11 @@ export const GUIDES_DE: GuideArticle[] = [
 					kind: 'checklist',
 					title: 'Vor deinem ersten Match',
 					items: [
-						'Aufschlag von unten, nach Bodenkontakt, diagonal ins gegnerische Feld.',
-						'Ball muss zuerst im Feld aufkommen, bevor Wand oder Gitter berührt werden dürfen.',
-						'Zählweise wie Tennis: 15, 30, 40, Spiel — Einstand bei 40:40.',
-						'Direkter Wandkontakt vor dem Bodenaufsprung ist ein Fehler.',
-						'Volleys sind erlaubt (außer teils beim Return direkt nach Aufschlag).'
+						'Aufschlag von oben, hinter der Grundlinie, diagonal ins richtige Aufschlagfeld.',
+						'Ball darf nur einmal aufkommen, bevor er zurückgespielt wird.',
+						'Zählweise: 15, 30, 40, Spiel — Einstand bei 40:40, danach zwei Punkte Vorsprung nötig (außer bei No-Ad).',
+						'Linie gehört zum Feld — Ball auf der Linie ist gut, nicht aus.',
+						'Volleys sind jederzeit erlaubt, außer der Ball hat den Boden noch nicht berührt und du stehst im gegnerischen Feld.'
 					]
 				}
 			}
@@ -127,1133 +120,930 @@ export const GUIDES_DE: GuideArticle[] = [
 			{
 				question: 'Ist Tennis schwer zu lernen?',
 				answer:
-					'Die Grundregeln lassen sich in wenigen Minuten verstehen, und die ersten Ballwechsel gelingen meist schon in der ersten Stunde. Das Spiel mit dem Glas und feinere Taktik brauchen dagegen etwas mehr Übung — typisch für einen Sport mit niedriger Einstiegshürde, aber viel Tiefe nach oben.'
+					'Die Grundregeln lassen sich in wenigen Minuten verstehen, und erste einfache Ballwechsel gelingen meist schon nach ein paar Trainingsstunden. Konstanz, Beinarbeit und Taktik entwickeln sich dagegen über Monate — typisch für einen Sport mit niedriger Einstiegshürde, aber viel Tiefe nach oben.'
 			},
 			{
-				question: 'Muss ich Tennis können, um Tennis zu spielen?',
+				question: 'Was passiert bei Einstand?',
 				answer:
-					'Nein. Tennis hat eigene Grundtechniken und ist bewusst zugänglich gestaltet. Tenniserfahrung kann bei Ballgefühl und Schlagtechnik helfen, ist aber keine Voraussetzung.'
+					'Bei 40:40 muss eine Seite zwei Punkte in Folge gewinnen, um das Spiel zu holen. Den ersten dieser beiden Punkte nennt man Vorteil — wird der nächste Punkt ebenfalls gewonnen, ist das Spiel vorbei, sonst geht es zurück auf Einstand. Manche Freizeitrunden spielen stattdessen No-Ad: ein einzelner entscheidender Punkt.'
 			},
 			{
-				question: 'Wie viele Sätze werden im Tennis gespielt?',
+				question: 'Zählt ein Ball auf der Linie als aus?',
 				answer:
-					'Im Turnier meist auf zwei Gewinnsätze, in der Freizeit einigen sich viele Gruppen auf einen Satz oder ein Zeitlimit — das ist unter Freizeitspielern gängige Praxis und keine feste Vorschrift.'
+					'Nein — im Gegenteil: Berührt der Ball die Linie auch nur an einer Stelle, gilt er als gut. Aus ist er erst, wenn er vollständig außerhalb aller Feldlinien aufkommt.'
 			},
 			{
-				question: 'Was passiert, wenn der Ball die Decke einer Halle trifft?',
+				question: 'Wie viele Sätze werden normalerweise gespielt?',
 				answer:
-					'In Hallen mit Überdachung gelten je nach Anlage und Verband unterschiedliche Zusatzregeln. Am besten vorher kurz beim Betreiber oder Verein nachfragen, falls das nicht eindeutig ausgeschildert ist.'
+					'Im Amateur- und Ligabereich meist zwei Gewinnsätze, wobei viele Ligen im dritten Satz statt eines vollen Satzes einen Match-Tiebreak bis 10 spielen, um Zeit zu sparen. Auf Profi-Ebene sind bei manchen Turnieren (v. a. bei den Herren bei Grand Slams) auch drei Gewinnsätze üblich.'
 			}
 		]
 	},
 	{
-		slug: 'tennis-vs-tennis',
-		title: 'Tennis vs. Tennis: Die wichtigsten Unterschiede einfach erklärt',
-		metaTitle: 'Tennis vs. Tennis: Die wichtigsten Unterschiede einfach erklärt',
+		slug: 'tennis-einzel-doppel',
+		title: 'Tennis Einzel vs. Doppel: Die wichtigsten Unterschiede',
+		metaTitle: 'Tennis Einzel vs. Doppel: Die wichtigsten Unterschiede einfach erklärt',
 		metaDescription:
-			'Tennis und Tennis im Vergleich: Spielfeld, Schläger, Regeln, Technik, Taktik, Einstieg und Kosten.',
+			'Was unterscheidet Einzel und Doppel im Tennis wirklich — Spielfeld, Taktik, Aufschlag und welches Format zu dir passt.',
 		excerpt:
-			'Was Tennis und Tennis gemeinsam haben — und wo sie sich in Feld, Schlägern, Regeln und Taktik unterscheiden.',
+			'Gleiche Sportart, zwei ganz unterschiedliche Spiele: So unterscheiden sich Einzel und Doppel in Feld, Taktik und Tempo.',
 		category: 'regeln',
 		difficulty: 'einsteiger',
-		readingTime: 8,
+		readingTime: 6,
 		updatedAt: '2026-08-01',
-		popular: true,
-		relatedSlugs: ['tennis-regeln', 'tennis-fuer-anfaenger', 'tennis-schlaeger', 'tennis-begriffe'],
+		relatedSlugs: ['tennis-regeln', 'tennis-doppel', 'tennis-taktik'],
 		sections: [
 			{
-				id: 'gemeinsamkeiten',
-				heading: 'Gemeinsamkeiten',
+				id: 'ueberblick',
+				heading: 'Zwei Formate, eine Sportart',
 				paragraphs: [
-					'Beide Sportarten sind Rückschlagspiele mit Netz, ähnlicher Zählweise (15, 30, 40, Spiel) und dem Ziel, den Ball so zu platzieren, dass der Gegner ihn nicht mehr erreicht.',
-					'Wer schon Tennis gespielt hat, bringt ein gutes Grundgefühl für Ballflug, Timing und Positionsspiel mit — das hilft beim Einstieg in Tennis spürbar, auch wenn die Technik im Detail anders ist.'
+					'Die Grundregeln — Zählweise, Aufschlag, Aus-Linien im Grundprinzip — sind bei Einzel und Doppel identisch. Trotzdem spielen sich beide Formate sehr unterschiedlich: Im Einzel deckst du das ganze Feld allein ab, im Doppel teilst du dir Feld und Verantwortung mit einer Partnerin oder einem Partner.',
+					'TennisIndex führt für beide Formate ein eigenes, unabhängiges Rating — dein Einzel-Level sagt nichts zwingend über dein Doppel-Level aus, und umgekehrt. Viele Spieler:innen sind in einem Format deutlich stärker als im anderen.'
 				]
 			},
 			{
-				id: 'spielfeld',
-				heading: 'Unterschiede beim Spielfeld',
+				id: 'spielfeldgroesse',
+				heading: 'Spielfeld: Mit oder ohne Gassen',
 				paragraphs: [
-					'Ein Tennis-Court ist deutlich kleiner als ein Tennisplatz und komplett umschlossen: Glaswände und Gitter statt offener Fläche. Diese Wände sind aktiver Teil des Spiels, nicht nur Begrenzung.',
-					'Tennis wird praktisch immer im Doppel gespielt, Tennis meist im Einzel oder Doppel gleichermaßen üblich.'
+					'Das Feld selbst ist bei beiden Formaten gleich groß, aber im Doppel zählen zusätzlich die beiden äußeren Gassen (je 1,37 m) als gültiges Feld — das Spielfeld ist im Doppel also insgesamt breiter nutzbar. Beim Aufschlag ändert sich dagegen nichts: Das Aufschlagfeld ist in beiden Formaten identisch.',
+					'Im Einzel bedeutet das kompaktere Feld: mehr Laufwege für dich allein, aber auch klarere Verantwortung — jeder Fehler und jeder gute Punkt ist eindeutig dir zuzuordnen.'
 				]
 			},
 			{
-				id: 'schlaeger-baelle',
-				heading: 'Unterschiede bei Schlägern und Bällen',
+				id: 'taktik-unterschiede',
+				heading: 'Taktik: Laufarbeit vs. Netzpositionierung',
 				paragraphs: [
-					'Tennisschläger sind kürzer, haben keine Saiten, sondern eine feste, gelochte Fläche aus Carbon- oder Glasfaser-Verbundmaterialien mit einem Schaumkern. Tennisschläger haben einen längeren Griff und ein besaitetes, ovales Blatt.',
-					'Tennisbälle ähneln Tennisbällen, haben aber meist etwas weniger Innendruck, damit sie zum kleineren Court und den Wänden passen.'
+					'Im Einzel dreht sich viel um Grundlinienspiel, Ausdauer und die Fähigkeit, den Gegner im Feld hin und her zu bewegen — Punkte werden oft über mehrere Schläge hinweg erarbeitet.',
+					'Im Doppel entscheidet dagegen häufiger die Netzposition: Ein Team, das früh und sicher am Netz steht, hat mehr Chancen auf kurze, druckvolle Punkte. Kommunikation mit der Partnerin oder dem Partner (wer spielt welchen Ball, wer deckt die Mitte) wird fast so wichtig wie die Schlagtechnik selbst.'
 				]
 			},
 			{
-				id: 'aufschlag-regeln-vergleich',
-				heading: 'Aufschlag und Regeln',
+				id: 'aufschlag-unterschiede',
+				heading: 'Aufschlag und Return',
 				paragraphs: [
-					'Im Tennis wird von oben aufgeschlagen, im Tennis von unten nach Bodenkontakt. Die größte strukturelle Neuerung im Tennis ist die Wand: Nach dem Bodenaufsprung darf der Ball auf der eigenen Seite die Wand berühren und bleibt im Spiel — das gibt es im Tennis nicht.'
+					'Im Einzel schlägst du jeden zweiten Punkt selbst auf und musst danach das komplette Feld allein verteidigen. Im Doppel wechseln sich beide Partner:innen innerhalb eines Spiels mit dem Aufschlag ab, während die aufschlagende Person nach dem Aufschlag oft direkt ans Netz vorrückt — die Partnerin oder der Partner steht dabei meist schon am Netz.'
 				]
 			},
 			{
-				id: 'tempo-taktik',
-				heading: 'Spieltempo und Taktik',
+				id: 'was-passt-zu-dir',
+				heading: 'Was passt zu dir?',
 				paragraphs: [
-					'Tennis lebt stark vom Netzspiel: Weil der Court kleiner ist und Wände lange Ballwechsel ermöglichen, ist Positionierung am Netz oft entscheidender als reine Schlaghärte. Im Tennis entscheiden Grundlinienduelle, Aufschlagstärke und größere Laufwege eine größere Rolle.',
-					'Dadurch wirkt Tennis für viele Einsteiger zugänglicher: Auch mit moderater Athletik lassen sich lange, kluge Ballwechsel spielen.'
-				]
-			},
-			{
-				id: 'einstieg-tennisspieler',
-				heading: 'Einstieg für Tennisspieler',
-				paragraphs: [
-					'Tennisspieler müssen vor allem zwei Dinge umlernen: den Aufschlag von unten und den bewussten Umgang mit den Wänden, statt jeden Ball zu vermeiden, der Richtung Wand fliegt. Die Vorhand- und Rückhandgrundlagen lassen sich dagegen meist gut übertragen.',
-					'Ein häufiger Anfangsfehler von Umsteigern: reflexhaft hart schlagen, wie man es vom Tennis gewohnt ist — im Tennis führt das wegen der Wände oft eher zu einfachen Bällen für den Gegner.'
-				]
-			},
-			{
-				id: 'was-ist-einfacher',
-				heading: 'Was ist einfacher zu lernen?',
-				paragraphs: [
-					'Für komplette Einsteiger gilt Tennis allgemein als zugänglicher: kleinerer Court, kürzere Laufwege, verzeihende Wände und ein Doppelformat, bei dem man sich die Fläche mit einem Partner teilt. Tennis erfordert früher eine präzisere Schlagtechnik, um den Ball überhaupt sicher im großen Feld zu halten.',
-					'Das heißt nicht, dass Tennis "leichter" im Sinne von weniger anspruchsvoll ist — auf höherem Niveau ist die taktische Tiefe beachtlich. Der Einstieg gelingt aber in der Regel schneller.'
+					'Wer gerne läuft, lange Ballwechsel mag und unabhängig spielen will, findet im Einzel mehr Reiz. Wer taktisches Zusammenspiel, kürzere Punkte und geselliges Spielen mag, ist im Doppel oft besser aufgehoben — viele Spieler:innen spielen einfach beides, je nach Tagesform und Verfügbarkeit von Mitspieler:innen.'
 				]
 			}
 		],
 		faq: [
 			{
-				question: 'Kann ich mit Tenniserfahrung sofort gut Tennis spielen?',
+				question: 'Ist Doppel einfacher als Einzel?',
 				answer:
-					'Du bringst ein gutes Grundgefühl mit, musst dich aber an Aufschlag und Wandspiel neu gewöhnen. Die ersten Trainingseinheiten fühlen sich für viele Tennisspieler ungewohnt an, bevor es klickt.'
+					'Nicht unbedingt einfacher, aber anders anspruchsvoll: Du legst weniger Strecke zurück, musst dafür aber schneller reagieren, näher am Netz spielen und dich ständig mit deiner Partnerin oder deinem Partner abstimmen.'
 			},
 			{
-				question: 'Brauche ich für Tennis dieselben Schuhe wie für Tennis?',
+				question: 'Zählt für Doppel dieselbe Zählweise wie im Einzel?',
 				answer:
-					'Nicht unbedingt — Tennisschuhe sind auf die schnellen, kurzen Richtungswechsel im kleineren Feld optimiert. Mehr dazu im Ratgeber zu Tennisschuhen.'
+					'Ja, Punkte, Spiele und Sätze werden identisch gezählt. Der einzige strukturelle Unterschied ist, dass sich innerhalb eines Teams der Aufschlag zwischen den Partner:innen abwechselt.'
 			},
 			{
-				question: 'Ist Tennis für Tennisplätze mit umgebauten Courts entstanden?',
+				question: 'Brauche ich für Doppel eine feste Partnerin oder einen festen Partner?',
 				answer:
-					'Tennis hat eine eigenständige Entstehungsgeschichte und eigene Feldmaße. Manche Anlagen bauen zwar Tennisplätze zu Tennis-Courts um, das ist aber eine bauliche Entscheidung einzelner Betreiber, keine Regel des Sports.'
+					'Nein — viele Vereine und die TennisIndex-Matchsuche helfen dabei, spontan passende Doppelpartner:innen zu finden. Ein eingespieltes Team hat zwar einen Vorteil bei der Kommunikation, aber auch neu zusammengewürfelte Paarungen funktionieren gut.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-begriffe',
-		title: 'Tennis Begriffe erklärt: Bandeja, Vibora, Chiquita, Lob und mehr',
-		metaTitle: 'Tennis Begriffe erklärt: Bandeja, Vibora, Chiquita, Lob und mehr',
+		title: 'Tennis-Begriffe erklärt: Ass, Break, Slice, Volley und mehr',
+		metaTitle: 'Tennis-Begriffe erklärt: Das große Glossar für Einsteiger',
 		metaDescription:
-			'Die wichtigsten Tennis-Begriffe einfach erklärt. Ideal für Anfänger, die Tennis-Regeln, Schläge und Taktik besser verstehen wollen.',
+			'Die wichtigsten Tennis-Begriffe verständlich erklärt: Ass, Break, Slice, Volley, Stoppball, Passierschlag und mehr.',
 		excerpt:
-			'Von Bandeja bis Chiquita: das kleine Tennis-Wörterbuch für alle, die beim Reden auf dem Court mithalten wollen.',
+			'Ass, Break, Slice, Stoppball — ein kompaktes Glossar der wichtigsten Tennis-Begriffe für Einsteiger:innen.',
 		category: 'regeln',
 		difficulty: 'einsteiger',
-		readingTime: 7,
+		readingTime: 5,
 		updatedAt: '2026-08-01',
-		beginnerRecommended: true,
-		relatedSlugs: ['tennis-technik', 'tennis-taktik', 'tennis-regeln', 'tennis-doppel'],
+		relatedSlugs: ['tennis-regeln', 'tennis-technik', 'tennis-taktik'],
 		sections: [
 			{
-				id: 'grundbegriffe',
-				heading: 'Grundbegriffe',
+				id: 'einleitung',
+				heading: 'Warum ein eigenes Glossar?',
 				paragraphs: [
-					'Court: das Spielfeld, umschlossen von Glaswänden und Gittern.',
-					'Aus: der Ball ist ungültig geworden, der Punkt geht an die Gegenseite.',
-					'Golden Point: bei Einstand entscheidet ein einzelner Punkt statt der Zwei-Punkte-Regel — eine in der Freizeit beliebte Abkürzung, keine feste Turnierpflicht überall.'
+					'Beim ersten Vereinstraining oder beim Zuschauen fallen schnell Begriffe, die ohne Erklärung wenig Sinn ergeben — Ass, Break, Unforced Error. Dieses Glossar sammelt die wichtigsten Begriffe an einem Ort, damit du sie schnell nachschlagen kannst.'
 				]
 			},
 			{
-				id: 'schlagbegriffe',
-				heading: 'Schlagbegriffe',
-				paragraphs: [
-					'Bandeja: ein kontrollierter Überkopfschlag, meist gespielt, um die Netzposition zu halten statt den Punkt sofort zu beenden.',
-					'Vibora: eine Variante der Bandeja mit mehr Seitspin, oft noch aggressiver in der Ballplatzierung.',
-					'Chiquita: ein flacher, kontrollierter Ball, der tief auf die Füße der am Netz stehenden Gegner gespielt wird.',
-					'Smash: der harte Schlag von oben, meist der Punktgewinnschlag schlechthin — aber nur, wenn er gut platziert ist.',
-					'Lob: ein hoher Ball über die Gegner hinweg, um sie vom Netz zurückzudrängen.'
-				]
-			},
-			{
-				id: 'taktikbegriffe',
-				heading: 'Taktikbegriffe',
-				paragraphs: [
-					'Netzposition: der taktisch meist stärkste Standort nahe am Netz, von dem aus Druck aufgebaut wird.',
-					'Return: der Rückschlag auf den gegnerischen Aufschlag.',
-					'Winner: ein Schlag, den der Gegner gar nicht mehr erreicht — der Punkt ist direkt gewonnen.'
-				]
-			},
-			{
-				id: 'spielfeldbegriffe',
-				heading: 'Spielfeldbegriffe',
-				paragraphs: [
-					'Grundlinie: die hintere Begrenzungslinie des Feldes, direkt vor der Glaswand.',
-					'Aufschlagfeld: das diagonale Zielfeld, in das der Aufschlag muss.',
-					'Mittellinie: teilt jede Feldhälfte in ein linkes und rechtes Aufschlagfeld.'
-				]
-			},
-			{
-				id: 'spanische-begriffe',
-				heading: 'Häufige spanische Begriffe',
-				paragraphs: [
-					'Tennis hat spanische und südamerikanische Wurzeln, viele Fachbegriffe stammen deshalb aus dem Spanischen und werden international unverändert verwendet — auch im deutschsprachigen Tennis-Alltag hörst du sie ständig: "Bandeja", "Vibora" und "Chiquita" sind Beispiele dafür.'
-				]
-			},
-			{
-				id: 'glossar',
-				heading: 'Mini-Glossar A–Z',
+				id: 'die-wichtigsten-begriffe',
+				heading: 'Die wichtigsten Begriffe auf einen Blick',
 				box: {
 					kind: 'info',
-					title: 'Die wichtigsten Begriffe auf einen Blick',
+					title: 'Von A bis V',
 					items: [
-						'Bandeja — kontrollierter Überkopfschlag zur Netzsicherung',
-						'Chiquita — flacher Ball auf die Füße der Netzspieler',
-						'Golden Point — entscheidender Einzelpunkt bei Einstand',
-						'Lob — hoher Ball über die Gegner hinweg',
-						'Return — Rückschlag auf den Aufschlag',
-						'Smash — harter Schlag von oben',
-						'Vibora — Bandeja-Variante mit mehr Seitspin',
-						'Winner — direkt gewonnener Punkt'
+						'Ass: Ein Aufschlag, den die Gegenseite gar nicht berührt — direkter Punktgewinn.',
+						'Break: Ein Aufschlagspiel gewinnen, obwohl die Gegenseite aufgeschlagen hat.',
+						'Deuce (Einstand): Punktestand 40:40 innerhalb eines Spiels.',
+						'Doppelfehler: Beide Aufschlagversuche gehen daneben — Punkt für die Gegenseite.',
+						'Grundlinie: Die hintere Begrenzungslinie des Feldes, von der aus aufgeschlagen wird.',
+						'Let: Punkt wird wiederholt, meist weil der Aufschlag die Netzkante berührt hat.',
+						'Lob: Ein hoher Ball, der die Gegenseite (oft am Netz stehend) überspielt.',
+						'Passierschlag: Ein Ball, der an einer am Netz stehenden Person seitlich vorbeigeschlagen wird.',
+						'Return: Der erste Schlag nach dem gegnerischen Aufschlag.',
+						'Slice: Ein Schlag mit Unterschnitt, der Ball fliegt flacher und springt niedriger ab.',
+						'Stoppball: Ein kurzer, sanft gespielter Ball knapp hinter das Netz.',
+						'Tiebreak: Entscheidungsspiel bei Satzstand 6:6, gezählt in einzelnen Punkten.',
+						'Topspin: Ein Schlag mit Vorwärtsdrall, der Ball springt nach dem Aufkommen steiler ab.',
+						'Unforced Error: Ein vermeidbarer eigener Fehler ohne erkennbaren Druck der Gegenseite.',
+						'Volley: Der Ball wird direkt aus der Luft gespielt, bevor er den Boden berührt.'
 					]
 				}
+			},
+			{
+				id: 'begriffe-rund-ums-match',
+				heading: 'Begriffe rund ums Match',
+				paragraphs: [
+					'Ein "Aufschlagverlust" bedeutet, das eigene Aufschlagspiel zu verlieren — im Amateurbereich häufiger als bei Profis, wo das eigene Aufschlagspiel meist als klarer Vorteil gilt. Ein "Comeback" beschreibt, einen deutlichen Rückstand noch aufzuholen.',
+					'"Unerzwungener Fehler" und "erzwungener Fehler" unterscheiden, ob ein Fehler aus eigenem Antrieb passiert (z. B. Ball ins Netz ohne Gegnerdruck) oder durch einen guten gegnerischen Schlag provoziert wurde — bei TennisIndex spielt diese Unterscheidung für dein Rating keine Rolle, gewertet wird nur das Endergebnis.'
+				]
 			}
 		],
 		faq: [
 			{
-				question: 'Muss ich alle Fachbegriffe kennen, um Tennis zu spielen?',
+				question: 'Was ist der Unterschied zwischen Slice und Topspin?',
 				answer:
-					'Nein. Für den Einstieg reichen Grundregeln und ein paar Schlagnamen. Die Begriffe helfen aber, Training und Taktikgespräche im Verein besser zu verstehen.'
+					'Slice wird mit Unterschnitt gespielt: Der Ball fliegt flacher und springt nach dem Aufkommen niedriger und flacher ab. Topspin wird mit Vorwärtsdrall gespielt: Der Ball fliegt in einem höheren Bogen und springt nach dem Aufkommen steiler und schneller nach vorne ab.'
 			},
 			{
-				question: 'Warum sind viele Tennis-Begriffe spanisch?',
+				question: 'Was bedeutet "Break"?',
 				answer:
-					'Tennis hat seine Wurzeln im spanischsprachigen Raum, weshalb sich viele Fachbegriffe international unübersetzt durchgesetzt haben.'
+					'Ein Break liegt vor, wenn du das Aufschlagspiel deiner Gegnerin oder deines Gegners gewinnst — also ein Spiel holst, obwohl die andere Seite aufgeschlagen hat. Das gilt taktisch oft als besonders wertvoller Punktgewinn.'
 			}
 		]
 	},
-
 	// ------------------------------------------------------------
 	// AUSRÜSTUNG
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-ausruestung',
-		title: 'Tennis Ausrüstung: Was du zum Spielen wirklich brauchst',
-		metaTitle: 'Tennis Ausrüstung: Was du zum Spielen wirklich brauchst',
+		title: 'Tennis-Ausrüstung: Was du zum Spielen wirklich brauchst',
+		metaTitle: 'Tennis-Ausrüstung für Anfänger: Die komplette Übersicht',
 		metaDescription:
-			'Tennis-Ausrüstung für Anfänger und Fortgeschrittene: Schläger, Schuhe, Bälle, Kleidung und sinnvolles Zubehör einfach erklärt.',
-		excerpt: 'Die Grundausstattung für den Einstieg — und was du dir getrost erst später zulegst.',
+			'Schläger, Bälle, Schuhe, Kleidung: Diese Tennis-Ausrüstung brauchst du wirklich zum Einstieg — und was warten kann.',
+		excerpt:
+			'Schläger, Bälle, Schuhe und Kleidung: eine ehrliche Übersicht, was du zum Einstieg wirklich brauchst.',
 		category: 'ausruestung',
 		difficulty: 'einsteiger',
-		readingTime: 8,
+		readingTime: 7,
 		updatedAt: '2026-08-01',
 		popular: true,
-		beginnerRecommended: true,
-		relatedSlugs: ['tennis-schlaeger', 'tennis-schuhe', 'tennis-kosten', 'tennis-fuer-anfaenger'],
+		relatedSlugs: ['tennis-schlaeger', 'tennis-schuhe', 'tennis-kosten'],
 		sections: [
 			{
 				id: 'grundausstattung',
-				heading: 'Grundausstattung',
+				heading: 'Die Grundausstattung',
 				paragraphs: [
-					'Für den Einstieg brauchst du im Kern drei Dinge: einen Tennisschläger, passende Schuhe und Tennisbälle. Viele Anlagen verleihen Schläger für die ersten Male, sodass du nicht sofort investieren musst.',
-					'Alles Weitere — spezielle Kleidung, Taschen, Griffbänder — ist sinnvoll, aber nicht entscheidend für deine ersten Matches.'
+					'Für deine ersten Stunden brauchst du im Kern nur drei Dinge: einen Tennisschläger, passende Tennisschuhe und bequeme Sportkleidung. Bälle stellt beim ersten Vereinstraining oder Schnupperkurs meist der Verein oder die Trainerin bzw. der Trainer.',
+					'Alles andere — eigene Bälle, Schlägertasche, Griffbänder, Handtuch am Netzpfosten — ist praktisch, aber am Anfang nicht entscheidend. Kaufe lieber wenig und gezielt, als gleich die komplette Ausrüstung auf einmal anzuschaffen.'
 				]
 			},
 			{
-				id: 'tennisschlaeger',
-				heading: 'Tennisschläger',
+				id: 'schlaeger',
+				heading: 'Schläger',
 				paragraphs: [
-					'Der Schläger ist die wichtigste Anschaffung. Anfänger fahren meist gut mit einer runden oder tropfenförmigen Form, die mehr Kontrolle und größere Treffzone bietet. Details zu Formen, Gewicht und Auswahl findest du im eigenen Ratgeber zu Tennisschlägern.'
+					'Für den Einstieg eignet sich ein leichterer Schläger mit größerem Schlägerkopf — das vergrößert die Trefffläche und verzeiht Fehler eher als ein kleiner, schwerer Turnierschläger. Viele Vereine verleihen für Schnupperstunden Leihschläger, sodass ein eigener Kauf nicht sofort nötig ist.',
+					'Details zur Schlägerwahl (Kopfgröße, Gewicht, Griffstärke) findest du im eigenen Schläger-Guide.'
 				]
 			},
 			{
-				id: 'tennisschuhe',
-				heading: 'Tennisschuhe',
+				id: 'baelle',
+				heading: 'Bälle',
 				paragraphs: [
-					'Tennis wird mit vielen kurzen Sprints und schnellen Richtungswechseln gespielt. Spezielle Tennisschuhe bieten dafür passenden Grip und seitliche Stabilität — mehr dazu im Ratgeber zu Tennisschuhen. Für den allerersten Test tun es meist auch stabile Hallensport- oder Tennisschuhe.'
+					'Reguläre Tennisbälle gibt es in zwei Ausführungen: "Regular Duty" für weiche Beläge wie Sand, "Extra Duty" mit robusterem Filz für Hartplatz. Für Kinder und blutige Anfänger:innen gibt es zusätzlich langsamere, drucklosere Bälle (Rot/Orange/Grün), die den Einstieg erleichtern.',
+					'Ein Ball verliert mit der Zeit Innendruck und Sprungkraft — für lockeres Training reicht das trotzdem meist noch lange aus.'
 				]
 			},
 			{
-				id: 'tennisbaelle',
-				heading: 'Tennisbälle',
+				id: 'schuhe-und-kleidung',
+				heading: 'Schuhe und Kleidung',
 				paragraphs: [
-					'Tennisbälle sehen Tennisbällen ähnlich, haben aber meist etwas weniger Innendruck. Die meisten Anlagen und Vereine stellen Bälle bereit oder verkaufen sie vor Ort — als Einsteiger musst du dir dazu selten selbst Gedanken machen.'
+					'Normale Laufschuhe sind für Tennis ungeeignet: Ihnen fehlt die seitliche Stabilität für die schnellen Richtungswechsel, und ihr Profil passt oft nicht zum Belag. Details dazu im eigenen Schuh-Guide.',
+					'Bei der Kleidung zählt vor allem Bewegungsfreiheit und atmungsaktives Material — auf Sandplätzen ist helle Kleidung zusätzlich praktisch, weil roter Sandstaub auf dunklen Stoffen stärker auffällt.'
 				]
 			},
 			{
-				id: 'kleidung',
-				heading: 'Kleidung',
-				paragraphs: [
-					'Normale Sportkleidung reicht völlig aus: atmungsaktives Shirt, bewegungsfreundliche Shorts oder Rock, Sportsocken. Spezielle Tennis-Kollektionen sind optisch nett, aber keine Voraussetzung.'
-				]
-			},
-			{
-				id: 'zubehoer',
-				heading: 'Zubehör',
-				paragraphs: [
-					'Sinnvolle Ergänzungen mit der Zeit: eine Schlägertasche zum Transport, ein Überzieh-Griffband, wenn der Originalgriff durchgespielt ist, und ein Vibrationsdämpfer, falls dir der Aufprall im Arm zu stark ist. Alles optional, nichts davon ist am ersten Tag wichtig.'
-				]
-			},
-			{
-				id: 'nicht-sofort-kaufen',
-				heading: 'Was Anfänger nicht sofort kaufen müssen',
+				id: 'kann-warten',
+				heading: 'Kann warten, bis du weißt, ob Tennis dein Sport wird',
 				box: {
 					kind: 'tips',
-					title: 'Kann warten, bis du weißt, ob Tennis dein Sport wird',
+					title: 'Erst mal sparen',
 					items: [
-						'Ein teurer Profi-Schläger — ein solider Einsteiger- oder Leihschläger reicht für die ersten Monate.',
-						'Eine komplette Tennis-Bekleidungskollektion.',
-						'Eigene Bälle in größeren Mengen — die meisten Anlagen stellen sie.',
-						'Zubehör wie Overgrips oder Dämpfer, bevor du überhaupt regelmäßig spielst.'
+						'Ein zweiter, teurerer Schläger — der erste reicht locker für die ersten Monate.',
+						'Eigene Schlägertasche mit mehreren Fächern.',
+						'Griffband-Vorrat und spezielle Dämpfer.',
+						'Turnierbälle in größeren Gebinden.',
+						'Spezielle Tennis-Uhren oder Tracking-Wearables.'
 					]
 				}
 			},
 			{
-				id: 'kauf-checkliste',
-				heading: 'Kauf-Checkliste',
+				id: 'vor-dem-kauf',
+				heading: 'Vor dem ersten Kauf',
 				box: {
 					kind: 'checklist',
-					title: 'Vor dem ersten Kauf',
+					title: 'Kurz gecheckt',
 					items: [
-						'Erst 1–2 Mal mit Leihschläger spielen, bevor du investierst.',
-						'Schläger nach Kontrolle statt nach Optik auswählen (siehe Ratgeber Tennisschläger).',
-						'Schuhe mit gutem Seitenhalt statt reinen Laufschuhen wählen.',
-						'Bei der Anlage nachfragen, ob Bälle gestellt werden.',
-						'Bequeme, bewegungsfreundliche Sportkleidung reicht völlig.'
+						'Erst ein bis zwei Schnupperstunden mit Leihschläger nehmen, bevor du selbst kaufst.',
+						'Beim Schlägerkauf im Fachgeschäft beraten lassen — Griffstärke passt nicht "nach Gefühl".',
+						'Auf den Hauptbelag deines Vereins achten (Sand vs. Hartplatz) bei der Schuhwahl.',
+						'Kleidung nach Bewegungsfreiheit wählen, nicht nach Optik allein.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Kann ich mit Tennisschlägern Tennis spielen?',
+				question: 'Brauche ich sofort einen eigenen Schläger?',
 				answer:
-					'Nein, Tennisschläger sind ein eigenes Sportgerät ohne Saiten mit fester, gelochter Fläche. Ein Tennisschläger funktioniert dafür nicht.'
+					'Nein. Für die ersten Schnupperstunden reicht meist ein Leihschläger vom Verein. Erst wenn klar ist, dass du regelmäßig weiterspielst, lohnt sich der eigene Kauf mit passender Beratung.'
 			},
 			{
-				question: 'Brauche ich sofort eigene Ausrüstung?',
+				question: 'Reichen normale Sportschuhe zum Tennisspielen?',
 				answer:
-					'Nein. Viele Anlagen verleihen Schläger, und Bälle werden meist gestellt. Für den Einstieg reicht bequeme Sportkleidung und passendes Schuhwerk.'
-			},
-			{
-				question: 'Wie oft muss ich Ausrüstung ersetzen?',
-				answer:
-					'Das hängt stark von Spielhäufigkeit und Material ab. Schuhe nutzen sich durch die vielen Richtungswechsel spürbar ab, Schläger halten bei Freizeitspielern in der Regel deutlich länger.'
+					'Für eine einzelne Schnupperstunde notfalls ja, auf Dauer aber nicht: Tennisschuhe bieten seitliche Stabilität und ein zum Belag passendes Profil, das normale Laufschuhe nicht haben — wichtig, um Verletzungen vorzubeugen.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-schlaeger',
-		title: 'Tennisschläger für Anfänger: Formen, Gewicht und Auswahl erklärt',
-		metaTitle: 'Tennisschläger für Anfänger: Formen, Gewicht und Auswahl erklärt',
+		title: 'Tennisschläger für Anfänger: Kopfgröße, Gewicht und Auswahl erklärt',
+		metaTitle: 'Tennisschläger für Anfänger: Der komplette Kaufratgeber',
 		metaDescription:
-			'So findest du den passenden Tennisschläger: runde, tropfenförmige und diamantförmige Schläger, Gewicht, Balance und Spielstil.',
+			'Kopfgröße, Gewicht, Griffstärke und Besaitung: So findest du als Anfänger:in den passenden Tennisschläger.',
 		excerpt:
-			'Rund, Tropfen oder Diamant? So wählst du die passende Schlägerform für deinen Spielstil.',
+			'Kopfgröße, Gewicht und Griffstärke einfach erklärt — so findest du deinen ersten passenden Tennisschläger.',
 		category: 'ausruestung',
 		difficulty: 'einsteiger',
 		readingTime: 8,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-ausruestung', 'tennis-schuhe', 'tennis-technik', 'tennis-kosten'],
+		relatedSlugs: ['tennis-ausruestung', 'tennis-technik', 'tennis-kosten'],
 		sections: [
 			{
-				id: 'warum-wichtig',
-				heading: 'Warum der richtige Schläger wichtig ist',
+				id: 'kopfgroesse',
+				heading: 'Kopfgröße: größer verzeiht mehr',
 				paragraphs: [
-					'Der Schläger beeinflusst direkt, wie leicht dir Kontrolle fällt und wie viel Kraft du für einen Schlag investieren musst. Ein zum Spielstil passender Schläger macht die Lernkurve am Anfang spürbar angenehmer.',
-					'Es gibt keinen objektiv "besten" Schläger — nur den, der zu deinem aktuellen Niveau und Spielstil passt.'
+					'Die Schlägerkopfgröße wird in Quadratzoll angegeben, üblich sind etwa 95 bis 115 Quadratzoll. Ein größerer Kopf bietet eine größere Trefffläche ("Sweet Spot") und verzeiht ungenaue Treffer eher — ideal für den Einstieg.',
+					'Erfahrenere Spieler:innen greifen oft zu kleineren Köpfen, weil sie damit präziser und kontrollierter spielen können, sobald die Technik sitzt. Für die ersten ein bis zwei Jahre lohnt sich fast immer die größere, verzeihendere Variante.'
 				]
 			},
 			{
-				id: 'formen',
-				heading: 'Schlägerformen erklärt',
-				paragraphs: [
-					'Rund: größte Treffzone (Sweet Spot), sehr kontrollfreundlich, meist die empfohlene Form für den Einstieg.',
-					'Tropfenförmig: Mischform zwischen Kontrolle und Power, guter Kompromiss für Spieler mit erster Erfahrung.',
-					'Diamantförmig: Schwerpunkt weiter oben im Schlägerkopf, mehr Power, kleinerer Sweet Spot — eher für fortgeschrittene Spieler mit sauberer Technik.'
-				]
-			},
-			{
-				id: 'gewicht-balance',
+				id: 'gewicht-und-balance',
 				heading: 'Gewicht und Balance',
 				paragraphs: [
-					'Leichtere Schläger lassen sich schneller führen und schonen Arm und Schulter, schwerere Schläger bringen mehr Wucht in den Schlag, verlangen aber auch mehr Kontrolle und Kraft.',
-					'Für Einsteiger empfiehlt sich in der Regel eher die leichtere bis mittlere Gewichtsklasse — Kontrolle first, Power kommt mit der Zeit von allein dazu.'
+					'Anfänger-Schläger wiegen unbespannt meist zwischen 250 und 285 Gramm — leicht genug, um ihn über eine ganze Trainingsstunde ohne Ermüdung zu führen. Schwerere Schläger (ab etwa 300 Gramm) bieten mehr Stabilität und Power bei festem Kontakt, verlangen aber mehr Armkraft und saubere Technik.',
+					'Die Balance (kopflastig, griffstücklastig oder ausgeglichen) beeinflusst, wie wendig sich der Schläger anfühlt. Kopflastige Schläger liefern mehr Power aus wenig Schwung, griffstücklastige mehr Kontrolle und Manövrierbarkeit — für den Einstieg reicht eine ausgeglichene bis leicht griffstücklastige Balance meist am besten.'
 				]
 			},
 			{
-				id: 'kontrolle-vs-power',
-				heading: 'Kontrolle vs. Power',
+				id: 'griffstaerke',
+				heading: 'Griffstärke',
 				paragraphs: [
-					'Kontrollorientierte Schläger (meist rund, ausgewogene Balance) verzeihen mehr und helfen, den Ball sicher im Spiel zu halten. Power-orientierte Schläger (meist diamantförmig, kopflastig) belohnen präzise Technik mit mehr Wucht, bestrafen Fehler aber auch stärker.',
-					'Als Faustregel: Wer noch an der Grundtechnik arbeitet, profitiert fast immer mehr von Kontrolle als von zusätzlicher Power.'
+					'Die Griffstärke wird meist in Griffgrößen von L0 bis L5 (bzw. 4 1/8 bis 4 5/8 Zoll) angegeben. Ein zu dicker Griff erschwert das Handgelenk-Zuklappen bei manchen Schlägen, ein zu dünner Griff zwingt die Hand, fester zuzugreifen als nötig — beides begünstigt auf Dauer Verspannungen.',
+					'Im Fachgeschäft lässt sich die passende Größe unkompliziert messen; als grobe Faustregel sollte zwischen Fingerspitzen und Handballen bei umschlossenem Griff etwa eine Fingerbreite Platz bleiben.'
 				]
 			},
 			{
-				id: 'anfaenger-schlaeger',
-				heading: 'Schläger für Anfänger',
+				id: 'besaitung',
+				heading: 'Besaitung und Spannung',
 				paragraphs: [
-					'Ein runder oder tropfenförmiger Schläger mit moderatem Gewicht ist für die meisten Einsteiger die passende Wahl. Er verzeiht ungenaue Treffpunkte und macht das Erlernen der Grundschläge einfacher.'
+					'Die meisten Schläger werden fertig bespannt verkauft, meist mit synthetischem Nylon-Material — solide und günstig für den Einstieg. Naturdarm- oder Multifilament-Saiten bieten mehr Spielgefühl, sind aber teurer.',
+					'Die Saitenspannung beeinflusst Kontrolle und Power: Straffer bespannt bedeutet meist mehr Kontrolle, aber weniger natürliche Power; lockerer bespannt umgekehrt. Für den Einstieg ist die Werksbespannung fast immer eine gute Ausgangsbasis, Feinjustierung kommt später mit wachsendem Spielgefühl.'
 				]
 			},
 			{
-				id: 'fortgeschrittene-schlaeger',
-				heading: 'Schläger für Fortgeschrittene',
-				paragraphs: [
-					'Mit sicherer Technik lohnt sich der Blick auf tropfenförmige oder diamantförmige Modelle mit mehr Power, je nachdem, ob eher Kontrolle oder Angriffsspiel im Vordergrund steht.'
-				]
-			},
-			{
-				id: 'kauffehler',
-				heading: 'Fehler beim Kauf',
+				id: 'haeufiger-frust',
+				heading: 'Das führt oft zu Frust mit dem neuen Schläger',
 				box: {
 					kind: 'mistakes',
-					title: 'Das führt oft zu Frust mit dem neuen Schläger',
+					title: 'Typische Kauffehler',
 					items: [
-						'Einen Profi- oder Power-Schläger kaufen, obwohl die Grundtechnik noch nicht sitzt.',
-						'Nur nach Optik oder Marke entscheiden, statt Form und Gewicht zu prüfen.',
-						'Einen deutlich zu schweren Schläger wählen — das belastet Arm und Schulter unnötig.',
-						'Vor dem Kauf nicht probespielen oder beraten lassen, obwohl viele Shops das anbieten.'
+						'Ein "Profi-Schläger" mit kleinem Kopf und hohem Gewicht, weil das Lieblingsvorbild ihn spielt.',
+						'Griffstärke rein nach Handgröße geschätzt, ohne Anprobe.',
+						'Zu straff bespannt, "weil härter härter klingt" — das kostet vor allem Power und Komfort.',
+						'Der Schläger bleibt monatelang unbenutzt in der Ecke, weil er sich von Anfang an falsch anfühlte.'
 					]
 				}
 			},
 			{
-				id: 'checkliste',
-				heading: 'Schläger-Checkliste',
+				id: 'vor-dem-kauf-schlaeger',
+				heading: 'Vor dem Kauf prüfen',
 				box: {
 					kind: 'checklist',
-					title: 'Vor dem Kauf prüfen',
+					title: 'Kurz gecheckt',
 					items: [
-						'Form: rund oder tropfenförmig für den Einstieg.',
-						'Gewicht: eher leicht bis mittel, besonders bei Arm- oder Schulterproblemen.',
-						'Balance: ausgewogen statt kopflastig, wenn Kontrolle im Vordergrund steht.',
-						'Wenn möglich vorher probespielen oder leihen.',
-						'Erst nach ein paar Trainingseinheiten final entscheiden.'
+						'Kopfgröße ab etwa 100 Quadratzoll für den Einstieg.',
+						'Gewicht unbespannt im Bereich 250–285 Gramm.',
+						'Griffstärke im Fachgeschäft messen lassen, nicht schätzen.',
+						'Erst zur Probe schwingen (viele Läden bieten Testschläger), dann kaufen.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Welche Schlägerform ist am besten für Anfänger?',
+				question: 'Was kostet ein guter Einsteiger-Schläger?',
 				answer:
-					'In der Regel eine runde Form: größter Sweet Spot, am meisten Kontrolle, am verzeihendsten bei ungenauen Treffpunkten.'
+					'Die Preisspanne ist groß und ändert sich laufend — ein Fachgeschäft vor Ort gibt dir dazu die aktuellste und verlässlichste Auskunft. Wichtiger als der Preis ist für den Einstieg ohnehin die passende Kopfgröße, das Gewicht und die richtige Griffstärke.'
 			},
 			{
-				question: 'Wie schwer sollte mein erster Tennisschläger sein?',
+				question: 'Reicht ein gebrauchter Schläger zum Einstieg?',
 				answer:
-					'Tendenziell eher leicht bis mittel. Genaue Gewichtsangaben variieren je nach Hersteller — am besten im Fachhandel beraten lassen oder verschiedene Modelle probieren.'
-			},
-			{
-				question: 'Muss ich als Anfänger gleich viel Geld ausgeben?',
-				answer:
-					'Nein. Solide Einsteigermodelle gibt es in moderaten Preislagen, und viele Vereine verleihen ohnehin Schläger für die ersten Male.'
+					'Ja, solange Kopfgröße, Gewicht und Griffstärke passen. Auf den Zustand der Bespannung solltest du trotzdem achten — stark ausgeleierte oder brüchige Saiten lassen sich meist günstig neu bespannen.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-schuhe',
-		title: 'Tennis Schuhe: Worauf du beim Kauf achten solltest',
-		metaTitle: 'Tennis Schuhe: Worauf du beim Kauf achten solltest',
+		title: 'Tennisschuhe: Worauf du beim Kauf achten solltest',
+		metaTitle: 'Tennisschuhe kaufen: Sohle, Belag und Passform erklärt',
 		metaDescription:
-			'Tennisschuhe erklärt: Grip, Stabilität, Dämpfung, Sohlenprofile und Unterschiede zu Tennis- oder Laufschuhen.',
+			'Sandplatz, Hartplatz oder All-Court: Diese Sohlenprofile und Kriterien solltest du beim Kauf von Tennisschuhen kennen.',
 		excerpt:
-			'Warum normale Laufschuhe auf dem Court schnell an ihre Grenzen kommen — und was Tennisschuhe anders machen.',
+			'Sandplatz oder Hartplatz — das richtige Sohlenprofil macht bei Tennisschuhen den größten Unterschied.',
 		category: 'ausruestung',
 		difficulty: 'einsteiger',
-		readingTime: 7,
+		readingTime: 6,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-ausruestung', 'tennis-schlaeger', 'tennis-fuer-anfaenger', 'tennis-kosten'],
+		relatedSlugs: ['tennis-ausruestung', 'tennis-schlaeger', 'tennis-fuer-anfaenger'],
 		sections: [
 			{
 				id: 'warum-spezielle-schuhe',
-				heading: 'Warum spezielle Schuhe wichtig sind',
+				heading: 'Warum spezielle Tennisschuhe?',
 				paragraphs: [
-					'Tennis verlangt viele kurze Sprints, abrupte Stopps und seitliche Richtungswechsel auf vergleichsweise kleinem Raum. Laufschuhe sind für geradlinige Bewegung optimiert und bieten dafür oft zu wenig seitlichen Halt.',
-					'Tennisschuhe sind speziell für diese Belastung gebaut — mit einer für den Belag passenden Sohle und mehr Unterstützung an den Seiten.'
+					'Tennis verlangt viele schnelle Richtungswechsel, Stopps und seitliche Ausfallschritte — deutlich mehr seitliche Belastung als Laufen. Tennisschuhe sind dafür mit verstärkten seitlichen Stützzonen und einer robusteren, flacheren Sohle gebaut als normale Laufschuhe.',
+					'Wer dauerhaft mit Laufschuhen spielt, riskiert nicht nur schlechteren Halt, sondern auch schnelleren Verschleiß der Sohle und ein höheres Verletzungsrisiko bei abrupten Bewegungen.'
 				]
 			},
 			{
-				id: 'grip-sohlenprofil',
-				heading: 'Grip und Sohlenprofil',
+				id: 'sohle-nach-belag',
+				heading: 'Sohlenprofil nach Belag',
 				paragraphs: [
-					'Der Belag auf Tennis-Courts (meist Teppich mit Sand-Einstreuung) verlangt ein eigenes Sohlenprofil, das genug Grip für schnelle Starts und Stopps bietet, ohne beim Rutschen und Drehen zu blockieren.',
-					'Zu grobstollige Sohlen (wie bei manchen Outdoor- oder Laufschuhen) können sich im Belag verhaken, zu glatte Sohlen rutschen unkontrolliert — Tennisschuhe suchen bewusst den Mittelweg.'
+					'Für Sandplatz (Asche) eignen sich Schuhe mit feinem Fischgrätenmuster (Herringbone) — dieses Profil greift gut in losen Sand und lässt trotzdem ein kontrolliertes Rutschen beim Abstoppen zu, was auf Sand sogar gewünscht ist.',
+					'Für Hartplatz sind robustere, meist etwas gröbere Profile üblich, die dem höheren Abrieb standhalten. "All-Court"-Schuhe mit einem gemischten Profil sind ein guter Kompromiss, wenn du auf wechselnden Belägen spielst.',
+					'Rasenplätze (im Amateurbereich seltener) brauchen wiederum eigene, meist mit kleinen Noppen versehene Rasenschuhe — normale Sand- oder Hartplatzschuhe rutschen darauf zu stark oder beschädigen den Belag.'
 				]
 			},
 			{
-				id: 'stabilitaet',
-				heading: 'Stabilität bei Richtungswechseln',
+				id: 'passform-und-daempfung',
+				heading: 'Passform und Dämpfung',
 				paragraphs: [
-					'Eine verstärkte seitliche Stützstruktur schützt vor Umknicken bei den schnellen seitlichen Bewegungen, die im Tennis ständig vorkommen. Das ist einer der größten Unterschiede zu klassischen Laufschuhen, die primär auf geradlinige Dämpfung ausgelegt sind.'
+					'Tennisschuhe sollten vorne etwas mehr Platz lassen als normale Alltagsschuhe, weil der Fuß bei seitlichen Bewegungen leicht nach vorne rutscht. Ein fester Fersenhalt ist wichtiger als maximale Polsterung — zu weiche Dämpfung kann bei schnellen Richtungswechseln sogar instabiler wirken.',
+					'Wer Knie- oder Gelenkprobleme hat, profitiert oft von etwas mehr Dämpfung im Vorfußbereich; hier lohnt sich im Zweifel eine kurze Beratung im Fachgeschäft.'
 				]
 			},
 			{
-				id: 'daempfung',
-				heading: 'Dämpfung',
-				paragraphs: [
-					'Weil viele kurze, harte Stopps und Antritte anfallen, brauchen Tennisschuhe eine Dämpfung, die Gelenke bei genau diesen Belastungsmustern entlastet — nicht identisch mit der Dämpfung eines Laufschuhs, der auf gleichmäßige, geradlinige Schritte ausgelegt ist.'
-				]
-			},
-			{
-				id: 'indoor-outdoor',
-				heading: 'Indoor vs. Outdoor',
-				paragraphs: [
-					'Manche Modelle sind speziell für Hallenböden oder für Außen-Courts optimiert, andere funktionieren für beides. Falls du überwiegend an einem Anlagentyp spielst, lohnt sich der Blick auf die Herstellerangabe zum Einsatzbereich.'
-				]
-			},
-			{
-				id: 'haeufige-fehler',
-				heading: 'Häufige Fehler',
+				id: 'falsche-wahl',
+				heading: 'Diese Schuhwahl bereut man oft schnell',
 				box: {
 					kind: 'mistakes',
-					title: 'Diese Schuhwahl bereut man oft schnell',
+					title: 'Häufige Fehlkäufe',
 					items: [
-						'Normale Laufschuhe für regelmäßiges Tennis-Training nutzen.',
-						'Tennisschuhe ungeprüft übernehmen — manche funktionieren gut, andere nicht, das hängt vom Modell ab.',
-						'Auf Passform und Seitenhalt beim Kauf nicht achten, nur auf Optik.',
-						'Deutlich zu enge oder zu weite Schuhe kaufen "weil sie im Angebot waren".'
+						'Laufschuhe fürs erste Vereinstraining, weil "die stehen eh schon im Schrank".',
+						'Hartplatzschuhe auf Sandplatz — schlechterer Halt und schnellerer Verschleiß.',
+						'Schuhgröße zu eng gewählt, ohne Platz für das Vorrutschen des Fußes.',
+						'Vor dem Kauf keine kurze Proberunde in der Halle oder auf dem Testplatz gemacht.'
 					]
 				}
 			},
 			{
-				id: 'kauf-checkliste',
-				heading: 'Kauf-Checkliste',
+				id: 'vor-dem-schuhkauf',
+				heading: 'Vor dem Schuhkauf',
 				box: {
 					kind: 'checklist',
-					title: 'Vor dem Schuhkauf',
+					title: 'Kurz gecheckt',
 					items: [
-						'Seitenhalt und Stabilität testen, nicht nur Dämpfung nach vorn.',
-						'Sohlenprofil zum Belag deiner Stamm-Anlage passend wählen.',
-						'Passform in der Anlage oder im Fachhandel prüfen, wenn möglich.',
-						'Bei häufigem Spielen auf Verschleiß der Außensohle achten.'
+						'Sohlenprofil zum Hauptbelag deines Vereins passend wählen.',
+						'Etwas mehr Platz im Vorfußbereich einplanen als bei Alltagsschuhen.',
+						'Fersenhalt und seitliche Stabilität testen, nicht nur die Dämpfung.',
+						'Bei wechselnden Belägen: All-Court-Modell in Betracht ziehen.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Kann ich Tennisschuhe für Tennis benutzen?',
+				question: 'Kann ich mit einem Schuh auf allen Belägen spielen?',
 				answer:
-					'Teilweise ja, je nach Modell — viele Tennisschuhe bieten bereits guten Seitenhalt. Für regelmäßiges Spielen lohnen sich aber speziell für Tennis entwickelte Schuhe.'
+					'Mit einem All-Court-Modell meist ja, mit spürbaren Kompromissen gegenüber einem speziell auf einen Belag zugeschnittenen Schuh. Wer überwiegend auf einem Belag spielt, fährt mit dem passenden Spezial-Sohlenprofil in der Regel besser.'
 			},
 			{
-				question: 'Warum sind Laufschuhe für Tennis ungeeignet?',
+				question: 'Wie oft sollte ich meine Tennisschuhe wechseln?',
 				answer:
-					'Laufschuhe sind auf geradlinige Bewegung optimiert und bieten meist zu wenig seitlichen Halt für die schnellen Richtungswechsel im Tennis — das erhöht das Verletzungsrisiko.'
-			},
-			{
-				question: 'Wie schnell nutzen sich Tennisschuhe ab?',
-				answer:
-					'Das hängt stark von Spielhäufigkeit, Belag und Bewegungsstil ab. Wer sehr viel und intensiv spielt, wird die Außensohle schneller abnutzen als Gelegenheitsspieler.'
+					'Das hängt stark von Spielhäufigkeit und Belag ab — Sandplatz nutzt die Sohle spürbar schneller ab als Hartplatz. Sobald das Profil sichtbar glatt wird oder der seitliche Halt nachlässt, ist ein Wechsel fällig, unabhängig von einer festen Zeitspanne.'
 			}
 		]
 	},
-
 	// ------------------------------------------------------------
 	// TECHNIK & TAKTIK
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-technik',
-		title: 'Tennis Technik: Die wichtigsten Schläge einfach erklärt',
-		metaTitle: 'Tennis Technik: Die wichtigsten Schläge einfach erklärt',
+		title: 'Tennis-Technik: Die wichtigsten Schläge einfach erklärt',
+		metaTitle: 'Tennis-Technik: Vorhand, Rückhand, Aufschlag und Volley erklärt',
 		metaDescription:
-			'Die wichtigsten Tennis-Schläge im Überblick: Vorhand, Rückhand, Volley, Bandeja, Vibora, Lob und Smash.',
-		excerpt: 'Von der Vorhand bis zur Bandeja — die Grundschläge, die jedes Tennis-Match ausmachen.',
+			'Vorhand, Rückhand, Aufschlag, Volley und Slice: die wichtigsten Tennis-Grundschläge verständlich erklärt.',
+		excerpt:
+			'Vorhand, Rückhand, Aufschlag und Volley — die Grundschläge, auf denen jede weitere Technik aufbaut.',
 		category: 'technik-taktik',
 		difficulty: 'fortgeschritten',
 		readingTime: 9,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-taktik', 'tennis-begriffe', 'tennis-training', 'tennis-doppel'],
+		relatedSlugs: ['tennis-taktik', 'tennis-training', 'tennis-begriffe'],
 		sections: [
 			{
-				id: 'grundhaltung',
-				heading: 'Grundhaltung',
+				id: 'vorhand',
+				heading: 'Vorhand (Forehand)',
 				paragraphs: [
-					'Eine leicht gebeugte, bewegliche Grundhaltung mit Gewicht auf dem Vorfuß ist die Basis für fast jeden Schlag im Tennis. Aus dieser Position kannst du schnell in jede Richtung starten, ohne erst umständlich das Gleichgewicht finden zu müssen.',
-					'Der Schläger wird meist locker mit beiden Händen bereitgehalten (Continental-artiger Griff für Volleys), damit du auf Vorhand und Rückhand gleich schnell reagieren kannst.'
+					'Die Vorhand ist für die meisten Spieler:innen der erste verlässliche Schlag und oft die schlagkräftigste Waffe. Geschlagen wird auf der Seite der Schlaghand, meist mit einer Ausholbewegung, die den Schläger unterhalb der Trefflinie ansetzt und dann nach vorne oben durchzieht.',
+					'Zwei Grundvarianten sind verbreitet: der klassische Halbwestern- oder Westerngriff für viel Topspin, oder ein flacherer Ostgriff für eine direktere, flachere Flugbahn. Für Einsteiger:innen lohnt sich meist ein Griff irgendwo dazwischen, um beide Varianten offenzuhalten.'
 				]
 			},
 			{
-				id: 'vorhand-rueckhand',
-				heading: 'Vorhand und Rückhand',
+				id: 'rueckhand',
+				heading: 'Rückhand (Backhand)',
 				paragraphs: [
-					'Vorhand und Rückhand sind die Grundschläge, mit denen die meisten Ballwechsel bestritten werden. Wichtig ist eine kompakte, kontrollierte Schwungbewegung statt eines übertrieben großen Ausholens — im Tennis zählt Präzision oft mehr als reine Wucht.',
-					'Der Treffpunkt liegt idealerweise leicht vor dem Körper, mit stabilem Stand und aktivem Handgelenk für die Feinjustierung der Richtung.'
+					'Die Rückhand wird ein- oder beidhändig gespielt. Beidhändig gibt zusätzliche Stabilität und Kraft, besonders für Einsteiger:innen oft der leichtere Einstieg. Einhändig erlaubt mehr Reichweite und wird von vielen als eleganter empfunden, verlangt aber mehr Übung, bis Kraft und Kontrolle stimmen.',
+					'Welche Variante besser passt, hängt stark von Körperkraft, Reichweite und persönlicher Vorliebe ab — beide Varianten werden auch auf hohem Niveau erfolgreich gespielt.'
+				]
+			},
+			{
+				id: 'aufschlag',
+				heading: 'Aufschlag',
+				paragraphs: [
+					'Der Aufschlag ist der einzige Schlag, bei dem du volle Kontrolle über Ballwurf und Timing hast — entsprechend lohnt sich gezieltes Üben besonders. Wichtige Elemente sind ein konstanter, sauberer Ballwurf, ein flüssiger Ausholschwung ("Trophy Position") und ein Treffpunkt möglichst weit oben und vorne.',
+					'Für den Einstieg zählt vor allem Konstanz: lieber ein etwas langsamerer, sicherer erster Aufschlag als viele Doppelfehler durch zu viel Risiko.'
 				]
 			},
 			{
 				id: 'volley',
 				heading: 'Volley',
 				paragraphs: [
-					'Der Volley wird am Netz gespielt, bevor der Ball den Boden berührt. Die Bewegung ist kurz und kompakt, mehr ein kontrolliertes Blocken und Lenken als ein voller Schwung.',
-					'Ein guter Volley hält den Ball tief und platziert ihn gezielt, statt ihn nur "irgendwie" zurückzuspielen.'
+					'Beim Volley wird der Ball direkt aus der Luft gespielt, meist mit kurzer, kompakter Schlagbewegung statt großem Schwung. Die Grundposition am Netz ist wichtig: Gewicht nach vorne, Schläger vor dem Körper, damit du auf schnelle Bälle reagieren kannst.',
+					'Ein häufiger Anfängerfehler ist zu viel Schwung beim Volley — kontrollierte, kurze Bewegungen sind meist präziser und zuverlässiger.'
 				]
 			},
 			{
-				id: 'lob',
-				heading: 'Lob',
+				id: 'slice-und-topspin',
+				heading: 'Slice und Topspin',
 				paragraphs: [
-					'Der Lob ist ein hoher, weiter Ball über die am Netz stehenden Gegner hinweg. Technisch braucht es eine offene Schlägerfläche und ein ruhiges, kontrolliertes Durchschwingen von unten nach oben — Ziel ist Höhe und Tiefe, nicht Tempo.'
+					'Slice (Unterschnitt) erzeugt einen flacheren, niedriger abspringenden Ball — nützlich, um das Tempo herauszunehmen oder sich Zeit für die nächste Position zu verschaffen. Topspin (Vorwärtsdrall) erzeugt einen höheren Bogen und einen steileren, schnelleren Absprung — nützlich für mehr Sicherheit über das Netz bei gleichzeitig hohem Tempo.',
+					'Beide Varianten ergänzen die Grundschläge, statt sie zu ersetzen — die meisten fortgeschrittenen Spieler:innen wechseln je nach Spielsituation zwischen beiden.'
 				]
 			},
 			{
-				id: 'bandeja',
-				heading: 'Bandeja',
-				paragraphs: [
-					'Die Bandeja ist ein kontrollierter Überkopfschlag als Antwort auf einen Lob, mit dem du die Netzposition behältst, statt dich zurückdrängen zu lassen. Der Schwung ist gedämpft, fast wie ein Slice von oben, statt eines vollen Smashes.'
-				]
-			},
-			{
-				id: 'vibora',
-				heading: 'Vibora',
-				paragraphs: [
-					'Die Vibora ist eine Variante der Bandeja mit ausgeprägterem Seitspin, wodurch der Ball nach dem Aufprall stärker und unangenehmer abspringt. Sie erfordert etwas mehr Technikgefühl als die klassische Bandeja.'
-				]
-			},
-			{
-				id: 'smash',
-				heading: 'Smash',
-				paragraphs: [
-					'Der Smash ist der volle Überkopfschlag mit maximalem Tempo, meist als direkter Punktgewinnschlag gedacht. Entscheidend ist die Platzierung — ein unplatzierter Smash lässt sich über Glas oder Gitter oft überraschend gut kontern.'
-				]
-			},
-			{
-				id: 'glas-nutzen',
-				heading: 'Glas nutzen',
-				paragraphs: [
-					'Techniken mit dem Glas erfordern vor allem Timing: den Ball nach dem Bodenaufsprung und dem Wandabpraller neu einschätzen und mit ruhigem Stand kontrolliert zurückspielen, statt zu hektisch nachzueilen.'
-				]
-			},
-			{
-				id: 'technik-tipps',
-				heading: 'Technik-Tipps für Anfänger',
+				id: 'fortschritt',
+				heading: 'Womit du am schnellsten Fortschritte machst',
 				box: {
 					kind: 'tips',
-					title: 'Womit du am schnellsten Fortschritte machst',
+					title: 'Übungstipps',
 					items: [
-						'Erst Vorhand und Rückhand sauber lernen, bevor Bandeja und Vibora Priorität bekommen.',
-						'Am Netz bewusst kurze, kompakte Volley-Bewegungen üben statt volle Schwünge.',
-						'Den Lob früh ins Repertoire aufnehmen — er ist technisch einfacher als sein Ruf.',
-						'Beim Glasspiel Geduld haben: erst den Ballabsprung richtig einschätzen, dann schlagen.'
+						'Erst Konstanz über die Netzmitte trainieren, dann erst auf Tempo und Winkel gehen.',
+						'Beinarbeit nicht vernachlässigen — die beste Schlagtechnik hilft wenig ohne rechtzeitige Position.',
+						'Regelmäßig gegen eine Wand oder Ballmaschine üben, um Wiederholungen zu erhöhen.',
+						'Videos der eigenen Schläge aufnehmen und mit einer Trainerin oder einem Trainer besprechen.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Welchen Schlag sollte ich als Anfänger zuerst lernen?',
+				question: 'Sollte ich Rückhand einhändig oder beidhändig lernen?',
 				answer:
-					'Eine solide Vorhand und Rückhand aus stabiler Grundposition — darauf bauen alle anderen Schläge auf.'
+					'Für die meisten Einsteiger:innen ist beidhändig der leichtere und stabilere Start, weil die zweite Hand zusätzliche Kraft und Kontrolle gibt. Einhändig lohnt sich vor allem, wenn du gezielt mehr Reichweite und Slice-Vielseitigkeit aufbauen willst.'
 			},
 			{
-				question: 'Ist die Bandeja schwer zu lernen?',
+				question: 'Wie lange dauert es, bis der Aufschlag sitzt?',
 				answer:
-					'Sie braucht etwas Übung, weil der Schwung gedämpfter ist als beim Smash. Mit gezieltem Training auf dem Court oder im Einzeltraining lässt sie sich aber gut erlernen.'
-			},
-			{
-				question: 'Wie wichtig ist der Smash im Tennis wirklich?',
-				answer:
-					'Er ist ein wirkungsvoller Punktgewinnschlag, aber weniger zentral als im ersten Moment vermutet — Platzierung, Lob und Netzspiel entscheiden auf Dauer mehr Punkte.'
+					'Ein einigermaßen konstanter, sicherer Aufschlag lässt sich meist innerhalb einiger Wochen regelmäßigen Trainings aufbauen. Mehr Tempo und Präzision entwickeln sich danach über Monate weiter — der Aufschlag gilt zurecht als einer der technisch anspruchsvollsten Schläge.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-taktik',
-		title: 'Tennis Taktik: Einfach besser spielen im Doppel',
-		metaTitle: 'Tennis Taktik: Einfach besser spielen im Doppel',
+		title: 'Tennis-Taktik: Einfach besser spielen im Einzel',
+		metaTitle: 'Tennis-Taktik für Einzel: Grundlagen für mehr gewonnene Punkte',
 		metaDescription:
-			'Tennis-Taktik für Anfänger und Fortgeschrittene: Positionierung, Netzspiel, Lob, Geduld, Kommunikation und Fehlervermeidung.',
-		excerpt: 'Warum kluge Positionierung im Tennis oft mehr bringt als der härteste Schlag.',
+			'Grundlinienspiel, Netzangriff und Schlagwahl: So entwickelst du im Tennis-Einzel eine klarere Taktik.',
+		excerpt:
+			'Grundlinienspiel, Netzangriff und kluge Schlagwahl — so gewinnst du im Einzel mehr Punkte, ohne härter zu schlagen.',
 		category: 'technik-taktik',
 		difficulty: 'fortgeschritten',
-		readingTime: 9,
+		readingTime: 8,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-technik', 'tennis-doppel', 'tennis-training', 'tennis-begriffe'],
+		relatedSlugs: ['tennis-technik', 'tennis-doppel', 'tennis-einzel-doppel'],
 		sections: [
 			{
-				id: 'taktik-vs-power',
-				heading: 'Warum Taktik wichtiger ist als reine Power',
+				id: 'grundlinienspiel',
+				heading: 'Grundlinienspiel: Positionierung ist die halbe Miete',
 				paragraphs: [
-					'Weil der Court von Wänden begrenzt ist, kommen viele Bälle zurück, die im Tennis längst im Aus wären. Reine Härte wird dadurch schnell bestraft: ein zu harter, unplatzierter Ball landet oft als einfacher Ball beim Gegner.',
-					'Wer stattdessen Platzierung, Tempo-Wechsel und Positionierung nutzt, gewinnt auf Dauer mehr Punkte als reine Kraftspieler.'
+					'Nach jedem eigenen Schlag zur Feldmitte zurückzukehren, gehört zu den wichtigsten taktischen Grundlagen im Einzel — von dort aus deckst du beide Seiten annähernd gleich gut ab. Wer stattdessen am äußeren Rand stehen bleibt, öffnet der Gegenseite die eine Feldhälfte fast völlig.',
+					'Cross (diagonal über die lange Diagonale) ist meist der sicherere Schlag, weil das Netz dort niedriger ist und mehr Feld zur Verfügung steht. Longline (die Linie entlang) ist riskanter, aber oft überraschender und effektiver als Wechselschlag.'
 				]
 			},
 			{
-				id: 'grundpositionen',
-				heading: 'Grundpositionen im Doppel',
+				id: 'netzangriff',
+				heading: 'Wann sich der Weg ans Netz lohnt',
 				paragraphs: [
-					'Im Idealfall stehen beide Partner auf gleicher Höhe — entweder beide am Netz (Angriffsposition) oder beide an der Grundlinie (Verteidigungsposition). Gemischte Formationen, bei denen einer vorn und einer weit hinten steht, öffnen oft unnötig große Lücken.'
+					'Ein kurzer, schwacher Ball der Gegenseite ist meist die beste Gelegenheit, ans Netz vorzurücken und den Punkt mit einem Volley oder Smash zu beenden, statt von der Grundlinie aus weiterzuspielen. Am Netz zu stehen verkürzt der Gegenseite die Reaktionszeit erheblich.',
+					'Wer zu selten ans Netz geht, verschenkt einfache Punkte; wer zu oft und ohne guten Anlass geht, wird leicht mit einem Lob oder Passierschlag überspielt — die Balance macht den Unterschied.'
 				]
 			},
 			{
-				id: 'netz-erobern',
-				heading: 'Netz erobern',
+				id: 'schlagwahl-unter-druck',
+				heading: 'Schlagwahl unter Druck',
 				paragraphs: [
-					'Das Netz ist im Tennis meist die stärkste Position: von dort lassen sich Bälle früh nehmen und Druck aufbauen. Der Weg dorthin führt oft über einen guten Lob oder eine kontrollierte Bandeja, die dem Gegnerteam Zeit zum Zurückweichen lässt, während du selbst vorrückst.'
+					'In engen Spielsituationen (Einstand, Satzball) lohnt es sich, auf den eigenen zuverlässigsten Schlag zu setzen statt auf ein riskantes Experiment. Viele Punkte gehen nicht durch spektakuläre Gewinnschläge verloren, sondern durch vermeidbare eigene Fehler in genau solchen Momenten.',
+					'Ein einfacher Grundsatz: Je knapper der Punktestand, desto mehr Sicherheitsmarge einplanen — lieber einen Schlag weniger riskant, aber konstant zu Ende spielen.'
 				]
 			},
 			{
-				id: 'lob-einsetzen',
-				heading: 'Lob richtig einsetzen',
+				id: 'muster-erkennen',
+				heading: 'Muster der Gegenseite erkennen',
 				paragraphs: [
-					'Ein gut getimter Lob drängt die Gegner vom Netz zurück und gibt deinem Team die Chance, selbst die Netzposition zu übernehmen. Er ist damit weniger ein Verlegenheitsschlag als ein aktives taktisches Mittel.'
+					'Viele Spieler:innen haben unbewusste Vorlieben — etwa fast immer cross statt longline zu spielen, oder bei Druck fast immer denselben Schlag zu wählen. Wer solche Muster im Laufe eines Matches erkennt, kann sich gezielt darauf einstellen, etwa früher an der erwarteten Position stehen oder gezielt in die schwächere Seite spielen.'
 				]
 			},
 			{
-				id: 'glas-verteidigen',
-				heading: 'Mit dem Glas verteidigen',
-				paragraphs: [
-					'In der Verteidigung hilft das Glas, mehr Zeit zu gewinnen: Statt einen schwierigen Ball sofort und hektisch zu returnieren, kannst du den Absprung von der Wand nutzen, um dich neu zu positionieren und kontrolliert zu antworten.'
-				]
-			},
-			{
-				id: 'kommunikation',
-				heading: 'Kommunikation mit dem Partner',
-				paragraphs: [
-					'Kurze, klare Ansagen wie "ich", "du", "raus" oder "lob" verhindern Missverständnisse und doppelt angelaufene oder liegen gelassene Bälle. Gute Doppel-Teams sprechen während des Matches kontinuierlich, nicht nur bei Problemen.'
-				]
-			},
-			{
-				id: 'taktische-fehler',
-				heading: 'Häufige taktische Fehler',
+				id: 'punktekosten',
+				heading: 'Das kostet in der Praxis die meisten Punkte',
 				box: {
 					kind: 'mistakes',
-					title: 'Das kostet in der Praxis die meisten Punkte',
+					title: 'Häufige taktische Fehler',
 					items: [
-						'Beide Spieler an der Grundlinie festhalten, obwohl das Netz frei wäre.',
-						'Zu große Lücken zwischen den Partnern lassen.',
-						'Jeden hohen Ball smashen wollen, statt Kontrolle und Platzierung zu wählen.',
-						'Nicht kommunizieren, wodurch Bälle in der Mitte liegen bleiben.',
-						'Nach einem gewonnenen Punkt die Position nicht neu ordnen.'
+						'Nach dem eigenen Schlag stehen bleiben, statt zur Mitte zurückzulaufen.',
+						'Bei jedem Ball auf maximales Tempo spielen, statt Platzierung und Konstanz zu priorisieren.',
+						'Kurze Bälle der Gegenseite ignorieren, statt konsequent ans Netz nachzurücken.',
+						'In wichtigen Punkten unnötig riskante Schläge probieren, statt auf das Zuverlässige zu setzen.'
 					]
 				}
 			},
 			{
-				id: 'match-checkliste',
-				heading: 'Match-Checkliste',
+				id: 'im-kopf-behalten',
+				heading: 'Vor und während des Matches im Kopf behalten',
 				box: {
 					kind: 'checklist',
-					title: 'Vor und während des Matches im Kopf behalten',
+					title: 'Kurz gecheckt',
 					items: [
-						'Gemeinsam am Netz oder gemeinsam hinten stehen, nicht gemischt.',
-						'Lob aktiv einsetzen, um das Netz zurückzuerobern.',
-						'Mit dem Partner laufend kurze Ansagen austauschen.',
-						'Nicht jeden Ball maximal hart schlagen — Platzierung vor Härte.',
-						'Nach jedem Punkt kurz neu positionieren.'
+						'Nach jedem Schlag zur Mitte zurückpositionieren.',
+						'Kurze Bälle konsequent zum Netzangriff nutzen.',
+						'In engen Punkten auf den zuverlässigsten Schlag setzen.',
+						'Muster der Gegenseite über den Matchverlauf beobachten und ausnutzen.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Was ist die wichtigste taktische Regel im Tennis-Doppel?',
+				question: 'Sollte ich als Einsteiger:in schon Taktik trainieren?',
 				answer:
-					'Gemeinsam auf gleicher Höhe agieren — entweder beide am Netz oder beide hinten. Gemischte Formationen sind meist die größte Schwachstelle.'
+					'Ja, in einfacher Form durchaus — vor allem die Rückkehr zur Feldmitte nach jedem Schlag lässt sich schon früh üben und bringt sofort spürbar mehr gewonnene Punkte, ganz ohne bessere Schlagtechnik.'
 			},
 			{
-				question: 'Wie oft sollte ich mit meinem Partner sprechen?',
+				question: 'Ist Cross oder Longline die bessere Wahl?',
 				answer:
-					'Kontinuierlich, nicht nur bei Problemen. Kurze Ansagen vor und während jedes Ballwechsels verhindern die meisten Missverständnisse.'
-			},
-			{
-				question: 'Lohnt sich Risiko oder lieber immer sicher spielen?',
-				answer:
-					'Beides hat seinen Platz — situationsabhängig zwischen Sicherheit und kontrolliertem Risiko zu wählen, ist genau das, was taktische Reife ausmacht.'
+					'Cross ist meist die sicherere Grundoption, weil das Netz dort niedriger ist und mehr Feldfläche zur Verfügung steht. Longline lohnt sich gezielt als Überraschungsmoment oder wenn die Gegenseite stark auf Cross-Schläge eingestellt ist.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-doppel',
-		title: 'Tennis Doppel: Positionierung, Kommunikation und Teamplay',
-		metaTitle: 'Tennis Doppel: Positionierung, Kommunikation und Teamplay',
+		title: 'Tennis-Doppel: Positionierung, Kommunikation und Teamplay',
+		metaTitle: 'Tennis-Doppel: Positionierung, Kommunikation und Formationen erklärt',
 		metaDescription:
-			'Tennis wird im Doppel gespielt. Lerne Positionierung, Kommunikation, Abstimmung, Rollenverteilung und typische Fehler im Team.',
-		excerpt: 'Warum ein eingespieltes Tennis-Team mehr ist als zwei gute Einzelspieler.',
+			'Netzposition, Kommunikation und Aufschlagformationen: So spielt ihr als Doppel-Team taktisch klüger zusammen.',
+		excerpt:
+			'Netzposition, klare Absprachen und die richtige Formation — so wird aus zwei Einzelspieler:innen ein echtes Team.',
 		category: 'technik-taktik',
 		difficulty: 'fortgeschritten',
 		readingTime: 8,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-taktik', 'tennis-regeln', 'tennis-technik', 'tennis-training'],
+		relatedSlugs: ['tennis-taktik', 'tennis-einzel-doppel', 'tennis-technik'],
 		sections: [
 			{
-				id: 'warum-doppel-wichtig',
-				heading: 'Warum Doppel im Tennis so wichtig ist',
+				id: 'grundformation',
+				heading: 'Grundformation: Eine Person vorne, eine hinten',
 				paragraphs: [
-					'Tennis wird praktisch ausschließlich im Doppel gespielt — das Feld, die Regeln und die Taktik sind komplett darauf ausgelegt, dass zwei Personen gemeinsam eine Hälfte verteidigen und angreifen. Ein eingespieltes Team schlägt fast immer zwei starke Einzelkönner ohne Abstimmung.'
+					'Die klassische Doppel-Formation beim eigenen Aufschlag: Die aufschlagende Person steht hinten, die Partnerin oder der Partner bereits am Netz. Nach einem guten ersten Aufschlag rückt auch die aufschlagende Person zügig ans Netz nach, sodass beide möglichst schnell in der starken Netzposition stehen.',
+					'Beim Return ist es oft umgekehrt: Die returnierende Person steht hinten an der Grundlinie, die Partnerin oder der Partner meist ebenfalls zunächst etwas zurückhaltender, bis sich eine gute Gelegenheit zum Vorrücken ergibt.'
 				]
 			},
 			{
-				id: 'grundposition',
-				heading: 'Grundposition',
+				id: 'kommunikation',
+				heading: 'Kommunikation: Klein, aber entscheidend',
 				paragraphs: [
-					'Die Basis-Formation: beide Partner auf ungefähr gleicher Höhe, mit Verantwortung für die eigene Feldhälfte, aber wachsam für Bälle in der Mitte. Diese Grundordnung sollte nach jedem Ballwechsel schnell wiederhergestellt werden.'
+					'Kurze, klare Ansagen wie "meiner" oder "deiner" für Bälle in der Mitte verhindern die häufigste Doppel-Panne: dass beide stehen bleiben, weil jede oder jeder dachte, die Partnerin oder der Partner übernimmt.',
+					'Auch vor dem Aufschlag lohnt sich eine kurze Absprache, etwa ob die Person am Netz aktiv "poachen" (den Return abfangen) soll oder auf der eigenen Seite bleibt — spontane Überraschungsmomente funktionieren am besten, wenn sie vorher kurz angekündigt wurden.'
 				]
 			},
 			{
-				id: 'wer-nimmt-welchen-ball',
-				heading: 'Wer nimmt welchen Ball?',
+				id: 'formationen',
+				heading: 'Formationen jenseits der Standardaufstellung',
 				paragraphs: [
-					'Als Faustregel gilt: Wer den besseren Winkel und die bessere Ballkontrolle für die Situation hat, übernimmt — meist der Spieler, dessen Vorhand der Ball näherkommt. Bälle exakt in der Mitte sind Verhandlungssache und gehören klar angesagt, um Kollisionen oder liegen gelassene Bälle zu vermeiden.'
+					'Die "australische Formation" stellt beide Team-Mitglieder auf dieselbe Feldseite, um eine Gegnerin oder einen Gegner mit starker Cross-Rückhand von diesem bevorzugten Schlag abzuschneiden. Die "I-Formation" positioniert die Netzperson direkt in der Mitte hinter der aufschlagenden Person und weicht erst nach dem Aufschlag zur Seite aus, um die Return-Richtung schwerer vorhersehbar zu machen.',
+					'Solche Formationen lohnen sich vor allem gegen eingespielte Returnschläge der Gegenseite — für den Einstieg reicht die klassische Grundformation völlig aus.'
 				]
 			},
 			{
-				id: 'links-rechts',
-				heading: 'Links- und Rechtsspieler',
+				id: 'gasse-abdecken',
+				heading: 'Die Gasse abdecken',
 				paragraphs: [
-					'Viele Teams spielen mit einer festen Seitenzuordnung, oft passend zur starken Hand: Rechtshänder oft auf der linken Feldhälfte, damit die Rückhand nicht ständig in der Mitte liegt, wo die meisten Bälle ankommen — das ist aber keine feste Regel, sondern Erfahrungswert, der von Spielstil zu Spielstil variiert.'
+					'Ein häufiges Ziel der Gegenseite ist ein Schlag in die äußere Gasse, wenn dort eine Lücke entsteht. Die Grundregel: Die Person am Netz deckt die Gasse auf ihrer Seite mit ab, sobald sich die Gegenseite in eine gute Position zum Longline-Schlag bringt — dafür braucht es ständiges Mitverfolgen des Spielgeschehens, nicht nur des eigenen Balls.'
 				]
 			},
 			{
-				id: 'netz-verteidigung-gemeinsam',
-				heading: 'Netz und Verteidigung gemeinsam spielen',
-				paragraphs: [
-					'Ob am Netz oder in der Verteidigung — entscheidend ist, dass sich beide Partner gemeinsam bewegen, wie durch eine unsichtbare Linie verbunden. Rückt einer vor oder zurück, sollte der andere mitziehen, um keine Lücken zu öffnen.'
-				]
-			},
-			{
-				id: 'doppel-fehler',
-				heading: 'Typische Doppel-Fehler',
+				id: 'bremst-teams-aus',
+				heading: 'Das bremst die meisten Teams aus',
 				box: {
 					kind: 'mistakes',
-					title: 'Das bremst die meisten Teams aus',
+					title: 'Typische Doppel-Fehler',
 					items: [
-						'Unklare Zuständigkeit bei Bällen in der Mitte, ohne Ansage.',
-						'Ein Partner am Netz, der andere weit hinten — dauerhaft gemischte Formation.',
-						'Nach einem verlorenen Punkt in Frust verfallen, statt sich neu zu sortieren.',
-						'Sich nicht an das Spielniveau des Partners anpassen, sondern isoliert Risiko suchen.'
+						'Bälle in der Mitte liegen lassen, weil unklar ist, wer zuständig ist.',
+						'Als Netzperson zu passiv bleiben, statt aktiv Bälle abzufangen.',
+						'Nach dem eigenen Return sofort zurückweichen, statt die Gelegenheit zum Vorrücken zu nutzen.',
+						'Keine kurze Absprache vor dem Aufschlag, wodurch Überraschungsmomente verpuffen.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Gibt es Tennis auch im Einzel?',
+				question: 'Wer sollte am Netz stehen?',
 				answer:
-					'Tennis wird ganz überwiegend im Doppel gespielt. Einzelvarianten existieren vereinzelt, sind aber die Ausnahme und nicht der Standard des Sports.'
+					'Grundsätzlich die Person, die gerade nicht returniert oder aufschlägt — die Netzposition ist im Doppel meist die stärkere, weil sie kürzere Reaktionszeiten für die Gegenseite erzwingt und mehr direkte Punktgewinne ermöglicht.'
 			},
 			{
-				question: 'Wie finde ich die richtige Seite für mich?',
+				question: 'Was ist "Poachen"?',
 				answer:
-					'Am besten beide Seiten im Training ausprobieren. Viele Spieler bevorzugen die Seite, auf der ihre starke Hand nicht ständig für Bälle aus der Mitte zuständig ist.'
-			},
-			{
-				question: 'Was mache ich, wenn mein Partner viel schwächer oder stärker ist?',
-				answer:
-					'Kommunikation hilft am meisten: klar absprechen, wer welche Bälle übernimmt, und das eigene Risiko an das gemeinsame Niveau anpassen, statt isoliert zu agieren.'
+					'Poachen heißt, als Netzperson aktiv einen Ball abzufangen, der eigentlich zur Partnerin oder zum Partner unterwegs wäre — meist beim Return, um die Gegenseite zu überraschen. Funktioniert am besten mit kurzer Vorab-Absprache.'
 			}
 		]
 	},
-
 	// ------------------------------------------------------------
-	// EINSTIEG & TRAINING
+	// EINSTIEG
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-fuer-anfaenger',
 		title: 'Tennis für Anfänger: Alles, was du vor deinem ersten Match wissen musst',
-		metaTitle: 'Tennis für Anfänger: Alles, was du vor deinem ersten Match wissen musst',
+		metaTitle: 'Tennis für Anfänger: Der komplette Einstiegs-Guide',
 		metaDescription:
-			'Tennis für Einsteiger: Regeln, Ausrüstung, erste Schläge, typische Fehler und Tipps für dein erstes Match.',
-		excerpt: 'Dein Startpunkt: alles Wichtige für den ersten Tennis-Tag, kompakt zusammengefasst.',
+			'Verein finden, erste Trainerstunde, Ausrüstung: der komplette Einstiegs-Guide für dein erstes Tennis-Match.',
+		excerpt:
+			'Verein finden, erste Trainerstunde, Ausrüstung besorgen — so gelingt dein Einstieg ins Tennis ohne Umwege.',
 		category: 'einstieg',
 		difficulty: 'einsteiger',
-		readingTime: 9,
+		readingTime: 8,
 		updatedAt: '2026-08-01',
 		popular: true,
 		beginnerRecommended: true,
-		relatedSlugs: ['tennis-regeln', 'tennis-ausruestung', 'tennis-vs-tennis', 'tennis-training'],
+		relatedSlugs: ['tennis-regeln', 'tennis-ausruestung', 'tennis-einzel-doppel', 'tennis-training'],
 		sections: [
 			{
-				id: 'warum-einsteigerfreundlich',
-				heading: 'Warum Tennis einsteigerfreundlich ist',
+				id: 'verein-oder-platz-finden',
+				heading: 'Verein oder Platz finden',
 				paragraphs: [
-					'Tennis wird auf einem kleineren Feld gespielt als Tennis, die Wände geben Fehlern eine zweite Chance, und Doppel bedeutet, dass du dir die Fläche mit einem Partner teilst. Dadurch gelingen auch für komplette Neulinge oft schon nach kurzer Zeit richtige Ballwechsel.'
+					'Der einfachste Einstieg ist meist ein Schnupperangebot bei einem Verein in der Nähe — viele bieten kostenlose oder günstige Probestunden an. Alternativ lassen sich in vielen Städten auch öffentliche oder kommerzielle Plätze stundenweise buchen, ganz ohne Vereinsbindung.',
+					'Auf TennisIndex findest du unter /vereine und /karte Vereine und Anlagen in deiner Nähe auf einen Blick.'
 				]
 			},
 			{
-				id: 'was-du-brauchst',
-				heading: 'Was du brauchst',
+				id: 'erste-trainerstunde',
+				heading: 'Die erste Trainerstunde',
 				paragraphs: [
-					'Für den ersten Versuch reichen bequeme Sportkleidung, stabile Schuhe und — falls die Anlage nichts verleiht — ein geliehener oder günstiger Einsteigerschläger. Details dazu im Ratgeber zur Tennis-Ausrüstung.'
+					'Eine angeleitete erste Stunde bei einer Trainerin oder einem Trainer lohnt sich fast immer mehr als ein unkoordiniertes erstes Herumschlagen zu zweit — falsch antrainierte Bewegungsmuster sind später mühsam wieder zu korrigieren.',
+					'Erwarte in der ersten Stunde vor allem Grundlagenarbeit: Griffhaltung, einfache Vorhand- und Rückhand-Bewegungen, erste kurze Ballwechsel aus geringer Distanz — noch kein volles Match.'
 				]
 			},
 			{
-				id: 'wichtigste-regeln',
-				heading: 'Die wichtigsten Regeln',
+				id: 'was-mitbringen',
+				heading: 'Was du mitbringen solltest',
 				paragraphs: [
-					'In Kürze: Aufschlag von unten nach Bodenkontakt, Zählweise wie Tennis, der Ball darf nach dem Bodenaufsprung von der eigenen Wand abprallen und bleibt im Spiel. Die volle Übersicht findest du im Ratgeber zu den Tennis-Regeln.'
+					'Für die erste Stunde reichen bequeme Sportkleidung und feste Sportschuhe — einen eigenen Schläger verleihen die meisten Vereine oder Trainer:innen für den Anfang. Eine Wasserflasche und bei Sonne Sonnenschutz sind auf dem Platz keine schlechte Idee, gerade im Sommer.'
 				]
 			},
 			{
-				id: 'erste-schlaege',
-				heading: 'Erste Schläge',
-				paragraphs: [
-					'Konzentriere dich anfangs auf eine stabile Vorhand und Rückhand aus ruhiger Grundposition. Volleys, Lob und Bandeja kommen automatisch dazu, sobald die Grundschläge sitzen — mehr dazu im Technik-Ratgeber.'
-				]
-			},
-			{
-				id: 'verhalten-auf-dem-court',
-				heading: 'Verhalten auf dem Court',
-				paragraphs: [
-					'Übliche Höflichkeitsregeln gelten wie in jedem Rückschlagsport: Ball erst zurückspielen, wenn der Punkt eindeutig vorbei ist, keine störenden Ansagen während des gegnerischen Schlags, und bei strittigen Aus-Entscheidungen im Zweifel großzügig sein.'
-				]
-			},
-			{
-				id: 'tipps-erstes-match',
-				heading: 'Tipps für das erste Match',
+				id: 'entspannter-court-besuch',
+				heading: 'Damit dein erster Court-Besuch entspannt bleibt',
 				box: {
 					kind: 'tips',
-					title: 'Damit dein erster Court-Besuch entspannt bleibt',
+					title: 'Praktische Tipps',
 					items: [
-						'Vorher kurz einspielen, statt direkt ins Match zu starten.',
-						'Nicht jeden Ball hart schlagen wollen — erst mal im Spiel bleiben zählt mehr.',
-						'Mit erfahreneren Mitspielern kurz absprechen, wie ihr zählt und spielt.',
-						'Fragen zu Regeln ruhig direkt stellen — jeder hat mal angefangen.'
+						'Etwas früher da sein, um dich mit Platz und Umgebung vertraut zu machen.',
+						'Nicht sofort auf Tempo spielen wollen — erst Timing und Balltreffpunkt finden.',
+						'Nach der Stunde kurz nachfragen, woran du bis zum nächsten Mal arbeiten kannst.',
+						'Bei Unsicherheit zur Etikette (z. B. wer die Bälle aufsammelt) einfach höflich nachfragen.'
 					]
 				}
 			},
 			{
-				id: 'anfaengerfehler',
-				heading: 'Anfängerfehler',
+				id: 'anfaenger-typisch',
+				heading: 'Typisch am Anfang, aber leicht vermeidbar',
 				box: {
 					kind: 'mistakes',
-					title: 'Typisch am Anfang, aber leicht vermeidbar',
+					title: 'Häufige Einsteiger-Fehler',
 					items: [
-						'Sich zu sehr auf Kraft statt auf Kontrolle konzentrieren.',
-						'Ständig zurückweichen, statt das Netz zu suchen.',
-						'Das Spiel mit der Wand meiden, statt es zu üben.',
-						'Nicht mit dem Partner sprechen.'
+						'Zu weit von der Grundlinie entfernt stehen, aus Unsicherheit vor schnellen Bällen.',
+						'Den Schläger zu fest umklammern, was Schwung und Gefühl nimmt.',
+						'Nach einem verpatzten Punkt lange grübeln, statt sich schnell auf den nächsten zu konzentrieren.',
+						'Zu selten üben zwischen den Trainerstunden — Konstanz entsteht vor allem durch Wiederholung.'
 					]
 				}
 			},
 			{
-				id: 'start-checkliste',
-				heading: 'Start-Checkliste',
+				id: 'bevor-es-losgeht',
+				heading: 'Bevor es losgeht',
 				box: {
 					kind: 'checklist',
-					title: 'Bevor es losgeht',
+					title: 'Kurz gecheckt',
 					items: [
-						'Bequeme Sportkleidung und stabile Schuhe.',
-						'Schläger geliehen oder als Einsteigermodell besorgt.',
-						'Grundregeln zu Aufschlag, Zählweise und Glas verinnerlicht.',
-						'Locker einspielen vor dem ersten Punkt.',
-						'Mit offenem Ohr für Tipps von erfahreneren Mitspielern starten.'
+						'Schnupperstunde oder Probetraining bei einem Verein in der Nähe suchen.',
+						'Bequeme Sportkleidung und feste Sportschuhe mitbringen.',
+						'Wasserflasche und Sonnenschutz nicht vergessen.',
+						'Erwartungen niedrig ansetzen — die ersten Bälle gehen selten "wie im Fernsehen" rein.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Wie schnell lerne ich Tennis als absoluter Anfänger?',
+				question: 'Ab welchem Alter kann man mit Tennis anfangen?',
 				answer:
-					'Die Grundregeln und ersten Ballwechsel gelingen meist schon in der ersten Stunde. Ein sicheres Spielniveau entwickelt sich dann über mehrere Trainingseinheiten und Matches.'
+					'Tennis lässt sich in praktisch jedem Alter beginnen. Für Kinder gibt es eigene, langsamere Bälle und kleinere Felder für einen leichteren Einstieg, für Erwachsene jeden Alters normale Anfängerkurse bei den meisten Vereinen.'
 			},
 			{
-				question: 'Brauche ich Vorerfahrung aus anderen Sportarten?',
+				question: 'Muss ich sportlich fit sein, um anzufangen?',
 				answer:
-					'Nein, das ist keine Voraussetzung — allgemeine sportliche Grundfitness und Ballgefühl helfen, sind aber kein Muss.'
+					'Nein — die Grundlagen lassen sich unabhängig vom Fitnessstand erlernen, und die Kondition entwickelt sich mit regelmäßigem Spielen von selbst mit. Ein gutes Aufwärmen vor jeder Einheit hilft, Verletzungen von Anfang an zu vermeiden.'
 			},
 			{
-				question: 'Wo finde ich Mitspieler für den Einstieg?',
+				question: 'Wie schnell finde ich Mitspieler:innen auf meinem Niveau?',
 				answer:
-					'Viele Vereine bieten Schnupperstunden oder offene Trainingszeiten an. Auch spielervermittelnde Angebote innerhalb der eigenen Community können helfen, passende Mitspieler zu finden.'
+					'Über einen Verein meist recht schnell, da dort ohnehin viele Einsteiger:innen zusammen trainieren. TennisIndex hilft zusätzlich über die Vereins-Rangliste und die Matchsuche dabei, passende Gegner:innen für dein aktuelles Niveau zu finden.'
 			}
 		]
 	},
 	{
 		slug: 'tennis-training',
-		title: 'Tennis Training: Übungen für Technik, Taktik und bessere Matches',
-		metaTitle: 'Tennis Training: Übungen für Technik, Taktik und bessere Matches',
+		title: 'Tennis-Training: Übungen für Technik, Taktik und bessere Matches',
+		metaTitle: 'Tennis-Training: Übungen für Technik, Kondition und Taktik',
 		metaDescription:
-			'Tennis-Training für Anfänger und Fortgeschrittene: Übungen für Volley, Lob, Bandeja, Glas, Positionierung und Matchpraxis.',
+			'Von Wandtraining bis Matchsimulation: Trainingsübungen, mit denen du Technik, Kondition und Taktik gezielt verbesserst.',
 		excerpt:
-			'Wie du dein Training sinnvoll aufbaust — von Technikübungen bis zum eigenen 4-Wochen-Plan.',
+			'Von Wandtraining bis Matchsimulation — mit diesen Übungen kommst du gezielt voran, egal auf welchem Niveau.',
 		category: 'einstieg',
 		difficulty: 'fortgeschritten',
-		readingTime: 9,
+		readingTime: 7,
 		updatedAt: '2026-08-01',
-		relatedSlugs: ['tennis-technik', 'tennis-taktik', 'tennis-doppel', 'tennis-fuer-anfaenger'],
+		relatedSlugs: ['tennis-technik', 'tennis-taktik', 'tennis-fuer-anfaenger'],
 		sections: [
 			{
-				id: 'trainingsaufbau',
-				heading: 'Wie gutes Tennis-Training aufgebaut ist',
+				id: 'technikuebungen',
+				heading: 'Technikübungen für konstante Grundschläge',
 				paragraphs: [
-					'Effektives Training kombiniert meist drei Bausteine: Technikübungen für einzelne Schläge, Taktikübungen für Positionierung und Entscheidungen, und echte Matchpraxis, in der beides zusammenkommt. Wer nur Match spielt, ohne gezielt an Technik zu arbeiten, stagniert häufig auf einem bestimmten Niveau.'
+					'Wandtraining ist eine der effizientesten Übungen für Einsteiger:innen: Der Ball kommt sofort zurück, was in kurzer Zeit viel mehr Wiederholungen ermöglicht als das Spiel mit Partner:in. Ziel dabei ist zunächst reine Konstanz — den Ball zehn, zwanzig, dreißig Mal in Folge sauber treffen, bevor Tempo dazukommt.',
+					'Eine Ballmaschine (falls im Verein verfügbar) erlaubt gezieltes Üben einzelner Schlagarten mit gleichbleibendem Tempo und Platzierung, ohne auf eine Trainingspartnerin oder einen Trainingspartner angewiesen zu sein.'
 				]
 			},
 			{
-				id: 'technikuebungen',
-				heading: 'Technikübungen',
+				id: 'beinarbeit',
+				heading: 'Beinarbeit und Kondition',
 				paragraphs: [
-					'Wiederholtes Üben einzelner Schläge — etwa Volley-Serien am Netz oder Lob-Wiederholungen aus der Grundposition — verbessert Konstanz und Timing, ohne den Druck eines echten Punktes.'
+					'Seitliche Sprungübungen (Side Shuffles), kurze Sprints zwischen Markierungen und Schattenlaufen (Bewegungsmuster ohne Ball) verbessern die Reaktionsschnelligkeit, die im echten Spiel oft über Punkte entscheidet — schnellere Beine bringen dich früher in Schlagposition.',
+					'Grundausdauer lässt sich zusätzlich über Laufen, Radfahren oder Schwimmen aufbauen — Tennis selbst ist durch die vielen kurzen Sprints und Pausen eher ein Intervallsport als ein reiner Ausdauersport.'
 				]
 			},
 			{
 				id: 'taktikuebungen',
-				heading: 'Taktikübungen',
+				heading: 'Taktikübungen mit Partner:in',
 				paragraphs: [
-					'Übungen wie "beide Teams starten hinten, Ziel ist es, gemeinsam ans Netz vorzurücken" trainieren gezielt Entscheidungsfindung und Abstimmung, nicht nur reine Schlagtechnik.'
+					'Punktspiele mit eingeschränkten Regeln — etwa nur Cross-Bälle erlaubt, oder ein Punkt zählt nur nach mindestens fünf Schlägen — trainieren gezielt Konstanz und taktisches Denken, statt nur auf Tempo zu spielen.',
+					'Simulierte Matchsituationen (z. B. "du liegst 3:5 zurück, hol das Spiel") helfen, mentale Stärke unter Druck gezielt zu üben, statt sie erst im echten Wettkampf zum ersten Mal zu testen.'
 				]
 			},
 			{
-				id: 'partneruebungen',
-				heading: 'Partnerübungen',
-				paragraphs: [
-					'Übungen zu zweit — etwa gezielte Ballwechsel mit vorgegebenem Schlagtyp (nur Lob, nur Volley) — helfen, Automatismen mit dem eigenen Partner aufzubauen, die im Match dann intuitiv abrufbar sind.'
-				]
-			},
-			{
-				id: 'training-mit-trainer',
-				heading: 'Übungen mit Trainer',
-				paragraphs: [
-					'Ein Trainer kann gezielt Bälle zuspielen, um bestimmte Situationen (Smash-Verteidigung, Return-Varianten) wiederholt zu üben, und gibt direktes Feedback zur Technik — das beschleunigt Fortschritte oft deutlich gegenüber reinem Freizeitspiel.'
-				]
-			},
-			{
-				id: 'fehleranalyse',
-				heading: 'Fehleranalyse',
-				paragraphs: [
-					'Nach einem Match oder Training lohnt sich ein kurzer, ehrlicher Rückblick: Welche Schläge liefen unsicher? Welche taktischen Entscheidungen haben nicht funktioniert? Kleine, gezielte Anpassungen bringen auf Dauer mehr als pures Wiederholen ohne Reflexion.'
-				]
-			},
-			{
-				id: 'vier-wochen-plan',
-				heading: 'Trainingsplan für 4 Wochen',
+				id: 'einstiegsrahmen',
+				heading: 'Ein einfacher Einstiegsrahmen — an dein Niveau anpassen',
 				box: {
 					kind: 'info',
-					title: 'Ein einfacher Einstiegsrahmen — an dein Niveau anpassen',
+					title: 'Beispielhafte Trainingseinheit (60–75 Minuten)',
 					items: [
-						'Woche 1: Grundschläge festigen — Vorhand, Rückhand, einfache Volleys.',
-						'Woche 2: Lob und Bandeja gezielt in Partnerübungen einbauen.',
-						'Woche 3: Positionierung und Netzübernahme im Doppel üben.',
-						'Woche 4: Gelerntes in echten Matches anwenden und danach reflektieren.'
+						'10 Minuten Aufwärmen: leichtes Laufen, Dehnen, erste lockere Ballwechsel.',
+						'15 Minuten Grundschlagtraining: Vorhand und Rückhand cross, Fokus auf Konstanz.',
+						'10 Minuten Aufschlag- und Return-Übung.',
+						'15 Minuten Volley- und Netzspiel-Übung.',
+						'15–20 Minuten Punktspiel oder verkürztes Match zur Anwendung.',
+						'5 Minuten Cool-down und kurze Reflexion, was gut lief und was nicht.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Wie oft sollte ich trainieren, um besser zu werden?',
+				question: 'Wie oft sollte ich als Einsteiger:in trainieren?',
 				answer:
-					'Das hängt von deinen Zielen ab. Schon ein bis zwei gezielte Einheiten pro Woche zusätzlich zu normalen Matches bringen spürbaren Fortschritt.'
+					'Ein bis zwei Einheiten pro Woche reichen für spürbare Fortschritte am Anfang völlig aus. Wichtiger als die Häufigkeit ist meist die Regelmäßigkeit — lieber konstant einmal pro Woche als sporadisch mit langen Pausen dazwischen.'
 			},
 			{
-				question: 'Brauche ich einen Trainer, um besser zu werden?',
+				question: 'Bringt Wandtraining wirklich etwas?',
 				answer:
-					'Nicht zwingend, aber gezieltes Feedback beschleunigt die Entwicklung oft deutlich, besonders bei technischen Details wie Bandeja oder Vibora.'
-			},
-			{
-				question: 'Was bringt mir Technikübungen gegenüber reinem Matchspielen?',
-				answer:
-					'Im Match steht das Ergebnis im Vordergrund, im Training kannst du gezielt an einzelnen Schwächen arbeiten, ohne den Druck des Punktgewinns.'
+					'Ja, besonders für Konstanz und Timing — durch die vielen Wiederholungen in kurzer Zeit lässt sich die Grundbewegung schneller festigen als im normalen Spiel, wo lange nicht jeder Ballwechsel gleich verläuft.'
 			}
 		]
 	},
-
 	// ------------------------------------------------------------
 	// KOSTEN
 	// ------------------------------------------------------------
 	{
 		slug: 'tennis-kosten',
-		title: 'Was kostet Tennis? Preise, Ausrüstung und laufende Kosten erklärt',
-		metaTitle: 'Was kostet Tennis? Preise, Ausrüstung und laufende Kosten erklärt',
+		title: 'Was kostet Tennis? Ausrüstung, Mitgliedschaft und laufende Kosten erklärt',
+		metaTitle: 'Was kostet Tennis? Ausrüstung, Mitgliedschaft und Platzmiete im Überblick',
 		metaDescription:
-			'Was kostet Tennis in Deutschland? Überblick über Courtmiete, Ausrüstung, Training, Mitgliedschaften und Spartipps.',
-		excerpt: 'Welche Kostenpunkte beim Tennis wirklich anfallen — und wo sich Sparen lohnt.',
+			'Vereinsmitgliedschaft, Platzmiete, Ausrüstung und Trainerstunden: die Kostenfaktoren im Tennis im Überblick.',
+		excerpt:
+			'Vereinsmitgliedschaft, Platzmiete und Ausrüstung — ein ehrlicher Überblick über die Kostenfaktoren im Tennis.',
 		category: 'kosten',
 		difficulty: 'einsteiger',
-		readingTime: 7,
+		readingTime: 6,
 		updatedAt: '2026-08-01',
-		relatedSlugs: [
-			'tennis-ausruestung',
-			'tennis-fuer-anfaenger',
-			'tennis-training',
-			'tennis-schlaeger'
-		],
+		relatedSlugs: ['tennis-ausruestung', 'tennis-schlaeger', 'tennis-fuer-anfaenger'],
 		sections: [
 			{
-				id: 'welche-kosten',
-				heading: 'Welche Kosten entstehen?',
+				id: 'einmalige-kosten',
+				heading: 'Einmalige Kosten: Ausrüstung',
 				paragraphs: [
-					'Die Kosten für Tennis setzen sich grob aus Courtmiete, Ausrüstung, gegebenenfalls Training und optional einer Vereinsmitgliedschaft zusammen. Wie hoch das insgesamt wird, hängt stark von Region, Anlage und Spielhäufigkeit ab — feste bundesweite Preise gibt es nicht, dafür variiert das Angebot zu stark.'
+					'Die größte einmalige Anschaffung ist der Schläger, gefolgt von passenden Tennisschuhen. Wie viel du dafür ausgibst, hängt stark davon ab, ob du im Fachgeschäft neu kaufst, ein Einsteigermodell wählst oder gebraucht einsteigst — die Preisspannen ändern sich zudem laufend, ein aktueller Blick ins Fachgeschäft vor Ort lohnt sich mehr als eine feste Zahl hier.',
+					'Kleidung und Zubehör (Bälle, ggf. Tasche) kommen dazu, sind aber meist deutlich günstiger als Schläger und Schuhe zusammen.'
 				]
 			},
 			{
-				id: 'courtmiete',
-				heading: 'Courtmiete',
+				id: 'laufende-kosten',
+				heading: 'Laufende Kosten: Mitgliedschaft und Platzmiete',
 				paragraphs: [
-					'Die meisten Anlagen vermieten Courts stundenweise, oft aufgeteilt auf bis zu vier Spieler. Preise unterscheiden sich je nach Standort, Tageszeit und Auslastung deutlich — ein Blick auf die Preisliste der jeweiligen Anlage vor Ort gibt die verlässlichste Auskunft.'
+					'Wer über einen Verein spielt, zahlt meist einen Jahres- oder Monatsbeitrag, der je nach Verein, Region und Ausstattung (Zahl der Plätze, Hallenkapazität, Zusatzangebote) sehr unterschiedlich ausfällt. Manche Vereine erheben zusätzlich eine einmalige Aufnahmegebühr.',
+					'Wer ohne Vereinsbindung spielt, zahlt stattdessen meist eine Platzmiete pro Stunde bei öffentlichen oder kommerziellen Anlagen — praktisch für unregelmäßiges Spielen, auf Dauer oft teurer als eine Vereinsmitgliedschaft bei regelmäßigem Spielbetrieb.'
 				]
 			},
 			{
-				id: 'ausruestung-kosten',
-				heading: 'Ausrüstung',
+				id: 'training-und-unterricht',
+				heading: 'Training und Unterricht',
 				paragraphs: [
-					'Einsteigerschläger sind meist günstiger als Modelle für Fortgeschrittene, dazu kommen gegebenenfalls Schuhe und Kleidung. Wer erst mal ausprobieren will, kann bei vielen Anlagen Schläger leihen und muss so am Anfang kaum investieren — mehr dazu im Ratgeber zur Tennis-Ausrüstung.'
+					'Einzelstunden bei einer Trainerin oder einem Trainer sind meist die teuerste, aber auch individuellste Trainingsform. Gruppentraining ist pro Person günstiger und bietet zusätzlich den sozialen Aspekt des gemeinsamen Lernens — für den Einstieg oft die bessere Wahl.',
+					'Die Kosten für Trainerstunden variieren stark nach Region, Qualifikation der Trainerin bzw. des Trainers und Vereinsangebot.'
 				]
 			},
 			{
-				id: 'training-kosten',
-				heading: 'Training',
+				id: 'laufende-kleinkosten',
+				heading: 'Laufende Kleinkosten',
 				paragraphs: [
-					'Einzel- oder Gruppentraining mit Trainer kostet je nach Anlage und Trainer unterschiedlich viel. Gruppentraining ist in der Regel günstiger pro Person als Einzelstunden.'
+					'Bälle nutzen sich ab und müssen regelmäßig ersetzt werden, besonders bei häufigem Spielen. Saiten reißen oder verlieren an Spannung — eine gelegentliche Neubespannung gehört für regelmäßig Spielende zur normalen Instandhaltung dazu.',
+					'Wer an Liga- oder Turnierspielen teilnimmt, hat je nach Verband und Wettbewerb zusätzlich Startgebühren einzuplanen.'
 				]
 			},
 			{
-				id: 'turniere',
-				heading: 'Turniere',
-				paragraphs: [
-					'Für Turnierteilnahmen fällt meist eine Startgebühr an, die Courtmiete, Bälle und Organisation abdeckt. Die Höhe variiert je nach Veranstalter und Turnierformat.'
-				]
-			},
-			{
-				id: 'mitgliedschaften',
-				heading: 'Mitgliedschaften',
-				paragraphs: [
-					'Manche Anlagen und Vereine bieten Mitgliedschaften mit vergünstigten Courtpreisen oder festen Spielzeiten an. Ob sich das lohnt, hängt davon ab, wie regelmäßig du tatsächlich spielst — bei gelegentlichem Spiel ist oft die reine Stundenmiete günstiger.'
-				]
-			},
-			{
-				id: 'spartipps',
-				heading: 'Spartipps',
+				id: 'bezahlbar-bleiben',
+				heading: 'So bleibt Tennis bezahlbar',
 				box: {
 					kind: 'tips',
-					title: 'So bleibt Tennis bezahlbar',
+					title: 'Spartipps für den Einstieg',
 					items: [
-						'Anfangs Schläger leihen, statt sofort zu kaufen.',
-						'Nebenzeiten (Vormittag, unter der Woche) sind oft günstiger als Abend- und Wochenendtermine.',
-						'Zu viert spielen und die Courtmiete teilen.',
+						'Erst mit Leihschläger und Schnupperstunden testen, bevor größere Anschaffungen anstehen.',
 						'Gruppentraining statt Einzelstunden für den Einstieg wählen.',
-						'Vor einer Mitgliedschaft die eigene tatsächliche Spielhäufigkeit realistisch einschätzen.'
+						'Gebrauchte Schläger und Ausrüstung im Fachgeschäft oder über den Verein prüfen.',
+						'Vereinsmitgliedschaft und öffentliche Platzmiete für dein Spielverhalten durchrechnen, statt pauschal zu entscheiden.'
 					]
 				}
 			},
 			{
-				id: 'kosten-checkliste',
-				heading: 'Kosten-Checkliste',
+				id: 'vor-dem-einstieg-klaeren',
+				heading: 'Vor dem Einstieg klären',
 				box: {
 					kind: 'checklist',
-					title: 'Vor dem Einstieg klären',
+					title: 'Kurz gecheckt',
 					items: [
-						'Preisliste der Wunsch-Anlage für Courtmiete und Nebenzeiten prüfen.',
-						'Klären, ob Schläger und Bälle verliehen bzw. gestellt werden.',
-						'Eigene, realistische Spielhäufigkeit einschätzen.',
-						'Gruppentraining als günstigen Einstieg in Betracht ziehen.',
-						'Mitgliedschaft erst abschließen, wenn sich regelmäßiges Spielen abzeichnet.'
+						'Beitragsordnung und Aufnahmegebühr beim Wunschverein direkt erfragen.',
+						'Prüfen, ob eine Schnuppermitgliedschaft oder Probezeit angeboten wird.',
+						'Klären, ob Schläger/Bälle in der ersten Zeit gestellt werden.',
+						'Gruppen- und Einzelunterrichtspreise vergleichen, bevor du dich festlegst.'
 					]
 				}
 			}
 		],
 		faq: [
 			{
-				question: 'Ist Tennis teurer als Tennis?',
+				question: 'Ist Tennis ein teurer Sport?',
 				answer:
-					'Das lässt sich pauschal nicht sagen — die Kosten hängen stark von Region, Anlage und persönlicher Spielhäufigkeit ab, bei beiden Sportarten gleichermaßen.'
+					'Die Einstiegskosten lassen sich mit Leihausrüstung und Gruppentraining klein halten. Teurer wird es meist erst mit eigener hochwertiger Ausrüstung, regelmäßigen Einzelstunden und Wettkampfteilnahmen — für lockeres Freizeitspielen bleibt der Einstieg überschaubar.'
 			},
 			{
-				question: 'Lohnt sich eine Mitgliedschaft für Einsteiger?',
+				question: 'Lohnt sich eine Vereinsmitgliedschaft gegenüber Platzmiete?',
 				answer:
-					'Am Anfang meist nicht zwingend nötig — erst ausprobieren, wie oft du wirklich spielst, dann über eine Mitgliedschaft entscheiden.'
-			},
-			{
-				question: 'Was ist die günstigste Art, mit Tennis zu starten?',
-				answer:
-					'Geliehener Schläger, Nebenzeiten nutzen und zu viert spielen, um sich die Courtmiete zu teilen — so bleiben die Einstiegskosten überschaubar.'
+					'Das hängt vor allem davon ab, wie oft du spielst. Bei regelmäßigem Spielbetrieb ist eine Vereinsmitgliedschaft meist günstiger als wiederholte Einzelbuchungen; bei sehr unregelmäßigem Spielen kann stundenweise Platzmiete ohne feste Bindung besser passen.'
 			}
 		]
 	}
