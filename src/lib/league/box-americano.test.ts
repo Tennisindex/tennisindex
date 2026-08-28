@@ -15,8 +15,8 @@ import {
 // Kurzschreibweise: Sätze als [team1, team2]-Paare.
 function match(
 	roundNumber: number,
-	team1: [number, number],
-	team2: [number, number],
+	team1: number[],
+	team2: number[],
 	sets: [number, number][],
 	extra: Partial<BoxMatchResult> = {}
 ): BoxMatchResult {

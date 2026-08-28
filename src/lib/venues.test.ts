@@ -19,7 +19,7 @@ describe('normalizeForSearch', () => {
 
 describe('matchesQuery', () => {
 	it('findet über den Namen', () => {
-		expect(matchesQuery(venue(), 'oberland')).toBe(true);
+		expect(matchesQuery(venue(), 'talstadt')).toBe(true);
 	});
 
 	it('findet über die Stadt', () => {
@@ -44,7 +44,7 @@ describe('matchesQuery', () => {
 
 	it('kommt mit fehlender Stadt und PLZ klar', () => {
 		const v = venue({ city: null, postalCode: null });
-		expect(matchesQuery(v, 'oberland')).toBe(true);
+		expect(matchesQuery(v, 'talstadt')).toBe(true);
 		expect(matchesQuery(v, 'wolfrats')).toBe(false);
 	});
 });

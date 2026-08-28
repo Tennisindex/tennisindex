@@ -60,8 +60,8 @@
 		{:else}
 			<ol class="board">
 				{#each data.board.players as p (p.handle)}
-					<li>
-						<a class="row" href="/p/{p.handle}">
+					<li class="row">
+						<a class="row-link" href="/p/{p.handle}" aria-label={p.name}></a>
 							<span class="r">{p.rank}</span>
 							<span class="who">
 								<span class="nm">{p.name}</span>
@@ -69,12 +69,11 @@
 									<span class="uc">unbeansprucht</span>
 								{/if}
 								<span class="club">
-									<a href="/c/{p.clubSlug}" onclick={(e) => e.stopPropagation()}>{p.clubName}</a>
+									<a class="club-link" href="/c/{p.clubSlug}">{p.clubName}</a>
 									· {p.matches} Matches
 								</span>
 							</span>
 							<span class="v">{p.rating.toFixed(2)}</span>
-						</a>
 					</li>
 				{/each}
 			</ol>
@@ -125,12 +124,19 @@
 	}
 
 	.row {
+		position: relative;
 		display: flex;
 		align-items: center;
 		gap: 14px;
 		padding: 12px 18px;
-		text-decoration: none;
-		color: inherit;
+	}
+
+	/* Deckt die ganze Zeile als Klickfläche ab, ohne ein <a> um den
+	   Club-Link herum zu verschachteln (ungültiges HTML). Der Club-Link
+	   selbst liegt mit z-index darüber und bleibt eigenständig klickbar. */
+	.row-link {
+		position: absolute;
+		inset: 0;
 	}
 
 	.r {
@@ -167,7 +173,9 @@
 		color: var(--muted-light);
 	}
 
-	.club a {
+	.club-link {
+		position: relative;
+		z-index: 1;
 		color: inherit;
 	}
 

@@ -246,6 +246,10 @@
 							Skill-Level (optional) — für erfahrene Neuzugänge, damit das Matchmaking nicht bei
 							Anfänger-Niveau startet
 						</label>
+						<select id="new-member-category" name="category">
+							<option value="doubles">Doppel</option>
+							<option value="singles">Einzel</option>
+						</select>
 						<select id="new-member-tier" name="skillTier">
 							<option value="">Nicht festlegen — startet mit Standardwert</option>
 							{#each SKILL_TIER_ORDER as tier (tier)}

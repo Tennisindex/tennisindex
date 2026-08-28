@@ -269,6 +269,7 @@ export async function addUnclaimedMember(
 	clubId: string,
 	displayName: string,
 	initialSkillTier?: SkillTier,
+	category: 'singles' | 'doubles' = 'doubles',
 	adminPlayerId?: string
 ): Promise<MemberWriteResult> {
 	const name = displayName.trim();
@@ -287,6 +288,7 @@ export async function addUnclaimedMember(
 			admin,
 			clubId,
 			data as string,
+			category,
 			initialSkillTier,
 			adminPlayerId
 		);

@@ -32,10 +32,10 @@ async function loadCycleOr404(
 	return cycle;
 }
 
-/** Die vier Spieler-IDs einer Runde, aus Sitz + Aufstellung aufgelöst. */
+/** Die Spieler-IDs einer Runde, aus Sitz + Aufstellung aufgelöst (2 bei singles_ladder, 4 bei box_americano_4). */
 function roundPlayerIds(
 	box: { lineup: { seat: number; playerId: string }[] },
-	round: { team1: [number, number]; team2: [number, number] }
+	round: { team1: number[]; team2: number[] }
 ): string[] {
 	const bySeat = new Map(box.lineup.map((p) => [p.seat, p.playerId] as const));
 	return [...round.team1, ...round.team2]

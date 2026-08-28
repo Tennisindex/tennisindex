@@ -160,12 +160,14 @@ export const actions: Actions = {
 		const skillTier = SKILL_TIERS.includes(skillTierRaw as SkillTier)
 			? (skillTierRaw as SkillTier)
 			: undefined;
+		const category = String(form.get('category') ?? '') === 'singles' ? 'singles' : 'doubles';
 
 		const result = await addUnclaimedMember(
 			supabaseAdmin(platform),
 			club.id,
 			displayName,
 			skillTier,
+			category,
 			locals.player.id
 		);
 		if (!result.ok) return { memberError: result.message };
