@@ -4,7 +4,7 @@
 	"Footer-Erweiterung", Block 6: Level-Schätzer-Link ergänzt) — vorher
 	dreifach kopierte Markup mit nur fünf Links, jetzt eine Stelle.
 
-	Liga-Link zeigt bewusst direkt auf /liga/bavaro statt auf eine
+	Liga-Link zeigt bewusst direkt auf /liga/talstadt statt auf eine
 	generische /liga-Übersicht: es gibt aktuell genau eine Liga, eine
 	Index-Seite mit einem einzigen Eintrag wäre dünner Content ohne
 	echten Mehrwert.
@@ -72,7 +72,7 @@
 			<a href={localizeHref('/level-schaetzen')}>{m.footer_level_schaetzer()}</a>
 			<a href={localizeHref('/vereine')}>{m.footer_vereine()}</a>
 			<a href={localizeHref('/karte')}>{m.footer_karte()}</a>
-			<a href={localizeHref('/liga/bavaro')}>{m.footer_liga()}</a>
+			<a href={localizeHref('/liga/talstadt')}>{m.footer_liga()}</a>
 			<a href={localizeHref('/ratgeber')}>{m.footer_ratgeber()}</a>
 			<a href={localizeHref('/ratgeber/tennis-regeln')}>{m.footer_tennis_regeln()}</a>
 			<a href={localizeHref('/ratgeber/tennis-ausruestung')}>{m.footer_tennis_ausruestung()}</a>

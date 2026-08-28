@@ -200,7 +200,7 @@
 				</p>
 				<a
 					class="btn btn-primary"
-					href={localizeHref('/liga/bavaro')}
+					href={localizeHref('/liga/talstadt')}
 					use:reveal={{ delay: 0.15 }}
 					style="margin-top:28px; display:inline-flex"
 				>

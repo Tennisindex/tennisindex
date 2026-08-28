@@ -7,7 +7,7 @@
 // Liest eine CSV- oder JSON-Datei mit Tennis-Anlagen und schreibt
 // supabase/seed-venues.local.sql — wie die übrigen Importe in diesem
 // Projekt wird das erzeugte SQL von Hand im Supabase SQL Editor
-// ausgeführt (siehe scripts/import-bavaro.ts).
+// ausgeführt.
 //
 // ERWARTETE SPALTEN (CSV-Kopfzeile) bzw. JSON-Schlüssel:
 //   name        Pflicht
@@ -457,7 +457,7 @@ L.push('-- Eine Anlage gilt als TennisIndex-Partner, sobald club_id gesetzt');
 L.push('-- ist. Bewusst kein Namensabgleich im Skript — der würde früher');
 L.push('-- oder später den falschen Verein treffen. Beispiel:');
 L.push('--');
-L.push("--   update tennis_venues set club_id = (select id from clubs where slug = 'stc-oberland')");
+L.push("--   update tennis_venues set club_id = (select id from clubs where slug = 'tc-talstadt')");
 L.push("--   where name = 'HIER DEN EXAKTEN ANLAGENNAMEN EINSETZEN';");
 L.push('');
 

@@ -11,7 +11,9 @@ vite.config.ts.timestamp-*
 .wrangler
 .dev.vars
 
-# Echte Ligadaten: Klarnamen von Vereinsmitgliedern, gehören nicht ins
-# öffentliche Repo. Nur lokal halten und in Supabase importieren.
+# Lokale Importdaten (z. B. scripts/import-venues.ts) und daraus erzeugtes
+# SQL vor manueller Prüfung — gehören nicht ins öffentliche Repo. Nur lokal
+# halten und in Supabase importieren. Frei erfundene Demo-Daten laufen
+# separat über scripts/seed-demo.ts -> supabase/seed.sql (nicht ignoriert).
 /data
 *.local.sql

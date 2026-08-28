@@ -177,7 +177,7 @@ describe('computeBoxStandings', () => {
 		expect({ ...a, seat: 0, rank: 0 }).toEqual({ ...b, seat: 0, rank: 0 });
 	});
 
-	it('zählt einen Punkt pro Sieg (Bávaro-Zählweise)', () => {
+	it('zählt einen Punkt pro Sieg', () => {
 		const s = computeBoxStandings(
 			[1, 2, 3, 4],
 			fullBox([

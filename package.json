@@ -14,8 +14,8 @@
 		"lint": "prettier --check .",
 		"test": "vitest run",
 		"test:watch": "vitest",
-		"import:bavaro": "node scripts/run.mjs scripts/import-bavaro.ts",
 		"icons": "node scripts/run.mjs scripts/generate-icons.ts",
+		"seed:demo": "node scripts/run.mjs scripts/seed-demo.ts",
 		"cap:sync": "cap sync",
 		"cap:open:android": "cap open android",
 		"cap:open:ios": "cap open ios"

@@ -92,25 +92,29 @@ Siehe [`.env.example`](.env.example). Datei nicht committen.
 | `src/lib/claim-match.ts`                     | Namensabgleich fürs Beanspruchen            |
 | `src/lib/server/rating/`                     | OpenSkill-Kern, Confirm-Worker, Claims      |
 | `src/lib/server/rating/league-seed.ts`       | Startwert aus einer bestehenden Ligatabelle |
-| `scripts/import-bavaro.ts`                   | Ligadaten → Seed-SQL                        |
+| `scripts/seed-demo.ts`                       | Fiktive Demo-Daten → seed.sql                |
 | `supabase/migrations/`                       | Schema + RPCs                               |
 | `docs/`                                      | Widget-Konzept, Verification-Pipeline       |
 
-## Echte Ligadaten importieren
+## Demo-Daten für die lokale Entwicklung
 
-Der Pilot läuft mit den echten Tabellen der BÁVARO Tennis League (STC Oberland),
-nicht mit Demodaten.
+TennisIndex startet als neues Projekt ohne echten Piloten — anders als
+PadelIndex (dessen Import-Skripte für eine echte Vereinsliga hier bewusst
+nicht übernommen wurden). Stattdessen erzeugt ein Skript frei erfundene
+Demo-Daten durch denselben Rating-Kern, den auch der Live-Betrieb nutzt:
 
 ```bash
-# data/bavaro-zyklus5.json liegt lokal, nicht im Repo
-npm run import:bavaro
-# erzeugt supabase/seed-bavaro.local.sql -> im Supabase SQL Editor ausführen
+npm run seed:demo
+# erzeugt supabase/seed.sql — läuft automatisch bei `supabase db reset`
 ```
 
-Das Skript rechnet die echten Matches durch denselben Rating-Kern, den auch
-der Live-Betrieb nutzt: Startwert aus der Ligaposition vor dem Zyklus, dann
-jedes Match einzeln. Alle IDs sind deterministisch aus dem Namen abgeleitet,
-ein erneuter Lauf ist idempotent.
+Das Skript legt einen fiktiven Verein (TC Talstadt), 16 frei erfundene
+Spieler:innen, eine chronologische Folge simulierter Einzel- und
+Doppel-Matches der letzten 10 Wochen sowie eine kleine Liga
+(`/liga/talstadt`, Format `box_americano_4`) an. Alle Ratings entstehen aus
+den simulierten Match-Ergebnissen über `computeMatchRatings()` — es werden
+keine mu/sigma-Werte direkt gesetzt. IDs sind deterministisch aus den Namen
+abgeleitet, ein erneuter Lauf überschreibt `seed.sql` identisch.
 
 **Personenbezogene Daten:** `data/` und `*.local.sql` sind bewusst gitignored.
 Dieses Repo ist öffentlich — Klarnamen von Vereinsmitgliedern gehören weder in

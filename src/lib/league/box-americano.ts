@@ -28,7 +28,7 @@ export type Tiebreaker = 'match_points' | 'set_diff' | 'sets_won' | 'game_diff' 
 export interface BoxLeagueConfig {
 	boxSize: number;
 	rounds: number;
-	/** Bávaro zählt 1 Punkt pro Sieg (aus den echten Daten abgeleitet). */
+	/** 1 Punkt pro Sieg — die Standardwertung für box_americano_4. */
 	pointsPerWin: number;
 	promote: number;
 	relegate: number;
@@ -38,9 +38,9 @@ export interface BoxLeagueConfig {
 	promoteBottomBox: number;
 	tiebreakers: Tiebreaker[];
 	/**
-	 * Bávaro-Regelwerk: die ersten N Wochen eines Zyklus vereinbaren die
-	 * Spieler ihre Termine selbst, danach vergibt der Admin die
-	 * restlichen offenen Runden. Siehe cyclePhase().
+	 * Die ersten N Wochen eines Zyklus vereinbaren die Spieler ihre
+	 * Termine selbst, danach vergibt der Admin die restlichen offenen
+	 * Runden. Siehe cyclePhase().
 	 */
 	selfServiceWeeks: number;
 }
