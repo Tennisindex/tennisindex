@@ -1,0 +1,53 @@
+// ============================================================
+// TennisIndex — hreflang-Alternates für mehrsprachige Seiten
+// ============================================================
+// Eine Quelle der Wahrheit für "welche Sprachvarianten gibt es von
+// dieser Seite und wie lauten ihre URLs" — verwendet sowohl in den
+// Seiten-<svelte:head>-Blöcken (HreflangLinks.svelte) als auch in der
+// Sitemap (sitemap.xml/+server.ts). Baut auf Paraglides eigener
+// localizeUrl()/locales/baseLocale auf statt eine zweite, abweichende
+// URL-Logik zu pflegen.
+
+import { baseLocale, locales, localizeUrl, type Locale } from '$lib/paraglide/runtime';
+
+const ORIGIN = 'https://tennisindex.eu';
+
+export type HreflangLink = { hreflang: Locale | 'x-default'; href: string };
+
+/**
+ * @param pathname Seitenrelativer, DELOKALISIERTER Pfad (z. B. "/ratgeber/tennis-regeln",
+ *   nicht "/en/ratgeber/tennis-regeln") — die Basis, aus der alle Sprachvarianten
+ *   abgeleitet werden.
+ */
+export function hreflangLinksFor(pathname: string): HreflangLink[] {
+	const base = new URL(pathname, ORIGIN);
+
+	const perLocale: HreflangLink[] = locales.map((locale) => ({
+		hreflang: locale,
+		href: localizeUrl(base, { locale }).href
+	}));
+
+	const defaultHref = localizeUrl(base, { locale: baseLocale }).href;
+
+	return [...perLocale, { hreflang: 'x-default', href: defaultHref }];
+}
+
+const OG_LOCALES: Record<Locale, string> = { de: 'de_DE', en: 'en_US', es: 'es_ES' };
+
+/** og:locale erwartet language_TERRITORY (Facebook-Konvention), nicht den bloßen Sprachcode. */
+export function ogLocaleFor(locale: Locale): string {
+	return OG_LOCALES[locale];
+}
+
+// Statisches Standard-Share-Bild pro Sprache (siehe scripts/generate-og-image.ts) —
+// dasselbe Bild für jede Seite, die kein eigenes dynamisches og:image hat
+// (Ausnahme: /level-schaetzen rendert sein Ergebnis selbst, lib/server/og-image.ts).
+const OG_IMAGES: Record<Locale, string> = {
+	de: `${ORIGIN}/og/share-de.png`,
+	en: `${ORIGIN}/og/share-en.png`,
+	es: `${ORIGIN}/og/share-es.png`
+};
+
+export function ogImageUrl(locale: Locale): string {
+	return OG_IMAGES[locale];
+}
