@@ -321,7 +321,7 @@
 			{/if}
 
 			<p class="back">
-				<a href="/liga/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}"
+				<a href="/turnier/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}"
 					>← Zurück zu den Boxen</a
 				>
 			</p>

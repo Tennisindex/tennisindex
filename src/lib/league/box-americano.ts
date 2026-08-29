@@ -17,12 +17,12 @@
 // leagues.format, nicht eine zweite Kopie der Tabellenlogik.
 //
 // Ausdrücklich NICHT hier drin: das allgemeine Index-Rating. Die
-// Liga-Tabelle (Matchpunkte -> Sätze -> Spiele, box-intern) und das
-// OpenSkill-Rating sind zwei getrennte Systeme. Ein Liga-Match fließt
+// Turniertabelle (Matchpunkte -> Sätze -> Spiele, box-intern) und das
+// OpenSkill-Rating sind zwei getrennte Systeme. Ein Turnier-Match fließt
 // über die normale matches-Zeile zusätzlich ins Index-Rating ein, aber
 // keine der beiden Rechnungen kennt die andere.
 
-/** Reihenfolge der Tiebreaker, konfigurierbar je Liga. */
+/** Reihenfolge der Tiebreaker, konfigurierbar je Turnier. */
 export type Tiebreaker = 'match_points' | 'set_diff' | 'sets_won' | 'game_diff' | 'games_won';
 
 export interface BoxLeagueConfig {
@@ -182,9 +182,9 @@ export interface BoxStanding {
  * Sonst entscheiden die Sätze und bei Satzgleichstand die Games. Diese
  * Reihenfolge ist nicht gewählt, sondern an den echten Daten geprüft:
  * im Zyklus 5 wurde eine Partie beim Stand 7:5, 0:3 abgebrochen (Sätze
- * 1:1) und in der offiziellen Ligatabelle dem Team mit 8:7 Games als
+ * 1:1) und in der offiziellen Turniertabelle dem Team mit 8:7 Games als
  * Sieg gutgeschrieben. Es ist außerdem dieselbe Regel, die winnerOf()
- * im Rating-Kern anwendet — Ligatabelle und Index-Rating kommen damit
+ * im Rating-Kern anwendet — Turniertabelle und Index-Rating kommen damit
  * beim selben Match nie zu unterschiedlichen Siegern.
  *
  * Nur wenn auch die Games gleich stehen, gibt es keinen Sieger.

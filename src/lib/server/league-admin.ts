@@ -1,5 +1,5 @@
 // ============================================================
-// TennisIndex — Liga-Modul: Zyklen und Boxen anlegen
+// TennisIndex — Turnier-Modul: Zyklen und Boxen anlegen
 // ============================================================
 // Schreiben läuft über service_role, wie überall in diesem Schema (siehe
 // club-members.ts) — es gibt bewusst keine INSERT/UPDATE/DELETE-Policies
@@ -28,7 +28,7 @@ import { formatPlayerName } from '$lib/claim-match';
 import { assertBoxInLeague, loadLeague, type League } from '$lib/server/league';
 
 /**
- * Gemeinsame Zugriffsprüfung für alle /liga/[slug]/verwaltung/*-Routen:
+ * Gemeinsame Zugriffsprüfung für alle /turnier/[slug]/verwaltung/*-Routen:
  * nicht eingeloggt -> zum Login mit Rücksprung; kein Vereins-Admin ->
  * 403. Geprüft bei JEDEM Laden und JEDER Aktion, nie nur einmal (gleiche
  * Begründung wie isClubAdmin selbst: IDs in der URL sind Nutzereingabe).
@@ -40,12 +40,12 @@ export async function requireLeagueAdmin(
 	pathname: string
 ): Promise<League> {
 	const league = await loadLeague(supabasePublic(platform), slug);
-	if (!league) throw error(404, 'Diese Liga gibt es nicht.');
+	if (!league) throw error(404, 'Dieses Turnier gibt es nicht.');
 	if (!playerId) throw redirect(303, `/anmelden?next=${encodeURIComponent(pathname)}`);
-	if (!league.clubId) throw error(403, 'Diese Liga hat keinen Verein, der sie verwalten könnte.');
+	if (!league.clubId) throw error(403, 'Dieses Turnier hat keinen Verein, der es verwalten könnte.');
 
 	const ok = await isClubAdmin(supabaseAdmin(platform), league.clubId, playerId);
-	if (!ok) throw error(403, 'Nur Vereins-Admins können diese Liga verwalten.');
+	if (!ok) throw error(403, 'Nur Vereins-Admins können dieses Turnier verwalten.');
 
 	return league;
 }
@@ -82,7 +82,7 @@ export type CycleSummary = {
 	boxCount: number;
 };
 
-/** Alle Zyklen einer Liga, neueste zuerst — für die Übersichtsliste. */
+/** Alle Zyklen eines Turniers, neueste zuerst — für die Übersichtsliste. */
 export async function listCycles(admin: SupabaseClient, leagueId: string): Promise<CycleSummary[]> {
 	const { data, error: err } = await admin
 		.from('league_cycles')
@@ -115,7 +115,7 @@ export async function listCycles(admin: SupabaseClient, leagueId: string): Promi
 export type CreateCycleResult = { ok: true; cycleId: string } | { ok: false; message: string };
 
 /**
- * Legt bei Bedarf eine neue Saison an (Name eindeutig je Liga, siehe
+ * Legt bei Bedarf eine neue Saison an (Name eindeutig je Turnier, siehe
  * unique(league_id, name) in 0016) und darin einen Zyklus.
  */
 export async function createCycle(
@@ -202,7 +202,7 @@ export type CreateBoxResult = { ok: true; boxId: string } | { ok: false; message
 
 /**
  * Legt eine Box an UND gleich ihre Runden-Platzhalter (status='scheduled',
- * ohne match_id) — ohne die gibt es auf /liga/.../box/[boxId] nichts zum
+ * ohne match_id) — ohne die gibt es auf /turnier/.../box/[boxId] nichts zum
  * Melden. `rounds` kommt aus leagues.config (box-americano.ts-Default: 3).
  */
 export async function createBox(
@@ -453,7 +453,7 @@ export async function nextLadderPosition(admin: SupabaseClient, cycleId: string)
 // ------------------------------------------------------------
 // Warteliste & Ersatz mitten im Zyklus
 // ------------------------------------------------------------
-// league_registrations bildet die Beziehung Spieler<->Liga insgesamt ab
+// league_registrations bildet die Beziehung Spieler<->Turnier insgesamt ab
 // (aktiv/Warteliste/Ersatzpool/ausgetreten), unabhängig von der Frage,
 // in welcher Box jemand gerade sitzt (league_box_members). Ein Austritt
 // betrifft potenziell beides: die Registrierung wechselt auf 'left',

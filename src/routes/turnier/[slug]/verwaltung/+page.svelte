@@ -1,5 +1,5 @@
 <script lang="ts">
-	// Liga-Verwaltung. Der Auf-/Abstieg ist hier ausdrücklich ein
+	// Turnierverwaltung. Der Auf-/Abstieg ist hier ausdrücklich ein
 	// VORSCHLAG: die Seite zeigt ihn an, ein Admin bestätigt ihn, und erst
 	// dann wird er als Beschluss festgeschrieben. Nichts passiert
 	// automatisch — genau so war die Anforderung.
@@ -46,8 +46,8 @@
 			<h1 use:reveal={{ delay: 0.05 }}>{data.league.name}</h1>
 
 			<p class="cycles-link" use:reveal={{ delay: 0.08 }}>
-				<a href="/liga/{data.league.slug}/verwaltung/zyklen">Zyklen und Boxen verwalten →</a>
-				· <a href="/liga/{data.league.slug}/verwaltung/spieler">Warteliste &amp; Austritt →</a>
+				<a href="/turnier/{data.league.slug}/verwaltung/zyklen">Zyklen und Boxen verwalten →</a>
+				· <a href="/turnier/{data.league.slug}/verwaltung/spieler">Warteliste &amp; Austritt →</a>
 			</p>
 
 			{#if data.league.clubSlug}
@@ -58,7 +58,7 @@
 
 			{#if !data.cycle}
 				<p class="muted intro" use:reveal={{ delay: 0.1 }}>
-					Für diese Liga läuft gerade kein Zyklus. Leg unter „Zyklen und Boxen verwalten" einen an.
+					Für dieses Turnier läuft gerade kein Zyklus. Leg unter „Zyklen und Boxen verwalten" einen an.
 				</p>
 			{:else}
 				<p class="muted intro" use:reveal={{ delay: 0.1 }}>
@@ -70,14 +70,14 @@
 					<div class="tags" use:reveal={{ delay: 0.12 }}>
 						<a
 							class="tag"
-							href="/liga/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}/ergebnisse"
+							href="/turnier/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}/ergebnisse"
 						>
 							<strong>{data.tags.openMatches}</strong> offene Spiele
 						</a>
 						{#if data.phase === 'self_service'}
 							<a
 								class="tag"
-								href="/liga/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}/termine"
+								href="/turnier/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}/termine"
 							>
 								<strong>{data.tags.missingSchedule}</strong> fehlende Terminvereinbarung{data.tags
 									.missingSchedule === 1
@@ -85,7 +85,7 @@
 									: 'en'}
 							</a>
 						{/if}
-						<a class="tag" href="/liga/{data.league.slug}/verwaltung/spieler">
+						<a class="tag" href="/turnier/{data.league.slug}/verwaltung/spieler">
 							<strong>{data.tags.openSeats}</strong> Ersatzspieler angefordert
 						</a>
 					</div>
@@ -210,7 +210,7 @@
 			{/if}
 
 			<p class="back">
-				<a href="/liga/{data.league.slug}">← Zur öffentlichen Ligaseite</a>
+				<a href="/turnier/{data.league.slug}">← Zur öffentlichen Turnierseite</a>
 			</p>
 		</div>
 	</section>

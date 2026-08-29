@@ -1,7 +1,7 @@
-// Liga-Verwaltung: Auf-/Abstiegsvorschlag prüfen und bestätigen, plus die
+// Turnierverwaltung: Auf-/Abstiegsvorschlag prüfen und bestätigen, plus die
 // Status-Übersicht (offene Spiele, fehlende Termine, angeforderte
 // Ersatzspieler) fürs Dashboard.
-// Zugriff hat, wer Admin des Vereins ist, zu dem die Liga gehört —
+// Zugriff hat, wer Admin des Vereins ist, zu dem das Turnier gehört —
 // geprüft bei jedem Laden UND bei jeder Aktion (requireLeagueAdmin).
 
 import { fail } from '@sveltejs/kit';

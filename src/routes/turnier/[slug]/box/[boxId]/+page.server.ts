@@ -34,7 +34,7 @@ async function requireBoxMember(
 
 export const load: PageServerLoad = async ({ params, url, platform, locals }) => {
 	const league = await loadLeague(supabasePublic(platform), params.slug);
-	if (!league) throw error(404, 'Diese Liga gibt es nicht.');
+	if (!league) throw error(404, 'Dieses Turnier gibt es nicht.');
 
 	if (!locals.player) {
 		throw redirect(303, `/anmelden?next=${encodeURIComponent(url.pathname)}`);
@@ -43,7 +43,7 @@ export const load: PageServerLoad = async ({ params, url, platform, locals }) =>
 
 	const admin = supabaseAdmin(platform);
 	const cycle = await loadCurrentCycle(admin, league.id);
-	if (!cycle) throw error(404, 'Für diese Liga läuft gerade kein Zyklus.');
+	if (!cycle) throw error(404, 'Für dieses Turnier läuft gerade kein Zyklus.');
 
 	const box = (await loadLadder(admin, cycle.id, league.format, league.config)).find((b) => b.id === params.boxId);
 	if (!box) throw error(404, 'Diese Box gehört nicht zum laufenden Zyklus.');

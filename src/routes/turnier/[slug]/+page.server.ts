@@ -1,4 +1,4 @@
-// Öffentliche Liga-Ansicht: eigene Rangliste, unabhängig vom
+// Öffentliche Turnier-Ansicht: eigene Rangliste, unabhängig vom
 // allgemeinen TennisIndex-Rating. Läuft über den Admin-Client, weil die
 // Satzergebnisse (match_sets) per RLS auf Beteiligte beschränkt sind —
 // Namen kommen trotzdem nur aus der anonymisierten View.
@@ -19,7 +19,7 @@ import { loadCurrentCycle, loadLadder, loadLeague } from '$lib/server/league';
 
 export const load: PageServerLoad = async ({ params, url, platform, locals }) => {
 	const league = await loadLeague(supabasePublic(platform), params.slug);
-	if (!league) throw error(404, 'Diese Liga gibt es nicht.');
+	if (!league) throw error(404, 'Dieses Turnier gibt es nicht.');
 
 	const admin = supabaseAdmin(platform);
 	const cycleId = url.searchParams.get('zyklus') ?? undefined;

@@ -2,7 +2,7 @@
 // TennisIndex — Mein Profil (privat)
 // ============================================================
 // Bewusst eine eigene, schlanke Seite statt /konto zu erweitern: /konto
-// ist inzwischen ein breites Dashboard (Rating-Verlauf, Prämien, Liga,
+// ist inzwischen ein breites Dashboard (Rating-Verlauf, Prämien, Turnier,
 // Club-Admin, …) — diese Seite zeigt nur die Identität aus der
 // Registrierung (Vorname/Nachname/Geburtsdatum/Verein/E-Mail) plus eine
 // Kurzfassung der Ranking-Daten. Kein Risiko für /konto, keine Änderung

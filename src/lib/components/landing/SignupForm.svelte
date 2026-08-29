@@ -8,7 +8,7 @@
 	// dafür einen keydown-Handler brauchen.
 	//
 	// defaultClub: für Kontexte, in denen der Verein schon feststeht
-	// (z. B. die Liga-Seite eines Vereins) — vorausgefüllt, aber vom
+	// (z. B. die Turnier-Seite eines Vereins) — vorausgefüllt, aber vom
 	// Feld her weiterhin ein normales Textfeld, keine feste Zuordnung.
 
 	import { untrack } from 'svelte';

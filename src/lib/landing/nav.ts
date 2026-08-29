@@ -3,7 +3,7 @@
 // ============================================================
 // War bislang 14x identisch in einzelnen +page.svelte-Dateien kopiert
 // (Startseite, /rating, /vereine, /faq, /ueber, /karte,
-// /level-schaetzen, die Liga-Verwaltungsseiten). Eine Stelle, damit ein
+// /level-schaetzen, die Turnierverwaltungsseiten). Eine Stelle, damit ein
 // neuer Nav-Punkt nicht 14 Edits braucht.
 //
 // BEWUSST EINE FUNKTION, KEIN STATISCHES ARRAY: m.xxx()/localizeHref()

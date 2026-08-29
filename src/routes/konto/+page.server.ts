@@ -59,7 +59,7 @@ export const load: PageServerLoad = async ({ locals, platform, url }) => {
 	// nichts zum Einlösen.
 	const rewards = club ? await loadRewardCatalog(locals.supabase, club.id) : [];
 
-	// Liga-Mitgliedschaft ist ebenfalls vereinsgebunden. loadOwnRegistration
+	// Turnier-Mitgliedschaft ist ebenfalls vereinsgebunden. loadOwnRegistration
 	// braucht zwingend den Admin-Client (league_registrations hat keine
 	// RLS-Policy, siehe league.ts).
 	const league = club ? await loadLeagueForClub(locals.supabase, club.id) : null;
@@ -230,7 +230,7 @@ export const actions: Actions = {
 		if (!locals.player || !locals.supabase) return { leagueError: 'Nicht angemeldet.' };
 		const club = await loadPlayerClub(locals.supabase, locals.player.id);
 		const league = club ? await loadLeagueForClub(locals.supabase, club.id) : null;
-		if (!league) return { leagueError: 'Für deinen Verein gibt es aktuell keine Liga.' };
+		if (!league) return { leagueError: 'Für deinen Verein gibt es aktuell kein Turnier.' };
 
 		const result = await joinLeagueWaitlist(supabaseAdmin(platform), league.id, locals.player.id);
 		if (!result.ok) return { leagueError: result.message };
@@ -241,7 +241,7 @@ export const actions: Actions = {
 		if (!locals.player || !locals.supabase) return { leagueError: 'Nicht angemeldet.' };
 		const club = await loadPlayerClub(locals.supabase, locals.player.id);
 		const league = club ? await loadLeagueForClub(locals.supabase, club.id) : null;
-		if (!league) return { leagueError: 'Für deinen Verein gibt es aktuell keine Liga.' };
+		if (!league) return { leagueError: 'Für deinen Verein gibt es aktuell kein Turnier.' };
 
 		// Wer selbst geht, weist niemandem den eigenen Sitz zu — das bleibt
 		// dem Admin überlassen (siehe league.ts departLeagueMember).

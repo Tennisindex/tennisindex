@@ -53,7 +53,7 @@
 			<span class="eyebrow" use:reveal>{data.league.name}</span>
 			<h1 use:reveal={{ delay: 0.05 }}>Warteliste &amp; Austritt</h1>
 			<p class="muted intro" use:reveal={{ delay: 0.1 }}>
-				Verlässt jemand die Liga mitten im Zyklus, rückt hier der Sitz frei — mit oder ohne
+				Verlässt jemand das Turnier mitten im Zyklus, rückt hier der Sitz frei — mit oder ohne
 				sofortigen Ersatz von der Warteliste. Bereits gespielte Runden bleiben davon unberührt.
 			</p>
 
@@ -162,7 +162,7 @@
 			{/if}
 
 			<p class="back">
-				<a href="/liga/{data.league.slug}/verwaltung">← Zur Liga-Verwaltung</a>
+				<a href="/turnier/{data.league.slug}/verwaltung">← Zur Turnierverwaltung</a>
 			</p>
 		</div>
 	</section>

@@ -61,11 +61,11 @@
 		{#if data.league}
 			<div class="card league-card">
 				<div class="card-head">
-					<h3 class="card-title" style="margin:0">Liga — {data.league.name}</h3>
-					<a class="btn btn-primary" href="/liga/{data.league.slug}/verwaltung">Liga verwalten →</a>
+					<h3 class="card-title" style="margin:0">Turnier — {data.league.name}</h3>
+					<a class="btn btn-primary" href="/turnier/{data.league.slug}/verwaltung">Turnier verwalten →</a>
 				</div>
 				<p class="muted" style="font-size: 13px; margin: 10px 0 0">
-					Boxen &amp; Paarungen, Warteliste, Termine, Ergebnisse und Auf-/Abstieg für diese Liga.
+					Boxen &amp; Paarungen, Warteliste, Termine, Ergebnisse und Auf-/Abstieg für dieses Turnier.
 				</p>
 			</div>
 		{/if}

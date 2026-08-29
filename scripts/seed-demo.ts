@@ -8,9 +8,9 @@
 // 16 frei erfundene Spieler:innen und eine chronologische Folge
 // simulierter Einzel- und Doppel-Matches der letzten ~10 Wochen — durch
 // den ECHTEN Rating-Kern (computeMatchRatings() aus rating-core.ts)
-// gerechnet, nicht durch geratene mu/sigma-Werte. Zusätzlich eine kleine
-// Liga (Slug "oberland", Format box_americano_4, 2 Boxen), damit
-// /liga/oberland (siehe Homepage/Footer-Link) nicht ins Leere zeigt.
+// gerechnet, nicht durch geratene mu/sigma-Werte. Zusätzlich ein kleines
+// Turnier (Slug "oberland", Format box_americano_4, 2 Boxen), damit
+// /turnier/oberland (siehe Homepage/Footer-Link) nicht ins Leere zeigt.
 //
 // Alle Namen sind erfunden. Das Skript ersetzt die frühere
 // scripts/import-bavaro*.ts-Familie, die echte Klarnamen eines echten
@@ -259,7 +259,7 @@ for (let week = 0; week < WEEKS; week++) {
 	}
 }
 
-// ---------- Liga: /liga/oberland, Format box_americano_4, 2 Boxen ----------
+// ---------- Turnier: /turnier/oberland, Format box_americano_4, 2 Boxen ----------
 const LEAGUE_ID = uuidv5('league:oberland');
 const SEASON_ID = uuidv5('league_season:oberland:1');
 const CYCLE_ID = uuidv5('league_cycle:oberland:1');
@@ -320,7 +320,7 @@ seedBox(BOX_B_ID, boxBPlayers, 2);
 // ---------- SQL erzeugen ----------
 const L: string[] = [];
 L.push('-- ERZEUGT von scripts/seed-demo.ts — nicht von Hand bearbeiten.');
-L.push('-- Frei erfundene Demo-Daten (Club, Spieler:innen, Matches, Liga) für die');
+L.push('-- Frei erfundene Demo-Daten (Club, Spieler:innen, Matches, Turnier) für die');
 L.push('-- lokale Entwicklung. Läuft automatisch bei `supabase db reset`.');
 L.push('');
 L.push('begin;');
@@ -392,9 +392,9 @@ for (const p of players) {
 }
 L.push('');
 
-L.push('-- ---------- Liga: /liga/oberland (box_americano_4, 2 Boxen) ----------');
+L.push('-- ---------- Turnier: /turnier/oberland (box_americano_4, 2 Boxen) ----------');
 L.push(
-	`insert into leagues (id, club_id, name, slug, format, config, status) values (${q(LEAGUE_ID)}, ${q(CLUB_ID)}, 'Vereinsliga STC Oberland', 'oberland', 'box_americano_4', '{"box_size":4,"rounds":3,"points_per_win":1,"promote":1,"relegate":1,"relegate_top_box":2,"promote_bottom_box":2,"tiebreakers":["match_points","set_diff","game_diff"],"self_service_weeks":3}'::jsonb, 'active') on conflict (id) do nothing;`
+	`insert into leagues (id, club_id, name, slug, format, config, status) values (${q(LEAGUE_ID)}, ${q(CLUB_ID)}, 'Turnier STC Oberland', 'oberland', 'box_americano_4', '{"box_size":4,"rounds":3,"points_per_win":1,"promote":1,"relegate":1,"relegate_top_box":2,"promote_bottom_box":2,"tiebreakers":["match_points","set_diff","game_diff"],"self_service_weeks":3}'::jsonb, 'active') on conflict (id) do nothing;`
 );
 L.push(
 	`insert into league_seasons (id, league_id, name, starts_on, ends_on, status) values (${q(SEASON_ID)}, ${q(LEAGUE_ID)}, 'Saison 1', ${q(cycleStart.toISOString().slice(0, 10))}, ${q(cycleEnd.toISOString().slice(0, 10))}, 'running') on conflict (id) do nothing;`
@@ -434,5 +434,5 @@ writeFileSync(OUT, L.join('\n'), 'utf8');
 
 console.log(`Geschrieben: ${OUT}`);
 console.log(
-	`${players.length} Spieler:innen, ${seededMatches.length} Matches (${seededMatches.filter((m) => m.matchType === 'singles').length} Einzel, ${seededMatches.filter((m) => m.matchType === 'doubles').length} Doppel), 1 Verein, 1 Liga mit 2 Boxen.`
+	`${players.length} Spieler:innen, ${seededMatches.length} Matches (${seededMatches.filter((m) => m.matchType === 'singles').length} Einzel, ${seededMatches.filter((m) => m.matchType === 'doubles').length} Doppel), 1 Verein, 1 Turnier mit 2 Boxen.`
 );

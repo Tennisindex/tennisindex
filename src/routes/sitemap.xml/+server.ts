@@ -80,7 +80,7 @@ export const GET: RequestHandler = async ({ platform, setHeaders }) => {
 				urls.push(...localizedEntries(`/c/${club.slug}`, '0.8', 'daily'));
 			}
 
-			// Ligaseiten sind ein eigenes öffentliches Produkt (0016).
+			// Turnierseiten sind ein eigenes öffentliches Produkt (0016).
 			// Entwürfe bleiben draußen, die RLS-Policy filtert sie ohnehin.
 			const { data: leagues } = await sb
 				.from('leagues')
@@ -88,7 +88,7 @@ export const GET: RequestHandler = async ({ platform, setHeaders }) => {
 				.neq('status', 'draft')
 				.limit(200);
 			for (const league of leagues ?? []) {
-				urls.push(...localizedEntries(`/liga/${league.slug}`, '0.7', 'weekly'));
+				urls.push(...localizedEntries(`/turnier/${league.slug}`, '0.7', 'weekly'));
 			}
 
 			// Spielerprofile erst ab genug bestätigten Matches (lib/seo.ts) —

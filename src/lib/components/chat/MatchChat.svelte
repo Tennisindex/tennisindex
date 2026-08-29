@@ -1,6 +1,6 @@
 <script lang="ts">
-	// Universeller Chat für jedes organisierte Spiel (freies Match, Liga-
-	// Box-Runde, Liga-Box-Gruppe, Spielersuche-Anfrage) — siehe
+	// Universeller Chat für jedes organisierte Spiel (freies Match, Turnier-
+	// Box-Runde, Turnier-Box-Gruppe, Spielersuche-Anfrage) — siehe
 	// supabase/migrations/0016_match_chat.sql. Läuft komplett clientseitig
 	// über den cookie-gebundenen Browser-Client (wie AvatarUpload.svelte):
 	// sowohl Lesen/Schreiben als auch die Realtime-Subscription hängen an

@@ -1,5 +1,5 @@
 // ============================================================
-// TennisIndex — Liga-Verwaltung: Termine & Plätze (6-Wochen-Regel)
+// TennisIndex — Turnierverwaltung: Termine & Plätze (6-Wochen-Regel)
 // ============================================================
 // Woche 1 bis league.config.selfServiceWeeks: Spieler vereinbaren ihre
 // Termine selbst (Eintrag über die öffentliche Box-Seite,
@@ -28,7 +28,7 @@ async function loadCycleOr404(
 	cycleId: string
 ) {
 	const cycle = await loadCurrentCycle(admin, leagueId, cycleId);
-	if (!cycle) throw error(404, 'Diesen Zyklus gibt es in dieser Liga nicht.');
+	if (!cycle) throw error(404, 'Diesen Zyklus gibt es in diesem Turnier nicht.');
 	return cycle;
 }
 

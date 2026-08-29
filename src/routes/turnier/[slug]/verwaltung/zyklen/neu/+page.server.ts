@@ -45,6 +45,6 @@ export const actions: Actions = {
 
 		if (!result.ok) return fail(400, { message: result.message });
 
-		throw redirect(303, `/liga/${league.slug}/verwaltung/zyklen/${result.cycleId}`);
+		throw redirect(303, `/turnier/${league.slug}/verwaltung/zyklen/${result.cycleId}`);
 	}
 };
