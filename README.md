@@ -93,10 +93,10 @@ npm run build       # Produktions-Build für den Cloudflare Worker
 ```
 
 - Site: [http://localhost:5173](http://localhost:5173)
-- Vereinsseite: `/c/tc-talstadt` (der fiktive Demo-Verein, siehe
+- Vereinsseite: `/c/stc-oberland` (der fiktive Demo-Verein, siehe
   ["Demo-Daten"](#demo-daten-für-die-lokale-entwicklung))
-- Widget-API: `/api/v1/clubs/tc-talstadt/leaderboard?limit=10&category=doubles`
-- iframe-Fallback: `/embed/tc-talstadt`
+- Widget-API: `/api/v1/clubs/stc-oberland/leaderboard?limit=10&category=doubles`
+- iframe-Fallback: `/embed/stc-oberland`
 - Widget-Skript: `/embed.js`
 
 Ohne Supabase-Keys läuft die Landing-Page trotzdem; alles, was Daten
@@ -202,9 +202,9 @@ npm run seed:demo
 ```
 
 [`scripts/seed-demo.ts`](scripts/seed-demo.ts) legt einen fiktiven Verein
-(TC Talstadt, Slug `tc-talstadt`), 16 frei erfundene Spieler:innen, eine
+(STC Oberland, Slug `stc-oberland`), 16 frei erfundene Spieler:innen, eine
 chronologische Folge simulierter Einzel- und Doppel-Matches der letzten
-zehn Wochen sowie eine kleine Liga (`/liga/talstadt`, Format
+zehn Wochen sowie eine kleine Liga (`/liga/oberland`, Format
 `box_americano_4`) an. Alle Ratings entstehen aus den simulierten
 Match-Ergebnissen über dieselbe `computeMatchRatings()`-Funktion, die
 auch der Live-Betrieb nutzt — es werden keine mu/sigma-Werte direkt

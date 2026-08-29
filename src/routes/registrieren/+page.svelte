@@ -152,7 +152,7 @@
 						name="clubName"
 						type="text"
 						autocomplete="organization"
-						placeholder="z. B. TC Talstadt"
+						placeholder="z. B. STC Oberland"
 						value={v?.clubName ?? ''}
 						required
 					/>

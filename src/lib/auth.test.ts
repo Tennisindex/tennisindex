@@ -4,7 +4,7 @@ import { safeRedirectTarget } from './auth';
 describe('safeRedirectTarget', () => {
 	it('lässt normale interne Pfade durch', () => {
 		expect(safeRedirectTarget('/konto')).toBe('/konto');
-		expect(safeRedirectTarget('/c/tc-talstadt')).toBe('/c/tc-talstadt');
+		expect(safeRedirectTarget('/c/stc-oberland')).toBe('/c/stc-oberland');
 	});
 
 	it('fällt ohne Angabe auf den Fallback zurück', () => {
@@ -41,8 +41,8 @@ describe('safeRedirectTarget', () => {
 		});
 
 		it('erhält Query und Hash einer Same-Origin-URL', () => {
-			expect(safeRedirectTarget(`${origin}/c/tc-talstadt?page=2#top`, { origin })).toBe(
-				'/c/tc-talstadt?page=2#top'
+			expect(safeRedirectTarget(`${origin}/c/stc-oberland?page=2#top`, { origin })).toBe(
+				'/c/stc-oberland?page=2#top'
 			);
 		});
 

@@ -200,7 +200,7 @@
 				</p>
 				<a
 					class="btn btn-primary"
-					href={localizeHref('/liga/talstadt')}
+					href={localizeHref('/liga/oberland')}
 					use:reveal={{ delay: 0.15 }}
 					style="margin-top:28px; display:inline-flex"
 				>
@@ -260,9 +260,9 @@
 			{#if data.board}
 				<p class="cta-alt" use:reveal={{ delay: 0.2 }}>
 					{m.home_cta_alt_question({ clubName: data.board.club.name })}
-					<a href="/c/tc-talstadt/beanspruchen">{m.home_cta_alt_claim()}</a>
+					<a href="/c/stc-oberland/beanspruchen">{m.home_cta_alt_claim()}</a>
 					·
-					<a href={localizeHref('/c/tc-talstadt')}>{m.home_cta_alt_ranking()}</a>
+					<a href={localizeHref('/c/stc-oberland')}>{m.home_cta_alt_ranking()}</a>
 				</p>
 			{/if}
 		</div>

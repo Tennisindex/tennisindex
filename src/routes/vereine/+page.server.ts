@@ -8,7 +8,7 @@ import { getClubLeaderboard } from '$lib/server/leaderboard';
 import { readTrialOfferEnabled } from '$lib/server/env';
 import type { LeaderboardResponse } from '$lib/leaderboard';
 
-const PILOT_CLUB = 'tc-talstadt';
+const PILOT_CLUB = 'stc-oberland';
 
 export const load: PageServerLoad = async ({ platform, setHeaders }) => {
 	let board: LeaderboardResponse | null = null;

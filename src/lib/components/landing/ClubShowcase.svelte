@@ -82,7 +82,7 @@
 
 	const rows = $derived(board?.players?.length ? board.players : FALLBACK);
 	const isReal = $derived(Boolean(board?.players?.length));
-	const clubName = $derived(board?.club?.name ?? 'TC Talstadt');
+	const clubName = $derived(board?.club?.name ?? 'STC Oberland');
 
 	const RING = 2 * Math.PI * 9;
 	const dash = (c: number) => {
@@ -175,7 +175,7 @@
 					> <span class="at">async</span>&gt;&lt;/<span class="t">script</span>&gt;
 
 &lt;<span class="t">tennisindex-leaderboard</span>
-  <span class="at">club</span>=<span class="s">"tc-talstadt"</span>
+  <span class="at">club</span>=<span class="s">"stc-oberland"</span>
   <span class="at">limit</span>=<span class="s">"10"</span>
   <span class="at">accent</span>=<span class="s">"#4C7A1F"</span>&gt;
 &lt;/<span class="t">tennisindex-leaderboard</span>&gt;</code
@@ -189,7 +189,7 @@
 			{/if}
 		</p>
 
-		<a class="btn btn-ghost-light cs-cta" href={localizeHref('/c/tc-talstadt')}>{m.cs_cta()}</a>
+		<a class="btn btn-ghost-light cs-cta" href={localizeHref('/c/stc-oberland')}>{m.cs_cta()}</a>
 	</div>
 </div>
 

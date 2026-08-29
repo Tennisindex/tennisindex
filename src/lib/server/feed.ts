@@ -266,7 +266,7 @@ function guideHighlights(locale: Locale): FeedItem[] {
 }
 
 /**
- * Roulette zeigt bewusst auf den echten Pilotverein (/c/tc-talstadt) statt
+ * Roulette zeigt bewusst auf den echten Pilotverein (/c/stc-oberland) statt
  * auf eine generische Übersicht — dasselbe ehrliche Framing wie die
  * Liga-Teaser auf der Startseite: ein konkretes Beispiel, keine Behauptung
  * flächendeckender Verfügbarkeit.
@@ -276,7 +276,7 @@ function featureAnnouncements(locale: Locale): FeedItem[] {
 		{
 			id: 'feature-roulette',
 			title: m.feed_feature_roulette_title({}, { locale }),
-			link: '/c/tc-talstadt/roulette',
+			link: '/c/stc-oberland/roulette',
 			category: 'FEATURE',
 			description: m.feed_feature_roulette_desc({}, { locale })
 		},

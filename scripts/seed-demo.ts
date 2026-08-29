@@ -4,13 +4,13 @@
 //
 //   npm run seed:demo
 //
-// Erzeugt supabase/seed.sql: ein Verein (TC Talstadt), eine Anlage,
+// Erzeugt supabase/seed.sql: ein Verein (STC Oberland), eine Anlage,
 // 16 frei erfundene Spieler:innen und eine chronologische Folge
 // simulierter Einzel- und Doppel-Matches der letzten ~10 Wochen — durch
 // den ECHTEN Rating-Kern (computeMatchRatings() aus rating-core.ts)
 // gerechnet, nicht durch geratene mu/sigma-Werte. Zusätzlich eine kleine
-// Liga (Slug "talstadt", Format box_americano_4, 2 Boxen), damit
-// /liga/talstadt (siehe Homepage/Footer-Link) nicht ins Leere zeigt.
+// Liga (Slug "oberland", Format box_americano_4, 2 Boxen), damit
+// /liga/oberland (siehe Homepage/Footer-Link) nicht ins Leere zeigt.
 //
 // Alle Namen sind erfunden. Das Skript ersetzt die frühere
 // scripts/import-bavaro*.ts-Familie, die echte Klarnamen eines echten
@@ -57,10 +57,10 @@ const n = (v: number | null | undefined) => (v === null || v === undefined ? 'nu
 const b = (v: boolean) => (v ? 'true' : 'false');
 
 // ---------- Fiktiver Verein + Anlage ----------
-const CLUB_ID = uuidv5('club:tc-talstadt');
-const CLUB_NAME = 'TC Talstadt';
-const CLUB_SLUG = 'tc-talstadt';
-const VENUE_ID = uuidv5('venue:tc-talstadt');
+const CLUB_ID = uuidv5('club:stc-oberland');
+const CLUB_NAME = 'STC Oberland';
+const CLUB_SLUG = 'stc-oberland';
+const VENUE_ID = uuidv5('venue:stc-oberland');
 
 // ---------- Fiktive Spieler:innen ----------
 // trueSkill (0-7, Anzeige-Skala) steuert NUR die Simulation der
@@ -259,12 +259,12 @@ for (let week = 0; week < WEEKS; week++) {
 	}
 }
 
-// ---------- Liga: /liga/talstadt, Format box_americano_4, 2 Boxen ----------
-const LEAGUE_ID = uuidv5('league:talstadt');
-const SEASON_ID = uuidv5('league_season:talstadt:1');
-const CYCLE_ID = uuidv5('league_cycle:talstadt:1');
-const BOX_A_ID = uuidv5('league_box:talstadt:1:1');
-const BOX_B_ID = uuidv5('league_box:talstadt:1:2');
+// ---------- Liga: /liga/oberland, Format box_americano_4, 2 Boxen ----------
+const LEAGUE_ID = uuidv5('league:oberland');
+const SEASON_ID = uuidv5('league_season:oberland:1');
+const CYCLE_ID = uuidv5('league_cycle:oberland:1');
+const BOX_A_ID = uuidv5('league_box:oberland:1:1');
+const BOX_B_ID = uuidv5('league_box:oberland:1:2');
 
 const leagueRoster = shuffle(players.map((p) => p.id));
 const boxAPlayers = leagueRoster.slice(0, 4);
@@ -392,9 +392,9 @@ for (const p of players) {
 }
 L.push('');
 
-L.push('-- ---------- Liga: /liga/talstadt (box_americano_4, 2 Boxen) ----------');
+L.push('-- ---------- Liga: /liga/oberland (box_americano_4, 2 Boxen) ----------');
 L.push(
-	`insert into leagues (id, club_id, name, slug, format, config, status) values (${q(LEAGUE_ID)}, ${q(CLUB_ID)}, 'Vereinsliga TC Talstadt', 'talstadt', 'box_americano_4', '{"box_size":4,"rounds":3,"points_per_win":1,"promote":1,"relegate":1,"relegate_top_box":2,"promote_bottom_box":2,"tiebreakers":["match_points","set_diff","game_diff"],"self_service_weeks":3}'::jsonb, 'active') on conflict (id) do nothing;`
+	`insert into leagues (id, club_id, name, slug, format, config, status) values (${q(LEAGUE_ID)}, ${q(CLUB_ID)}, 'Vereinsliga STC Oberland', 'oberland', 'box_americano_4', '{"box_size":4,"rounds":3,"points_per_win":1,"promote":1,"relegate":1,"relegate_top_box":2,"promote_bottom_box":2,"tiebreakers":["match_points","set_diff","game_diff"],"self_service_weeks":3}'::jsonb, 'active') on conflict (id) do nothing;`
 );
 L.push(
 	`insert into league_seasons (id, league_id, name, starts_on, ends_on, status) values (${q(SEASON_ID)}, ${q(LEAGUE_ID)}, 'Saison 1', ${q(cycleStart.toISOString().slice(0, 10))}, ${q(cycleEnd.toISOString().slice(0, 10))}, 'running') on conflict (id) do nothing;`

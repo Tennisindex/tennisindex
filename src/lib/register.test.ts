@@ -74,7 +74,7 @@ describe('validateRegisterInput', () => {
 		firstName: 'Alex',
 		lastName: 'Muster',
 		birthDate: '1990-05-20',
-		clubName: 'TC Talstadt',
+		clubName: 'STC Oberland',
 		email: 'alex@example.com',
 		password: 'Abcdefg1',
 		passwordRepeat: 'Abcdefg1'

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { filterVenues, matchesFilter, matchesQuery, normalizeForSearch } from './venues';
 
 const venue = (over: Partial<Parameters<typeof matchesQuery>[0]> = {}) => ({
-	name: 'TC Talstadt',
+	name: 'STC Oberland',
 	city: 'Wolfratshausen',
 	postalCode: '82515',
 	isPartner: true,
@@ -19,7 +19,7 @@ describe('normalizeForSearch', () => {
 
 describe('matchesQuery', () => {
 	it('findet über den Namen', () => {
-		expect(matchesQuery(venue(), 'talstadt')).toBe(true);
+		expect(matchesQuery(venue(), 'oberland')).toBe(true);
 	});
 
 	it('findet über die Stadt', () => {
@@ -44,7 +44,7 @@ describe('matchesQuery', () => {
 
 	it('kommt mit fehlender Stadt und PLZ klar', () => {
 		const v = venue({ city: null, postalCode: null });
-		expect(matchesQuery(v, 'talstadt')).toBe(true);
+		expect(matchesQuery(v, 'oberland')).toBe(true);
 		expect(matchesQuery(v, 'wolfrats')).toBe(false);
 	});
 });
@@ -65,7 +65,7 @@ describe('matchesFilter', () => {
 
 describe('filterVenues', () => {
 	const list = [
-		venue({ name: 'TC Talstadt', city: 'Wolfratshausen', isPartner: true }),
+		venue({ name: 'STC Oberland', city: 'Wolfratshausen', isPartner: true }),
 		venue({ name: 'Tennis Köln', city: 'Köln', postalCode: '50667', isPartner: false }),
 		venue({ name: 'Beispielhalle', city: 'München', postalCode: '80331', isPartner: false })
 	];

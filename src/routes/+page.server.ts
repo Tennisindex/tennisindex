@@ -1,5 +1,5 @@
 // Der Board-Lookup dient nur noch der letzten CTA-Zeile ("Du spielst
-// schon beim TC Talstadt? Profil beanspruchen"), die auf der
+// schon beim STC Oberland? Profil beanspruchen"), die auf der
 // Startseite bleibt. Der eigentliche Vereins-Bereich (ClubShowcase,
 // Tarife, Demo-Formular) lebt seit Block 4 unter /vereine — siehe
 // src/routes/vereine/+page.server.ts.
@@ -12,7 +12,7 @@ import type { PageServerLoad } from './$types';
 import { getClubLeaderboard } from '$lib/server/leaderboard';
 import type { LeaderboardResponse } from '$lib/leaderboard';
 
-const PILOT_CLUB = 'tc-talstadt';
+const PILOT_CLUB = 'stc-oberland';
 
 export const load: PageServerLoad = async ({ platform, setHeaders }) => {
 	let board: LeaderboardResponse | null = null;
