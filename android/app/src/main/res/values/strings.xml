@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TennisIndex</string>
+    <string name="title_activity_main">TennisIndex</string>
+    <string name="package_name">eu.tennisindex.app</string>
+    <string name="custom_url_scheme">eu.tennisindex.app</string>
+</resources>
