@@ -8,7 +8,7 @@ Worker, Daten in Supabase.
 
 Vollständiger Funktionsumfang: Spielerprofile, Vereinsverwaltung,
 Match-Meldung mit gegenseitiger Bestätigung, öffentliche Ranglisten und
-Suche, ein Admin-Dashboard, ein Liga-Modul (Doppel-Boxen und eine
+Suche, ein Admin-Dashboard, ein Turnier-Modul (Doppel-Boxen und eine
 Einzel-Ladder), Matchmaking/Roulette, ein Ratgeber- und Quiz-Bereich,
 In-App-Chat, ein Werbe-/Kampagnenmodul, Badges/Token-Belohnungen sowie
 Capacitor-Hüllen für iOS und Android. Dieses Repo ist eine für Tennis
@@ -123,7 +123,7 @@ Fehler statt eines echten Ergebnisses.
    | `0008_player_profile.sql` | Profil-Aggregate, `club_most_improved()` |
    | `0009_club_member_admin.sql` | Mitgliederverwaltung, Skill-Kalibrierung |
    | `0010_matchmaking.sql` | Spielanfragen, Verfügbarkeiten |
-   | `0011_league_module.sql` | Liga-Grundgerüst: `box_americano_4` + `singles_ladder` |
+   | `0011_league_module.sql` | Turnier-Grundgerüst: `box_americano_4` + `singles_ladder` |
    | `0012_tennis_venues.sql` | Anlagenverzeichnis (`/karte`) |
    | `0013_tennis_roulette.sql` | Zufalls-Matchmaking |
    | `0014_password_auth.sql` | Klassische Registrierung (E-Mail + Passwort) |
@@ -204,7 +204,7 @@ npm run seed:demo
 [`scripts/seed-demo.ts`](scripts/seed-demo.ts) legt einen fiktiven Verein
 (STC Oberland, Slug `stc-oberland`), 16 frei erfundene Spieler:innen, eine
 chronologische Folge simulierter Einzel- und Doppel-Matches der letzten
-zehn Wochen sowie eine kleine Liga (`/liga/oberland`, Format
+zehn Wochen sowie ein kleines Turnier (`/turnier/oberland`, Format
 `box_americano_4`) an. Alle Ratings entstehen aus den simulierten
 Match-Ergebnissen über dieselbe `computeMatchRatings()`-Funktion, die
 auch der Live-Betrieb nutzt — es werden keine mu/sigma-Werte direkt
@@ -253,7 +253,7 @@ auf `players`, sondern ausschließlich auf die View `club_leaderboard`.
 | `src/routes/c/[slug]/match/neu` | Match melden — Einzel/Doppel-Umschalter |
 | `src/routes/rankings/[category]` | `/rankings/singles`, `/rankings/doubles` |
 | `src/routes/p/[handle]` | Öffentliches Spielerprofil (beide Kategorien) |
-| `src/routes/liga/[slug]` | Liga-Ansicht + Verwaltung (Boxen, Zyklen, Termine) |
+| `src/routes/turnier/[slug]` | Turnier-Ansicht + Verwaltung (Boxen, Zyklen, Termine) |
 | `src/routes/c/[slug]/roulette` | Zufalls-Matchmaking |
 | `src/routes/quiz`, `src/routes/ratgeber` | Quiz- und Ratgeber-Bereich |
 | `src/routes/admin` | Super-Admin-Dashboard |
@@ -319,14 +319,14 @@ Damit niemand von stillen Annahmen überrascht wird:
 
 TennisIndex übernimmt Architektur, Datenmodell-Konventionen (RLS zum
 Lesen, service_role-RPCs zum Schreiben) und den kompletten Funktionsumfang
-von PadelIndex — Quiz, Roulette, Chat, Werbemodul, Liga-Modul,
+von PadelIndex — Quiz, Roulette, Chat, Werbemodul, Turnier-Modul,
 Badges/Token, Ratgeber-Inhalte, Capacitor-Hüllen — 1:1, jeweils für Tennis
 angepasst und um Einzel erweitert (siehe
 ["Einzel und Doppel"](#einzel-und-doppel-wie-das-rating-funktioniert)
 oben für die zentrale Erweiterung). Die auffälligsten Abweichungen vom
 Original sind an anderer Stelle in dieser README bereits benannt: kein
 Import echter Personendaten, kein übernommenes Support-Widget, neue
-Marke/Farben/Logo, ein zusätzliches Liga-Format (`singles_ladder`) und
+Marke/Farben/Logo, ein zusätzliches Turnier-Format (`singles_ladder`) und
 das grundlegend neue `player_ratings`-Datenmodell für die
 Kategorie-Trennung.
 

@@ -1,8 +1,8 @@
 <script lang="ts">
 	// ============================================================
-	// TennisIndex — /liga/[slug]
+	// TennisIndex — /turnier/[slug]
 	// ============================================================
-	// Die Liga-Rangliste ist ein eigenes Produkt neben dem allgemeinen
+	// Die Turnier-Rangliste ist ein eigenes Produkt neben dem allgemeinen
 	// Index-Rating und wird bewusst nicht mit ihm vermischt: hier stehen
 	// Matchpunkte, Sätze und Spiele einer Box, nicht das Level 0-7.
 	// Der Hinweis unten sagt das auch den Besuchern.
@@ -36,7 +36,7 @@
 	}
 
 	function boxLabel(box: PageData['ladder'][number]): string {
-		return box.label ?? m.liga_box_label_fallback({ n: box.ladderPosition });
+		return box.label ?? m.turnier_box_label_fallback({ n: box.ladderPosition });
 	}
 
 	const hasUnreadChat = $derived(data.unreadThreadIds.length > 0);
@@ -58,15 +58,15 @@
 </script>
 
 <svelte:head>
-	<title>{m.liga_title({ name: data.league.name })}</title>
-	<meta name="description" content={m.liga_meta_description({ name: data.league.name })} />
+	<title>{m.turnier_title({ name: data.league.name })}</title>
+	<meta name="description" content={m.turnier_meta_description({ name: data.league.name })} />
 	<link rel="canonical" href={canonical} />
 	<HreflangLinks path={page.url.pathname} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={canonical} />
 	<meta property="og:site_name" content="TennisIndex" />
 	<meta property="og:locale" content={ogLocale} />
-	<meta property="og:title" content={m.liga_og_title({ name: data.league.name })} />
+	<meta property="og:title" content={m.turnier_og_title({ name: data.league.name })} />
 	<meta property="og:image" content={ogImage} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -80,31 +80,31 @@
 	<section class="sec sec-light" id="top">
 		<div class="wrap">
 			<div class="sec-head">
-				<span class="eyebrow" use:reveal>{m.liga_eyebrow()}</span>
+				<span class="eyebrow" use:reveal>{m.turnier_eyebrow()}</span>
 				<h1 use:reveal={{ delay: 0.05 }}>{data.league.name}</h1>
 				{#if data.cycle}
 					<p class="muted" use:reveal={{ delay: 0.1 }}>
-						{data.cycle.name ?? m.liga_cycle_ordinal({ ordinal: data.cycle.ordinal })} · {fmtDate(
+						{data.cycle.name ?? m.turnier_cycle_ordinal({ ordinal: data.cycle.ordinal })} · {fmtDate(
 							data.cycle.startDate
 						)}
-						{m.liga_date_range_to()}
+						{m.turnier_date_range_to()}
 						{fmtDate(data.cycle.endDate)}
-						{#if data.cycle.status === 'running'}<span class="pill">{m.liga_cycle_running()}</span
-							>{:else}<span class="pill pill-done">{m.liga_cycle_done()}</span>{/if}
+						{#if data.cycle.status === 'running'}<span class="pill">{m.turnier_cycle_running()}</span
+							>{:else}<span class="pill pill-done">{m.turnier_cycle_done()}</span>{/if}
 					</p>
 				{/if}
 				<p class="muted note" use:reveal={{ delay: 0.14 }}>
-					{m.liga_note_pre()}
-					<strong>{m.liga_note_not()}</strong>
-					{m.liga_note_mid()}
-					<a href={localizeHref('/rating')}>{m.liga_note_link_label()}</a>{m.liga_note_post()}
+					{m.turnier_note_pre()}
+					<strong>{m.turnier_note_not()}</strong>
+					{m.turnier_note_mid()}
+					<a href={localizeHref('/rating')}>{m.turnier_note_link_label()}</a>{m.turnier_note_post()}
 				</p>
 			</div>
 
 			{#if !data.cycle}
-				<p class="empty" use:reveal>{m.liga_no_cycle()}</p>
+				<p class="empty" use:reveal>{m.turnier_no_cycle()}</p>
 			{:else if data.ladder.length === 0}
-				<p class="empty" use:reveal>{m.liga_no_boxes()}</p>
+				<p class="empty" use:reveal>{m.turnier_no_boxes()}</p>
 			{:else}
 				<div class="boxes">
 					{#each data.ladder as box (box.id)}
@@ -114,20 +114,20 @@
 								<div class="box-meta">
 									{#if box.scheduledAt}<span class="num">{fmtDate(box.scheduledAt)}</span>{/if}
 									{#if box.court}<span>{box.court}</span>{/if}
-									{#if !box.complete}<span class="pill pill-open">{m.liga_box_open_pill()}</span
+									{#if !box.complete}<span class="pill pill-open">{m.turnier_box_open_pill()}</span
 										>{/if}
 								</div>
 							</header>
 
 							<table class="standings">
-								<caption class="sr-only">{m.liga_table_caption({ box: boxLabel(box) })}</caption>
+								<caption class="sr-only">{m.turnier_table_caption({ box: boxLabel(box) })}</caption>
 								<thead>
 									<tr>
 										<th scope="col" class="c-rank">#</th>
-										<th scope="col">{m.liga_th_player()}</th>
-										<th scope="col" class="c-num">{m.liga_th_points()}</th>
-										<th scope="col" class="c-num">{m.liga_th_sets()}</th>
-										<th scope="col" class="c-num">{m.liga_th_games()}</th>
+										<th scope="col">{m.turnier_th_player()}</th>
+										<th scope="col" class="c-num">{m.turnier_th_points()}</th>
+										<th scope="col" class="c-num">{m.turnier_th_sets()}</th>
+										<th scope="col" class="c-num">{m.turnier_th_games()}</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -147,7 +147,7 @@
 												{/if}
 												{#if player?.role === 'substitute'}<span
 														class="sub"
-														title={m.liga_substitute_title()}>{m.liga_substitute_short()}</span
+														title={m.turnier_substitute_title()}>{m.turnier_substitute_short()}</span
 													>{/if}
 											</td>
 											<td class="c-num num">{row.matchPoints}</td>
@@ -160,7 +160,7 @@
 
 							<details class="rounds">
 								<summary
-									>{m.liga_rounds_summary({
+									>{m.turnier_rounds_summary({
 										done: box.rounds.filter((r) => r.matchId).length,
 										total: box.rounds.length
 									})}</summary
@@ -168,16 +168,16 @@
 								<ul>
 									{#each box.rounds as round (round.id)}
 										<li>
-											<span class="rnum num">{m.liga_round_short({ n: round.roundNumber })}</span>
+											<span class="rnum num">{m.turnier_round_short({ n: round.roundNumber })}</span>
 											<span class="pairing">
 												{nameOf(box, round.team1[0])} / {nameOf(box, round.team1[1])}
-												<em>{m.liga_pairing_vs()}</em>
+												<em>{m.turnier_pairing_vs()}</em>
 												{nameOf(box, round.team2[0])} / {nameOf(box, round.team2[1])}
 											</span>
 											<span class="score num">{setsLabel(round)}</span>
 											{#if round.matchId && !round.confirmed}
-												<span class="pill pill-open" title={m.liga_round_open_title()}
-													>{m.liga_box_open_pill()}</span
+												<span class="pill pill-open" title={m.turnier_round_open_title()}
+													>{m.turnier_box_open_pill()}</span
 												>
 											{/if}
 										</li>
@@ -188,9 +188,9 @@
 							{#if box.id === data.myBoxId}
 								<a
 									class="btn btn-primary report"
-									href={localizeHref(`/liga/${data.league.slug}/box/${box.id}`)}
+									href={localizeHref(`/turnier/${data.league.slug}/box/${box.id}`)}
 								>
-									{m.liga_report_result()}
+									{m.turnier_report_result()}
 									{#if hasUnreadChat}
 										<span class="unread-dot" role="img" aria-label={m.chat_unread_dot_label()}
 										></span>
@@ -204,16 +204,16 @@
 
 			<section class="joinbox" use:reveal>
 				{#if data.viewerLoggedIn}
-					<h2>{m.liga_join_heading_loggedin()}</h2>
+					<h2>{m.turnier_join_heading_loggedin()}</h2>
 					<p class="muted">
-						{m.liga_join_loggedin_pre()}
-						<a href="/konto#liga">{m.liga_join_loggedin_link()}</a>{m.liga_join_loggedin_post()}
+						{m.turnier_join_loggedin_pre()}
+						<a href="/konto#turnier">{m.turnier_join_loggedin_link()}</a>{m.turnier_join_loggedin_post()}
 					</p>
 				{:else}
-					<h2>{m.liga_join_heading_anon()}</h2>
+					<h2>{m.turnier_join_heading_anon()}</h2>
 					<p class="muted">
-						{m.liga_join_text_anon({
-							clubName: data.league.clubName ?? m.liga_join_fallback_club()
+						{m.turnier_join_text_anon({
+							clubName: data.league.clubName ?? m.turnier_join_fallback_club()
 						})}
 					</p>
 					<SignupForm defaultClub={data.league.clubName ?? ''} />

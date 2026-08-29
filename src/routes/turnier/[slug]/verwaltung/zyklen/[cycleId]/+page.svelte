@@ -217,11 +217,11 @@
 				Vereinsmitglieder noch ohne Box.
 			</p>
 			<p class="cycles-link" use:reveal={{ delay: 0.12 }}>
-				<a href="/liga/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}/termine"
+				<a href="/turnier/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}/termine"
 					>Termine &amp; Plätze →</a
 				>
 				·
-				<a href="/liga/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}/ergebnisse"
+				<a href="/turnier/{data.league.slug}/verwaltung/zyklen/{data.cycle.id}/ergebnisse"
 					>Ergebnisse →</a
 				>
 			</p>
@@ -445,7 +445,7 @@
 			{/if}
 
 			<p class="back">
-				<a href="/liga/{data.league.slug}/verwaltung/zyklen">← Zurück zur Zyklenliste</a>
+				<a href="/turnier/{data.league.slug}/verwaltung/zyklen">← Zurück zur Zyklenliste</a>
 			</p>
 		</div>
 	</section>

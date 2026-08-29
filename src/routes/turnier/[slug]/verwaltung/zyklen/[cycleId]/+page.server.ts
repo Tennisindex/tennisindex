@@ -20,7 +20,7 @@ async function loadCycleOr404(
 	cycleId: string
 ) {
 	const cycle = await loadCurrentCycle(admin, leagueId, cycleId);
-	if (!cycle) throw error(404, 'Diesen Zyklus gibt es in dieser Liga nicht.');
+	if (!cycle) throw error(404, 'Diesen Zyklus gibt es in diesem Turnier nicht.');
 	return cycle;
 }
 

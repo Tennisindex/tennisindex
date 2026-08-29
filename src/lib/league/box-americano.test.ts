@@ -103,7 +103,7 @@ describe('winnerOfBoxMatch', () => {
 
 	it('entscheidet bei Satzgleichstand über die Games', () => {
 		// Echter Fall aus Zyklus 5: 7:5, 0:3 -> Sätze 1:1, Games 7:8.
-		// Die offizielle Ligatabelle schreibt den Sieg Team 2 gut.
+		// Die offizielle Turniertabelle schreibt den Sieg Team 2 gut.
 		expect(
 			winnerOfBoxMatch(
 				match(

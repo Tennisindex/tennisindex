@@ -103,7 +103,7 @@
 			</form>
 
 			<p class="back">
-				<a href="/liga/{data.league.slug}/verwaltung/zyklen">← Zurück zur Zyklenliste</a>
+				<a href="/turnier/{data.league.slug}/verwaltung/zyklen">← Zurück zur Zyklenliste</a>
 			</p>
 		</div>
 	</section>

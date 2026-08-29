@@ -62,7 +62,7 @@
 				'Rating-System',
 				'Match-Bestätigung',
 				'Erste Vereins-Ranglisten',
-				'Liga-Funktionen',
+				'Turnier-Funktionen',
 				'Feedback sammeln',
 				'Datenqualität verbessern'
 			]

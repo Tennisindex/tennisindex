@@ -12,11 +12,11 @@ import { defineConfig } from 'vitest/config';
 
 // i18n-Routing: nur die ~15 öffentlichen/SEO-Seiten bekommen /en, /es
 // (siehe Plan "i18n & SEO-Lokalisierung"). Alles, was hier NICHT
-// gelistet ist (/konto, /admin, /anmelden, /liga/[slug]/verwaltung/*,
+// gelistet ist (/konto, /admin, /anmelden, /turnier/[slug]/verwaltung/*,
 // /c/[slug]/beanspruchen, …), taucht in keinem urlPatterns-Eintrag auf —
 // laut Paraglide-Quellcode (localize-url.js: "If no match found, return
 // the original url") bleibt so ein Pfad unverändert deutsch, ganz ohne
-// eigene Ausschlussliste. `/c/:slug` und `/liga/:slug` matchen bewusst
+// eigene Ausschlussliste. `/c/:slug` und `/turnier/:slug` matchen bewusst
 // nur genau EIN Pfadsegment (kein Catch-all), treffen also nie die
 // tieferen Transaktionsseiten wie /c/[slug]/beanspruchen.
 const IN_SCOPE_PATHS = [
@@ -30,8 +30,8 @@ const IN_SCOPE_PATHS = [
 	'/ueber',
 	'/c/:slug',
 	'/p/:handle',
-	'/liga/:slug/box/:boxId',
-	'/liga/:slug',
+	'/turnier/:slug/box/:boxId',
+	'/turnier/:slug',
 	'/datenschutz',
 	'/impressum'
 ];

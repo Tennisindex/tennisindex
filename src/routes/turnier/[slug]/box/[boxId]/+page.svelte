@@ -45,12 +45,12 @@
 	}
 
 	const boxTitle = $derived(
-		data.box.label ?? m.liga_box_label_fallback({ n: data.box.ladderPosition })
+		data.box.label ?? m.turnier_box_label_fallback({ n: data.box.ladderPosition })
 	);
 </script>
 
 <svelte:head>
-	<title>{m.ligabox_title({ boxTitle, leagueName: data.league.name })}</title>
+	<title>{m.turnierbox_title({ boxTitle, leagueName: data.league.name })}</title>
 	<meta name="robots" content="noindex, follow" />
 	<HreflangLinks path={page.url.pathname} />
 	<meta name="theme-color" content="#0F1F13" />
@@ -64,7 +64,7 @@
 			<span class="eyebrow" use:reveal>{data.league.name}</span>
 			<h1 use:reveal={{ delay: 0.05 }}>{boxTitle}</h1>
 			<p class="muted intro" use:reveal={{ delay: 0.1 }}>
-				{m.ligabox_intro()}
+				{m.turnierbox_intro()}
 			</p>
 
 			{#if form?.message}
@@ -72,7 +72,7 @@
 			{/if}
 			{#if form?.success}
 				<p class="ok" role="status">
-					{m.ligabox_saved()}
+					{m.turnierbox_saved()}
 				</p>
 			{/if}
 
@@ -105,17 +105,17 @@
 					{@const done = round.matchId !== null}
 					<li class="round" class:done>
 						<div class="round-head">
-							<span class="rnum num">{m.ligabox_round_number({ n: round.roundNumber })}</span>
+							<span class="rnum num">{m.turnierbox_round_number({ n: round.roundNumber })}</span>
 							{#if done && round.confirmed}
-								<span class="pill">{m.ligabox_confirmed_pill()}</span>
+								<span class="pill">{m.turnierbox_confirmed_pill()}</span>
 							{:else if done}
-								<span class="pill pill-open">{m.ligabox_waiting_pill()}</span>
+								<span class="pill pill-open">{m.turnierbox_waiting_pill()}</span>
 							{/if}
 						</div>
 
 						<p class="pairing">
 							<strong>{nameOf(round.team1[0])} / {nameOf(round.team1[1])}</strong>
-							<em>{m.ligabox_vs()}</em>
+							<em>{m.turnierbox_vs()}</em>
 							<strong>{nameOf(round.team2[0])} / {nameOf(round.team2[1])}</strong>
 						</p>
 
@@ -124,15 +124,15 @@
 								<p class="schedule-status muted small">
 									{#if round.scheduledAt}
 										{round.assignedByAdmin
-											? m.ligabox_schedule_status_admin({
+											? m.turnierbox_schedule_status_admin({
 													when: fmtSlot(round.scheduledAt, round.court)
 												})
-											: m.ligabox_schedule_status_player({
+											: m.turnierbox_schedule_status_player({
 													name: round.scheduledByName ?? '',
 													when: fmtSlot(round.scheduledAt, round.court)
 												})}
 									{:else}
-										{m.ligabox_schedule_status_open()}
+										{m.turnierbox_schedule_status_open()}
 									{/if}
 								</p>
 
@@ -157,20 +157,20 @@
 												<input
 													type="text"
 													name="court"
-													placeholder={m.ligabox_schedule_court_label()}
+													placeholder={m.turnierbox_schedule_court_label()}
 													maxlength="40"
 												/>
 											</div>
 											<div class="actions">
 												<button class="btn btn-ghost-light small" type="submit">
-													{m.ligabox_schedule_save()}
+													{m.turnierbox_schedule_save()}
 												</button>
 												<button
 													class="btn btn-ghost-light small"
 													type="button"
 													onclick={() => (scheduleOpenRound = null)}
 												>
-													{m.ligabox_cancel()}
+													{m.turnierbox_cancel()}
 												</button>
 											</div>
 										</fieldset>
@@ -181,7 +181,7 @@
 										type="button"
 										onclick={() => (scheduleOpenRound = round.id)}
 									>
-										{round.scheduledAt ? m.ligabox_schedule_edit() : m.ligabox_schedule_enter()}
+										{round.scheduledAt ? m.turnierbox_schedule_edit() : m.turnierbox_schedule_enter()}
 									</button>
 								{/if}
 							</div>
@@ -206,12 +206,12 @@
 							>
 								<input type="hidden" name="boxMatchId" value={round.id} />
 								<fieldset disabled={busy}>
-									<legend class="sr-only">{m.ligabox_sets_legend({ n: round.roundNumber })}</legend>
+									<legend class="sr-only">{m.turnierbox_sets_legend({ n: round.roundNumber })}</legend>
 									{#each [1, 2, 3] as n (n)}
 										<div class="setrow">
-											<span class="setlabel">{m.ligabox_set_label({ n })}</span>
+											<span class="setlabel">{m.turnierbox_set_label({ n })}</span>
 											<label class="sr-only" for="s{round.id}-{n}-a">
-												{m.ligabox_set_sr_label({
+												{m.turnierbox_set_sr_label({
 													n,
 													team1: nameOf(round.team1[0]),
 													team2: nameOf(round.team1[1])
@@ -228,7 +228,7 @@
 											/>
 											<span aria-hidden="true">:</span>
 											<label class="sr-only" for="s{round.id}-{n}-b">
-												{m.ligabox_set_sr_label({
+												{m.turnierbox_set_sr_label({
 													n,
 													team1: nameOf(round.team2[0]),
 													team2: nameOf(round.team2[1])
@@ -247,14 +247,14 @@
 									{/each}
 									<div class="actions">
 										<button class="btn btn-primary" type="submit">
-											{busy ? m.ligabox_saving() : m.ligabox_save_result()}
+											{busy ? m.turnierbox_saving() : m.turnierbox_save_result()}
 										</button>
 										<button
 											class="btn btn-ghost-light"
 											type="button"
 											onclick={() => (openRound = null)}
 										>
-											{m.ligabox_cancel()}
+											{m.turnierbox_cancel()}
 										</button>
 									</div>
 								</fieldset>
@@ -265,7 +265,7 @@
 								type="button"
 								onclick={() => (openRound = round.id)}
 							>
-								{m.ligabox_enter_result()}
+								{m.turnierbox_enter_result()}
 							</button>
 						{/if}
 
@@ -302,7 +302,7 @@
 			</ol>
 
 			<p class="back">
-				<a href={localizeHref(`/liga/${data.league.slug}`)}>{m.liga_back_link()}</a>
+				<a href={localizeHref(`/turnier/${data.league.slug}`)}>{m.turnier_back_link()}</a>
 			</p>
 		</div>
 	</section>

@@ -268,7 +268,7 @@ function guideHighlights(locale: Locale): FeedItem[] {
 /**
  * Roulette zeigt bewusst auf den echten Pilotverein (/c/stc-oberland) statt
  * auf eine generische Übersicht — dasselbe ehrliche Framing wie die
- * Liga-Teaser auf der Startseite: ein konkretes Beispiel, keine Behauptung
+ * Turnier-Teaser auf der Startseite: ein konkretes Beispiel, keine Behauptung
  * flächendeckender Verfügbarkeit.
  */
 function featureAnnouncements(locale: Locale): FeedItem[] {

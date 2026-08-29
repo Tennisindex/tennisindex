@@ -34,8 +34,8 @@
 			: null
 	);
 
-	// Kommt jemand frisch vom Anmelde-Link auf /liga/[slug] (?join_league=X),
-	// heben wir die Liga-Karte kurz hervor statt den Beitritt automatisch
+	// Kommt jemand frisch vom Anmelde-Link auf /turnier/[slug] (?join_league=X),
+	// heben wir die Turnier-Karte kurz hervor statt den Beitritt automatisch
 	// abzuschicken — der Klick auf "Auf die Warteliste" bleibt eine
 	// bewusste Handlung.
 	const highlightLeague = $derived(
@@ -314,7 +314,7 @@
 			{/if}
 
 			{#if data.league}
-				<div class="card" id="liga" class:highlight={highlightLeague}>
+				<div class="card" id="turnier" class:highlight={highlightLeague}>
 					<h3 class="card-title">{data.league.name}</h3>
 
 					{#if highlightLeague}
@@ -332,7 +332,7 @@
 						</p>
 					{/if}
 					{#if form?.leagueLeft}
-						<p class="notice" role="status">Aus der Liga ausgetreten.</p>
+						<p class="notice" role="status">Aus dem Turnier ausgetreten.</p>
 					{/if}
 
 					{#if data.leagueRegistration === null}
@@ -346,26 +346,26 @@
 					{:else if data.leagueRegistration === 'active'}
 						<p class="muted" style="font-size: 13px">
 							Du spielst aktuell in einer Box. Details und Ergebnismeldung unter
-							<a href="/liga/{data.league.slug}">der Ligaseite</a>.
+							<a href="/turnier/{data.league.slug}">der Turnierseite</a>.
 						</p>
 						<form
 							method="POST"
 							action="?/leaveLeague"
 							use:enhance={({ cancel }) => {
-								if (!confirm('Wirklich aus der Liga austreten? Dein Box-Platz wird frei.')) {
+								if (!confirm('Wirklich aus dem Turnier austreten? Dein Box-Platz wird frei.')) {
 									cancel();
 								}
 							}}
 						>
-							<button class="btn btn-ghost-light" type="submit">Aus der Liga austreten</button>
+							<button class="btn btn-ghost-light" type="submit">Aus dem Turnier austreten</button>
 						</form>
 					{:else if data.leagueRegistration === 'substitute'}
 						<p class="muted" style="font-size: 13px">
 							Du bist als Ersatzspieler:in eingetragen und spielst aktuell in einer Box. Details
-							unter <a href="/liga/{data.league.slug}">der Ligaseite</a>.
+							unter <a href="/turnier/{data.league.slug}">der Turnierseite</a>.
 						</p>
 						<form method="POST" action="?/leaveLeague" use:enhance>
-							<button class="btn btn-ghost-light" type="submit">Aus der Liga austreten</button>
+							<button class="btn btn-ghost-light" type="submit">Aus dem Turnier austreten</button>
 						</form>
 					{:else if data.leagueRegistration === 'waitlist'}
 						<p class="muted" style="font-size: 13px">
@@ -376,7 +376,7 @@
 							>
 						</form>
 					{:else if data.leagueRegistration === 'left'}
-						<p class="muted" style="font-size: 13px">Du hattest die Liga verlassen.</p>
+						<p class="muted" style="font-size: 13px">Du hattest das Turnier verlassen.</p>
 						<form method="POST" action="?/joinLeague" use:enhance>
 							<button class="btn btn-primary" type="submit">Wieder auf die Warteliste</button>
 						</form>

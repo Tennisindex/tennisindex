@@ -1,5 +1,5 @@
 // ============================================================
-// TennisIndex — Liga-Modul: Datenzugriff
+// TennisIndex — Turnier-Modul: Datenzugriff
 // ============================================================
 // Übersetzt zwischen den league_*-Tabellen (0016) und den reinen
 // Funktionen in $lib/league/box-americano. Die Rechenlogik steht
@@ -7,7 +7,7 @@
 //
 // Fast alles läuft über den Admin-Client: match_sets und
 // match_participants sind per RLS auf Beteiligte beschränkt, eine
-// öffentliche Ligatabelle braucht sie aber vollständig. Namen kommen
+// öffentliche Turniertabelle braucht sie aber vollständig. Namen kommen
 // ausschließlich aus der View league_box_lineup, die dieselbe
 // Anonymisierung anwendet wie club_leaderboard.
 
@@ -74,9 +74,9 @@ function scheduleChatMessage(scheduledAt: string, court: string | null): string 
 export type League = {
 	id: string;
 	clubId: string | null;
-	/** Name des Trägervereins — für die "hier steigst du ein"-CTA auf der Ligaseite. */
+	/** Name des Trägervereins — für die "hier steigst du ein"-CTA auf der Turnierseite. */
 	clubName: string | null;
-	/** Slug des Trägervereins — für den Rücksprung zwischen Vereins- und Liga-Verwaltung. */
+	/** Slug des Trägervereins — für den Rücksprung zwischen Vereins- und Turnierverwaltung. */
 	clubSlug: string | null;
 	name: string;
 	slug: string;
@@ -184,7 +184,7 @@ export async function loadLeague(sb: SupabaseClient, slug: string): Promise<Leag
 }
 
 /**
- * Für /konto: welche Liga (falls vorhanden) gehört zum eigenen Verein.
+ * Für /konto: welches Turnier (falls vorhanden) gehört zum eigenen Verein.
  * Ein Verein kann später mehrere haben — hier bewusst nur die erste
  * aktive, mehr braucht die Profilseite aktuell nicht.
  */
@@ -293,7 +293,7 @@ export async function listAssignedPlayerIds(
 }
 
 /**
- * Ein Spieler verlässt die Liga mitten im Zyklus — sowohl vom Admin
+ * Ein Spieler verlässt das Turnier mitten im Zyklus — sowohl vom Admin
  * ausgelöst (mit Ersatz aus der Warteliste, siehe verwaltung/spieler)
  * als auch selbstständig über /konto (immer ohne Ersatz: wer selbst
  * geht, weist niemandem seinen Sitz zu, das bleibt dem Admin
@@ -333,10 +333,10 @@ export async function departLeagueMember(
 			}
 		: null;
 
-	// membership kann zu einer FREMDEN Liga gehören: departingPlayerId kommt
+	// membership kann zu einem FREMDEN Turnier gehören: departingPlayerId kommt
 	// aus dem Formular (siehe verwaltung/spieler), league_box_members selbst
 	// trägt keinen league_id-Bezug. Ohne diesen Check könnte ein Admin einer
-	// Liga einen Spieler aus der Box einer ANDEREN Liga werfen. Gehört die
+	// Turnier einen Spieler aus der Box eines ANDEREN Turniers werfen. Gehört die
 	// gefundene Box nicht zu params.leagueId, zählt sie hier als "keine".
 	if (box && !(await loadCurrentCycle(admin, params.leagueId, box.cycleId))) {
 		box = null;
@@ -467,7 +467,7 @@ async function notifyAboutSubstitution(
 }
 
 /**
- * Der Zyklus, den die Ligaseite zeigt: der laufende, sonst der zuletzt
+ * Der Zyklus, den die Turnierseite zeigt: der laufende, sonst der zuletzt
  * abgeschlossene. Ohne Zyklus gibt es schlicht nichts anzuzeigen.
  */
 export async function loadCurrentCycle(
@@ -500,8 +500,8 @@ export async function loadCurrentCycle(
 
 /**
  * Schutz gegen IDOR: requireLeagueAdmin() prüft nur "ist diese Person
- * Admin GENAU DIESER Liga" (aus dem URL-Slug) — nie, ob eine boxId/
- * boxMatchId aus dem Formular überhaupt zu DIESER Liga gehört. boxId
+ * Admin GENAU DIESES Turniers" (aus dem URL-Slug) — nie, ob eine boxId/
+ * boxMatchId aus dem Formular überhaupt zu DIESEM Turnier gehört. boxId
  * steht z. B. als hidden input auf der öffentlichen Box-Seite (jede
  * eingeloggte Person sieht sie) — ohne diesen Check könnte ein
  * Vereins-Admin von Verein A eine boxId/boxMatchId von Verein B
@@ -509,7 +509,7 @@ export async function loadCurrentCycle(
  * Jede schreibende Admin-Funktion mit boxId/boxMatchId ruft eine der
  * beiden hier zuerst auf; wirft error(404), genau wie loadCycleOr404 in
  * denselben Routen — bewusst 404 statt 403, um nicht zu verraten, ob die
- * ID überhaupt existiert (nur in einer anderen Liga).
+ * ID überhaupt existiert (nur in einem anderen Turnier).
  */
 export async function assertBoxInLeague(
 	admin: SupabaseClient,
@@ -522,7 +522,7 @@ export async function assertBoxInLeague(
 		.eq('id', boxId)
 		.maybeSingle();
 	const cycle = box ? await loadCurrentCycle(admin, leagueId, box.cycle_id) : null;
-	if (!cycle) throw error(404, 'Diese Box gehört nicht zu dieser Liga.');
+	if (!cycle) throw error(404, 'Diese Box gehört nicht zu diesem Turnier.');
 }
 
 export async function assertBoxMatchInLeague(
@@ -728,7 +728,7 @@ export async function reportBoxResult(
 ): Promise<string> {
 	// Format+config kommen über den Fremdschlüssel-Pfad box -> cycle ->
 	// season -> league mit — der Aufrufer (die Formular-Action) hat die
-	// Liga selbst nicht geladen, nur boxMatchId, und soll das für diesen
+	// Turnier selbst nicht geladen, nur boxMatchId, und soll das für diesen
 	// einen Zweck auch nicht extra tun müssen.
 	const { data: round, error: rErr } = await admin
 		.from('league_box_matches')

@@ -2,8 +2,8 @@
 // TennisIndex — Service Worker für die PWA
 // ============================================================
 // Ziel ist Installierbarkeit und ein schneller App-Shell-Neustart,
-// NICHT Offline-Nutzung der Ranglisten/Ligen: Ratings, Boxen und
-// Ligatabellen ändern sich laufend, ein gecachtes Ergebnis wäre
+// NICHT Offline-Nutzung der Ranglisten/Turniere: Ratings, Boxen und
+// Turniertabellen ändern sich laufend, ein gecachtes Ergebnis wäre
 // falsche Daten mit dem Anschein von Aktualität. Deshalb:
 //
 //   - Build-Assets (JS/CSS) und statische Dateien (Icons, Fonts, Logo)

@@ -37,7 +37,7 @@
 				du danach an.
 			</p>
 
-			<a class="btn btn-primary" href="/liga/{data.league.slug}/verwaltung/zyklen/neu" use:reveal>
+			<a class="btn btn-primary" href="/turnier/{data.league.slug}/verwaltung/zyklen/neu" use:reveal>
 				Neuen Zyklus anlegen
 			</a>
 
@@ -71,7 +71,7 @@
 									</td>
 									<td class="c-num num">{c.boxCount}</td>
 									<td>
-										<a href="/liga/{data.league.slug}/verwaltung/zyklen/{c.id}">Boxen verwalten →</a
+										<a href="/turnier/{data.league.slug}/verwaltung/zyklen/{c.id}">Boxen verwalten →</a
 										>
 									</td>
 								</tr>
@@ -81,7 +81,7 @@
 				</div>
 			{/if}
 
-			<p class="back"><a href="/liga/{data.league.slug}/verwaltung">← Zur Verwaltung</a></p>
+			<p class="back"><a href="/turnier/{data.league.slug}/verwaltung">← Zur Verwaltung</a></p>
 		</div>
 	</section>
 </main>

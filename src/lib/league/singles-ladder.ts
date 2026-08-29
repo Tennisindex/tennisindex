@@ -1,7 +1,7 @@
 // ============================================================
 // TennisIndex — Format "singles_ladder": Rundenplan, Tabelle, Auf-/Abstieg
 // ============================================================
-// Zweites Liga-Format neben box_americano_4 (Doppel) — für Einzel. Eine
+// Zweites Turnier-Format neben box_americano_4 (Doppel) — für Einzel. Eine
 // Gruppe von boxSize Spielern (4-8) spielt eine vollständige Round-Robin-
 // Runde: jeder gegen jeden genau einmal, kein Partner-Konzept, keine
 // Sitz-Rotation nötig (jeder Sitz IST bereits ein Spieler, kein Team).

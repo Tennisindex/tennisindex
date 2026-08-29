@@ -184,27 +184,27 @@
 		</div>
 	</section>
 
-	<!-- ============================ LIGA TEASER ============================ -->
+	<!-- ============================ TURNIER TEASER ============================ -->
 	<!-- Bewusst als konkretes Beispiel, nicht als "TennisIndex bietet jetzt
-	     Liga-Hosting als Produkt für jeden Verein" — das Box-Ligen-Format ist
-	     technisch generisch gebaut, aber aktuell gibt es genau eine Liga bei
-	     einem Verein. Ehrlich als Pilot framen statt Verfügbarkeit zu
+	     Turnier-Hosting als Produkt für jeden Verein" — das Box-Turnier-Format
+	     ist technisch generisch gebaut, aber aktuell gibt es genau ein Turnier
+	     bei einem Verein. Ehrlich als Pilot framen statt Verfügbarkeit zu
 	     behaupten, die es noch nicht gibt. -->
-	<section class="sec" id="liga">
+	<section class="sec" id="turnier">
 		<div class="wrap">
 			<div class="sec-head">
-				<span class="eyebrow" use:reveal>{m.home_liga_eyebrow()}</span>
-				<h2 use:reveal={{ delay: 0.05 }}>{m.home_liga_h2()}</h2>
+				<span class="eyebrow" use:reveal>{m.home_turnier_eyebrow()}</span>
+				<h2 use:reveal={{ delay: 0.05 }}>{m.home_turnier_h2()}</h2>
 				<p class="muted" use:reveal={{ delay: 0.1 }}>
-					{m.home_liga_p()}
+					{m.home_turnier_p()}
 				</p>
 				<a
 					class="btn btn-primary"
-					href={localizeHref('/liga/oberland')}
+					href={localizeHref('/turnier/oberland')}
 					use:reveal={{ delay: 0.15 }}
 					style="margin-top:28px; display:inline-flex"
 				>
-					{m.home_liga_cta()}
+					{m.home_turnier_cta()}
 				</a>
 			</div>
 		</div>

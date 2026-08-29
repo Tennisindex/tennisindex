@@ -1,5 +1,5 @@
 // ============================================================
-// TennisIndex — Liga-Verwaltung: Ergebnisse, Walkover, Abbruch
+// TennisIndex — Turnierverwaltung: Ergebnisse, Walkover, Abbruch
 // ============================================================
 // Ergänzt das Selbst-Melden der Spieler (box/[boxId]) um die Admin-Sicht:
 // Ergebnis eintragen/korrigieren, Walkover werten, Abbruch mit Teilsätzen
@@ -26,7 +26,7 @@ async function loadCycleOr404(
 	cycleId: string
 ) {
 	const cycle = await loadCurrentCycle(admin, leagueId, cycleId);
-	if (!cycle) throw error(404, 'Diesen Zyklus gibt es in dieser Liga nicht.');
+	if (!cycle) throw error(404, 'Diesen Zyklus gibt es in diesem Turnier nicht.');
 	return cycle;
 }
 
