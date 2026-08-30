@@ -12,10 +12,9 @@ binding = "ASSETS"
 # Plain dashboard vars are wiped on each `wrangler deploy`. Keep public bindings here.
 # SUPABASE_SERVICE_ROLE_KEY must be an encrypted Worker Secret (not a Build variable).
 [vars]
-# Replace with your own TennisIndex Supabase project (Project Settings -> API).
-# This must be a fresh project of your own — never reuse another project's keys.
-PUBLIC_SUPABASE_URL = "https://YOUR_PROJECT.supabase.co"
-PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_..."
+# TennisIndex production Supabase project (Project Settings -> API).
+PUBLIC_SUPABASE_URL = "https://wxffzlowypugrmosfbch.supabase.co"
+PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_0qVOJXnKAKkwrc-pUq2pHQ_ugf_-AiX"
 # "12 Monate kostenlos"-Aktion für Vereine — auf "false" oder Zeile entfernen,
 # sobald echte Preise feststehen.
 PUBLIC_TRIAL_OFFER_ENABLED = "true"

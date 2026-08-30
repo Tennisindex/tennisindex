@@ -24,11 +24,11 @@ const cspDirectives = {
 	'script-src': ["'self'"],
 	'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
 	'font-src': ["'self'", 'https://fonts.gstatic.com'],
-	'img-src': ["'self'", 'data:', 'https://tile.openstreetmap.org', 'https://YOUR_PROJECT.supabase.co'],
+	'img-src': ["'self'", 'data:', 'https://tile.openstreetmap.org', 'https://wxffzlowypugrmosfbch.supabase.co'],
 	'connect-src': [
 		"'self'",
-		'https://YOUR_PROJECT.supabase.co',
-		'wss://YOUR_PROJECT.supabase.co',
+		'https://wxffzlowypugrmosfbch.supabase.co',
+		'wss://wxffzlowypugrmosfbch.supabase.co',
 		'https://static.cloudflareinsights.com',
 		'https://fonts.googleapis.com'
 	],
