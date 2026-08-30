@@ -70,6 +70,30 @@
 			</div>
 		{/if}
 
+		<div class="card league-card">
+			<div class="card-head">
+				<h3 class="card-title" style="margin:0">Turnierbäume (K.-o.-System)</h3>
+				<a class="btn btn-primary" href="/turnierbaum/neu">Neuen Turnierbaum anlegen →</a>
+			</div>
+			{#if data.bracketEvents.length === 0}
+				<p class="muted" style="font-size: 13px; margin: 10px 0 0">
+					Noch kein Turnierbaum angelegt — Setzliste, Freilose und doppelte Chance, eigenständig
+					neben eurer Box-Liga.
+				</p>
+			{:else}
+				<ul class="bracket-list">
+					{#each data.bracketEvents as ev (ev.id)}
+						<li>
+							<a href="/turnierbaum/{ev.slug}/verwaltung">{ev.name}</a>
+							<span class="muted" style="font-size: 12px">
+								· {ev.category === 'doubles' ? 'Doppel' : 'Einzel'} · {ev.status}
+							</span>
+						</li>
+					{/each}
+				</ul>
+			{/if}
+		</div>
+
 		{#if form?.settingsError}
 			<p class="err">{form.settingsError}</p>
 		{/if}
@@ -697,6 +721,16 @@
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
 		color: var(--muted-light);
+	}
+
+	.bracket-list {
+		list-style: none;
+		margin: 10px 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		font-size: 14px;
 	}
 
 	.err {

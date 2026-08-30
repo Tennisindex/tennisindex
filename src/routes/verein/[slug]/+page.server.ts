@@ -36,6 +36,7 @@ import { cancelPendingMatch, loadClubPendingMatches } from '$lib/server/matches'
 import { updateClubSettings } from '$lib/server/club-settings';
 import { createSlot, cancelSlot, loadSlotsForAdmin } from '$lib/server/roulette';
 import { loadLeagueForClub } from '$lib/server/league';
+import { listClubBracketEvents } from '$lib/server/bracket';
 
 type AdminClub = {
 	id: string;
@@ -82,15 +83,16 @@ export const load: PageServerLoad = async ({ params, locals, url, platform }) =>
 	const club = await requireClubAdmin(locals, params.slug, url);
 	const admin = supabaseAdmin(platform);
 
-	const [rewards, members, pendingMatches, rouletteSlots, league] = await Promise.all([
+	const [rewards, members, pendingMatches, rouletteSlots, league, bracketEvents] = await Promise.all([
 		loadRewardCatalogForAdmin(admin, club.id),
 		loadClubMembers(admin, club.id),
 		loadClubPendingMatches(admin, club.id),
 		loadSlotsForAdmin(admin, club.id),
-		loadLeagueForClub(admin, club.id)
+		loadLeagueForClub(admin, club.id),
+		listClubBracketEvents(admin, club.id)
 	]);
 
-	return { club, rewards, members, pendingMatches, rouletteSlots, league };
+	return { club, rewards, members, pendingMatches, rouletteSlots, league, bracketEvents };
 };
 
 export const actions: Actions = {

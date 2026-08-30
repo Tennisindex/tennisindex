@@ -91,6 +91,16 @@ export const GET: RequestHandler = async ({ platform, setHeaders }) => {
 				urls.push(...localizedEntries(`/turnier/${league.slug}`, '0.7', 'weekly'));
 			}
 
+			// Turnierbäume (K.-o.-System, 0020) — eigenständig neben den Box-Ligen oben.
+			const { data: bracketEvents } = await sb
+				.from('bracket_events')
+				.select('slug')
+				.neq('status', 'draft')
+				.limit(200);
+			for (const ev of bracketEvents ?? []) {
+				urls.push(...localizedEntries(`/turnierbaum/${ev.slug}`, '0.6', 'weekly'));
+			}
+
 			// Spielerprofile erst ab genug bestätigten Matches (lib/seo.ts) —
 			// club_leaderboard ist die einzige für anon lesbare Projektion auf
 			// players, players selbst ist seit 0005 für anon gesperrt.
